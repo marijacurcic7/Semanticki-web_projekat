@@ -7,6 +7,7 @@ import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
+
 def set_env_var():
     environ['FIRESTORE_EMULATOR_HOST'] = 'localhost:8080'
     environ['GOOGLE_APPLICATION_CREDENTIALS'] = './serviceAccountKey.json'
@@ -39,12 +40,7 @@ def test_firestore():
 def test_rdflib():
     g = Graph()
     g.parse('http://dbpedia.org/resource/WebAssembly')
-
-    # for s, p, o in g:
-        # print(s, p, o)
-
     return jsonify([(s, p, o) for s, p, o in g])
-    # return 'True'
 
 
 if __name__ == '__main__':
