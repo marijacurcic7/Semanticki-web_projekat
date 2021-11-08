@@ -1,6 +1,7 @@
 from flask import jsonify
 from semanticweb import app, db
 from rdflib import Graph
+from firebase_admin import auth
 
 @app.route('/')
 def main():
@@ -25,5 +26,11 @@ def test_firestore():
 def test_rdflib():
     g = Graph()
     g.parse('http://dbpedia.org/resource/WebAssembly')
-    return 'true'
-    # return jsonify([(s, p, o) for s, p, o in g])
+    # return 'true'
+    return jsonify([(s, p, o) for s, p, o in g])
+
+@app.route('/test-auth')
+def test_auth():
+    user = auth.get_user_by_email('jovan@teacher.com')
+    print(user)
+    return 'done'
