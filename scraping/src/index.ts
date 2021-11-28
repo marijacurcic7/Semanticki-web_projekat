@@ -27,27 +27,39 @@ async function getValue(elem: puppeteer.ElementHandle<Element>, property: string
   return await (await elem.getProperty(property))?.jsonValue() as string | undefined
 }
 
-async function chooseProgram(program: puppeteer.ElementHandle<Element>) {
-  const programUrl = await getValue(program, 'href')
-  const programName = await getValue(program)
-  if (!programUrl) return console.error('program url not found.')
-  console.log(programName)
-  await page.goto(programUrl)
+async function initProgramsArray(programs: puppeteer.ElementHandle<Element>[]) {
+  for (const program of programs) {
+    const url = await getValue(program, 'href')
+    const naziv = await getValue(program)
+    if (!url || !naziv) return console.error('missing url or name for the program')
+
+    const studijskiProgram = new StudijskiProgram()
+    studijskiProgram.url = url
+    studijskiProgram.naziv = naziv
+
+    studijskiProgrami.push(studijskiProgram)
+  }
+}
+
+async function chooseProgram(program: StudijskiProgram) {
+  await page.goto(program.url)
   await navigationPromise
 }
 
-async function chooseAllProgrammes() {
+async function chooseAllPrograms() {
   // osnovne akademske studije
   await page.waitForSelector('#affix-osnovne > .panel-body')
   const osnovneAkademskeStudije = await page.$$('#affix-osnovne > .panel-body > a')
-  for(const program of osnovneAkademskeStudije) {
-    console.log(await getValue(program))
+  await initProgramsArray(osnovneAkademskeStudije)
+
+  for (const program of studijskiProgrami) {
+    await chooseProgram(program)
   }
   await navigationPromise
 }
 
 (async () => {
   await init()
-  await chooseAllProgrammes()
+  await chooseAllPrograms()
   await terminate()
 })();
