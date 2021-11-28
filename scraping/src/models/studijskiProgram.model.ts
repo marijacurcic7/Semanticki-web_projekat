@@ -9,6 +9,7 @@ export class StudijskiProgram {
   espb: number;
   rukovodilac: Person;
   predmeti: Predmet[];
+  url: string;
   id?: string;
 }
 
