@@ -10,7 +10,7 @@ export class StudijskiProgram {
   brojSemestara: number;
   espb: number;
   rukovodilac: Person;
-  predmeti: Predmet[];
+  predmeti: Predmet[] = [];
   id?: string;
 
   constructor(naziv: string, url: string) {

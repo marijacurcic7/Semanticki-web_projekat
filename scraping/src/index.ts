@@ -10,7 +10,7 @@ let studijskiProgrami: StudijskiProgram[] = []
 
 async function init() {
   browser = await puppeteer.launch()
-  // browser = await puppeteer.launch({ headless: false, slowMo: 30 }) // za testiranje
+  browser = await puppeteer.launch({ headless: false, slowMo: 30 }) // za testiranje
   page = await browser.newPage()
   navigationPromise = page.waitForNavigation()
   await page.setViewport({ width: 1280, height: 1275 })
@@ -75,9 +75,103 @@ async function setCourseData(course: Predmet) {
   // TODO: popuniti sve za predmet
 }
 
-async function getAllCourses(program: StudijskiProgram) {
-  // TODO: dobaviti sve kurseve
+async function getGodinaAndSemestar(row: puppeteer.ElementHandle<Element>) {
+  let godina: number | undefined;
+  let semestar: 'zimski' | 'letnji' | undefined;
+  const matches = (await getValue(row)).match(/Godina:.(\d), Semestar:.(.*)/)
+
+  if (matches) {
+    const [_, g, s] = matches
+    godina = parseInt(g)
+    if (s.toLowerCase() === 'zimski') semestar = 'zimski'
+    else if (s.toLowerCase() === 'letnji') semestar = 'letnji'
+    else throw new Error('semestar is not zimski nor letnji.')
+    return { godina, semestar }
+  }
+  else {
+    throw new Error('problem getting godina & semestar')
+  }
 }
+
+async function getIzborniPredmeti(izborni: Predmet, godina: number | undefined, semestar: 'zimski' | 'letnji' | undefined) {
+  // open modal dialog
+  await page.waitForSelector(`#${izborni.id}`);
+  await page.click(`#${izborni.id}`)
+
+  await page.waitForSelector('#modalDialog  tbody')
+  const izborniRows = await page.$$('#modalDialog tbody > tr > td:nth-child(1) > a')
+
+  const izborniPredmeti: Predmet[] = []
+  for (const izborniRow of izborniRows) {
+    const naziv = await getValue(izborniRow)
+    const url = await getValue(izborniRow, 'href')
+    if (!godina || !semestar || !naziv || !url) throw new Error('missing fields.')
+    izborniPredmeti.push(new Predmet(godina, semestar, naziv, url))
+  }
+  return izborniPredmeti
+}
+async function getAllIzborniPredmeti(izborniPredmeti: Predmet[]) {
+  const newIzborniPredmeti: Predmet[] = []
+  for (const izborni of izborniPredmeti) {
+    await page.reload()
+    await navigationPromise
+    const ret = await getIzborniPredmeti(izborni, izborni.godina, izborni.semestar)
+    newIzborniPredmeti.push(...ret)
+  }
+  return newIzborniPredmeti
+}
+
+async function getAllCourses(program: StudijskiProgram) {
+  await page.goto(program.url)
+  await navigationPromise
+  await page.waitForSelector('#planTable > tbody > tr > td:nth-child(1)')
+  const rows = await page.$$('#planTable > tbody > tr > td:nth-child(1)')
+
+  let godina: number | undefined;
+  let semestar: 'zimski' | 'letnji' | undefined;
+
+  const _izborniPredmeti: Predmet[] = []
+
+  for (const row of rows) {
+    // check if a row is godina+semestar
+    if ((await getValue(row)).match(/Godina:.(\d), Semestar:.(.*)/)) {
+      const ret = await getGodinaAndSemestar(row)
+      godina = ret.godina
+      semestar = ret.semestar
+    }
+    // otherwise a row is a course
+    else {
+      // check if row iz 'izborna pozicija or izborni jezik'
+      if ((await getValue(row)).toLowerCase().match(/izborn/)) {
+        const izborniElem = await row.$('a')
+        if (!izborniElem) throw new Error('izborni element not found')
+        const izborniElemId = await getValue(izborniElem, 'id')
+        if (!godina || !semestar) return console.error('missing fields.')
+        const predmet = new Predmet(godina, semestar)
+        predmet.id = izborniElemId
+        _izborniPredmeti.push(predmet)
+      }
+      // if row is actually a course
+      else {
+        const courseElem = await row.$('a')
+        if (!courseElem) return console.error('course element not found.')
+
+        const naziv = await getValue(courseElem)
+        const url = await getValue(courseElem, 'href')
+
+        if (!godina || !semestar || !naziv || !url) return console.error('missing fields.')
+        const predmet = new Predmet(godina, semestar, naziv, url)
+        program.predmeti.push(predmet)
+      }
+    }
+  }
+
+  // dodaj izborne predmete u program
+  const izborniPredmeti = await getAllIzborniPredmeti(_izborniPredmeti)
+  program.predmeti = [...program.predmeti, ...izborniPredmeti]
+}
+
+
 
 async function test(program: puppeteer.ElementHandle<Element>) {
   const url = await getValue(program, 'href')
@@ -85,7 +179,7 @@ async function test(program: puppeteer.ElementHandle<Element>) {
   if (!url || !naziv) return console.error('missing url or name for the program')
 
   const studijskiProgram = new StudijskiProgram(naziv, url)
-  await setProgramData(studijskiProgram)
+  // await setProgramData(studijskiProgram)
   await getAllCourses(studijskiProgram)
   console.log(studijskiProgram.predmeti)
 }

@@ -1,8 +1,9 @@
 export class Predmet {
+  naziv: string;
+  url: string;
   godina: number;
   semestar: 'zimski' | 'letnji';
   espb: number;
-  naziv: string;
   kategorija: string;
   naucnaOblast: string;
   osnovneInformacije: string;
@@ -14,6 +15,13 @@ export class Predmet {
   formiranjeOcene: FormiranjeOcene[];
   izvodjaciNastave: IzvodjacNastave[];
   id?: string
+
+  constructor(godina: number, semestar: 'zimski' | 'letnji', naziv?: string, url?: string,) {
+    this.godina = godina;
+    this.semestar = semestar;
+    naziv ? this.naziv = naziv : undefined;
+    url ? this.url = url : undefined;
+  }
 }
 
 interface Knjiga {
