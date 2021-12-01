@@ -3,17 +3,17 @@ export class Predmet {
   url: string;
   godina: number;
   semestar: 'zimski' | 'letnji';
-  espb: number;
   kategorija: string;
   naucnaOblast: string;
+  espb: number;
   osnovneInformacije: string;
   cilj: string;
   ishod: string;
   sadrzaj: string;
   metodologijaIzvodjenjaNastave: string;
-  literatura: Knjiga[];
-  formiranjeOcene: FormiranjeOcene[];
-  izvodjaciNastave: IzvodjacNastave[];
+  literatura: Knjiga[] = [];
+  formiranjeOcene: FormiranjeOcene[] = [];
+  izvodjaciNastave: IzvodjacNastave[] = [];
   id?: string
 
   constructor(godina: number, semestar: 'zimski' | 'letnji', naziv?: string, url?: string,) {
@@ -34,8 +34,8 @@ interface Knjiga {
 
 interface FormiranjeOcene {
   predmetnaAktivnost: string;
-  predispitna: string;
-  obavezna: string;
+  predispitna: boolean;
+  obavezna: boolean;
   brojPoena: number;
 }
 

@@ -10,7 +10,7 @@ let studijskiProgrami: StudijskiProgram[] = []
 
 async function init() {
   browser = await puppeteer.launch()
-  browser = await puppeteer.launch({ headless: false, slowMo: 30 }) // za testiranje
+  // browser = await puppeteer.launch({ headless: false, slowMo: 50 }) // za testiranje
   page = await browser.newPage()
   navigationPromise = page.waitForNavigation()
   await page.setViewport({ width: 1280, height: 1275 })
@@ -71,9 +71,6 @@ async function setProgramData(program: StudijskiProgram) {
   program.espb = espb
 }
 
-async function setCourseData(course: Predmet) {
-  // TODO: popuniti sve za predmet
-}
 
 async function getGodinaAndSemestar(row: puppeteer.ElementHandle<Element>) {
   let godina: number | undefined;
@@ -173,15 +170,108 @@ async function getAllCourses(program: StudijskiProgram) {
 
 
 
+async function setCourseData(course: Predmet) {
+  // TODO: popuniti sve za predmet
+  await page.waitForSelector('.col-xs-12 > .table-fixer > tbody > tr')
+  const kategorija = await page.$('.col-xs-12 > .table-fixer > tbody > tr:nth-child(1)')
+  const naucnaOblast = await page.$('.col-xs-12 > .table-fixer > tbody > tr:nth-child(2)')
+  const espb = await page.$('.col-xs-12 > .table-fixer > tbody > tr:nth-child(4)')
+  if (!kategorija || !naucnaOblast || !espb) throw new Error('missing kategorija or naucnaOblast or espb')
+  course.kategorija = await getValue(kategorija)
+  course.naucnaOblast = await getValue(naucnaOblast)
+  course.espb = parseInt(await getValue(espb))
+
+  await page.waitForSelector('#ppTabs .tab-content > .tab-pane')
+  const tabs = await page.$$('#ppTabs .tab-content > .tab-pane')
+  course.osnovneInformacije = await getValue(tabs[0])
+  course.cilj = await getValue(tabs[1])
+  course.ishod = await getValue(tabs[2])
+  course.sadrzaj = await getValue(tabs[3])
+  course.metodologijaIzvodjenjaNastave = await getValue(tabs[4])
+
+  // literatura
+  const knjigaElems = await tabs[5].$$('tbody > tr')
+  for (const knjigaElem of knjigaElems) {
+    const autoriElem = await knjigaElem.$('td:nth-child(1)')
+    if (!autoriElem) throw new Error('autori knjige not found')
+    const autori = await getValue(autoriElem)
+
+    const nazivElem = await knjigaElem.$('td:nth-child(2)')
+    if (!nazivElem) throw new Error('naziv knjige not found.')
+    const naziv = await getValue(nazivElem)
+
+    const godinaElem = await knjigaElem.$('td:nth-child(3)')
+    if (!godinaElem) throw new Error('godina knjige not found.')
+    const godina = parseInt(await getValue(godinaElem))
+
+    const izdavacElem = await knjigaElem.$('td:nth-child(4)')
+    if (!izdavacElem) throw new Error('izdavac knjige not found.')
+    const izdavac = await getValue(izdavacElem)
+
+    const jezikElem = await knjigaElem.$('td:nth-child(5)')
+    if (!jezikElem) throw new Error('jezik knjige not found.')
+    const jezik = await getValue(jezikElem)
+
+    course.literatura.push({ autori, naziv, godina, izdavac, jezik })
+  }
+
+  // formiranje ocene
+  const formiranjeOceneElements = await tabs[6].$$('tbody > tr')
+  for (const formiranjeOceneElem of formiranjeOceneElements) {
+    const predmetnaAktivnostElem = await formiranjeOceneElem.$('td:nth-child(1)')
+    if (!predmetnaAktivnostElem) throw new Error('predmetna aktivnost not found.')
+    const predmetnaAktivnost = await getValue(predmetnaAktivnostElem)
+
+    const predispitnaElem = await formiranjeOceneElem.$('td:nth-child(2)')
+    if (!predispitnaElem) throw new Error('predispitna not found.')
+    const predispitna = await getValue(predispitnaElem) === 'da'
+
+    const obaveznaElem = await formiranjeOceneElem.$('td:nth-child(3)')
+    if (!obaveznaElem) throw new Error('obavezna not found.')
+    const obavezna = await getValue(obaveznaElem) === 'da'
+
+    const brojPoenaElem = await formiranjeOceneElem.$('td:nth-child(4)')
+    if (!brojPoenaElem) throw new Error('brojPoena not found.')
+    const brojPoena = parseInt(await getValue(brojPoenaElem))
+
+    course.formiranjeOcene.push({ predmetnaAktivnost, predispitna, obavezna, brojPoena })
+  }
+
+  // izvodjaci nastave
+  const izvodjaciNastaveElements = await tabs[7].$$('tbody > tr')
+  for (const izvodjacElem of izvodjaciNastaveElements) {
+    const punoImeElem = await izvodjacElem.$('td:nth-child(2) > h4 > a')
+    if (!punoImeElem) throw new Error('punoIme not found.')
+    const punoIme = (await getValue(punoImeElem, 'innerText')).replace(/\s\s+/g, ' ').trim()
+
+    const zvanjeElem = await izvodjacElem.$('td:nth-child(2) > h4 > small')
+    if (!zvanjeElem) throw new Error('zvanje not found.')
+    const zvanje = await getValue(zvanjeElem)
+
+    const vidNastaveElem = await izvodjacElem.$('td:nth-child(3)')
+    if (!vidNastaveElem) throw new Error('vidNastave not found.')
+    const vidNastave = await getValue(vidNastaveElem)
+
+    course.izvodjaciNastave.push({punoIme, zvanje, vidNastave})
+  }
+}
+
+
+
 async function test(program: puppeteer.ElementHandle<Element>) {
   const url = await getValue(program, 'href')
   const naziv = await getValue(program)
   if (!url || !naziv) return console.error('missing url or name for the program')
 
   const studijskiProgram = new StudijskiProgram(naziv, url)
-  // await setProgramData(studijskiProgram)
-  await getAllCourses(studijskiProgram)
-  console.log(studijskiProgram.predmeti)
+  await setProgramData(studijskiProgram)
+  // await getAllCourses(studijskiProgram)
+  // console.log(studijskiProgram.predmeti)
+  const tempUrl = 'http://www.ftn.uns.ac.rs/n1095546779/osnove-programiranja'
+  await page.goto(tempUrl)
+  await navigationPromise
+  await setCourseData(new Predmet(1, 'zimski', 'Osnove programiranja', tempUrl))
+
 }
 
 async function getAllPrograms() {
