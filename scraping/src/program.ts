@@ -17,7 +17,7 @@ async function getAllPrograms(page: Page, navigationPromise: Promise<HTTPRespons
   for (const program of studijskiProgrami) {
     await setProgramData(program, page, navigationPromise)
   }
-  
+
   await navigationPromise
   return studijskiProgrami
 }
@@ -52,27 +52,27 @@ async function setProgramData(program: StudijskiProgram, page: Page, navigationP
 
   // set fields on studijski program
   const nivoStudija = await programInfos[0].$('a')
-  if (!nivoStudija) return console.error(`nivo studija not found for ${program.naziv}.`)
+  if (!nivoStudija) throw new Error(`nivo studija not found for ${program.naziv}.`)
   program.nivoStudija = await getValue(nivoStudija)
 
   let zvanje = await programInfos[1].$('a')
-  if (!zvanje) return console.error(`zvanje not found for ${program.naziv}.`)
+  if (!zvanje) throw new Error(`zvanje not found for ${program.naziv}.`)
   program.zvanje = await getValue(zvanje)
 
   const obrazovnoPolje = programInfos[2]
-  if (!obrazovnoPolje) return console.error(`obrazovnoPolje not found for ${program.naziv}.`)
+  if (!obrazovnoPolje) throw new Error(`obrazovnoPolje not found for ${program.naziv}.`)
   program.obrazovnoPolje = (await getValue(obrazovnoPolje)).split('\n')[1]
 
   const naucnoStrucneOblasti = (await getValue(programInfos[3])).split('\n')[1]
-  if (!naucnoStrucneOblasti) return console.error(`naucnoStrucneOblasti not found for ${program.naziv}.`)
+  if (!naucnoStrucneOblasti) throw new Error(`naucnoStrucneOblasti not found for ${program.naziv}.`)
   program.naucnoStrucneOblasti = naucnoStrucneOblasti
 
   const brojSemestara = parseInt((await getValue(programInfos[4])).split('\n')[1].split('\/')[1])
-  if (!brojSemestara) return console.error(`brojSemestara not found for ${program.naziv}.`)
+  if (!brojSemestara) throw new Error(`brojSemestara not found for ${program.naziv}.`)
   program.brojSemestara = brojSemestara
 
   const espb = parseInt((await getValue(programInfos[5])).split('\n')[1])
-  if (!espb) return console.error(`espb not found for ${program.naziv}.`)
+  if (!espb) throw new Error(`espb not found for ${program.naziv}.`)
   program.espb = espb
 
 }
@@ -89,4 +89,4 @@ async function getValue(elem: ElementHandle<Element>, property: string = 'innerT
   else return retValue
 }
 
-export {getAllPrograms, setProgramData}
+export { getAllPrograms, setProgramData }

@@ -5,7 +5,7 @@ from os import environ
 
 environ['FIRESTORE_EMULATOR_HOST'] = 'localhost:8080'
 environ['FIREBASE_AUTH_EMULATOR_HOST'] = 'localhost:8083'
-environ['GOOGLE_APPLICATION_CREDENTIALS'] = './serviceAccountKey.json'
+environ['GOOGLE_APPLICATION_CREDENTIALS'] = '../../serviceAccountKey.json'
 environ['FLASK_ENV'] = 'development'
 
 cred = credentials.ApplicationDefault()

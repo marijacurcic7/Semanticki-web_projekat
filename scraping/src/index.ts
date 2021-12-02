@@ -1,5 +1,6 @@
 import * as puppeteer from 'puppeteer' // launch works only with this?
 import { getAllCourses, setCourseData } from './course';
+import { initializeDatabaseConnection, saveProgram, testDatabaseConnection } from './dataToFirestore';
 import { StudijskiProgram } from './models/studijskiProgram.model';
 import { getAllPrograms, setProgramData } from './program';
 
@@ -29,8 +30,8 @@ async function scrapeAllPrograms() {
     // set course data
     for (const course of courses) await setCourseData(course, page, navigationPromise)
   }
-
 }
+
 async function scrapeOneProgram() {
   // samo softversko inzenjerstvo
   const studijskiProgram = new StudijskiProgram(
@@ -40,12 +41,25 @@ async function scrapeOneProgram() {
   await setProgramData(studijskiProgram, page, navigationPromise)
   const courses = await getAllCourses(studijskiProgram, page, navigationPromise)
   for (const course of courses) await setCourseData(course, page, navigationPromise)
+  studijskiProgram.predmeti = courses
 
-  // TODO: UPISATI U BAZU
+  return studijskiProgram
+}
+
+/**
+ * Save program to firestore database
+ * @param program a given program
+ */
+async function save(program: StudijskiProgram) {
+  await initializeDatabaseConnection()
+  await saveProgram(program)
 }
 
 (async () => {
   await init()
-  await scrapeOneProgram()
+  const program = await scrapeOneProgram()
   await terminate()
+  console.log('scraping done')
+  await save(program)
+  console.log('writting to firestore done')
 })();
