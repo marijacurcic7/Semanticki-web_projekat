@@ -164,7 +164,6 @@ async function setCourseData(course: Predmet, page: Page, navigationPromise: Pro
   if (!kategorija || !naucnaOblast || !espb) throw new Error('missing kategorija or naucnaOblast or espb')
   course.kategorija = await getValue(kategorija)
   course.naucnaOblast = await getValue(naucnaOblast)
-  console.log((await getValue(espb)).split(''), '--------------------')
   course.espb = parseInt((await getValue(espb)).trim())
 
   await page.waitForSelector('#ppTabs .tab-content > .tab-pane')

@@ -89,4 +89,4 @@ async function getValue(elem: ElementHandle<Element>, property: string = 'innerT
   else return retValue
 }
 
-export {getAllPrograms}
+export {getAllPrograms, setProgramData}
