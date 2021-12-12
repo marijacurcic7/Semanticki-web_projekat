@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff05df01-42cd-4454-99e3-3dccba8d1104" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/rdf.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rdf.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="ff05df01-42cd-4454-99e3-3dccba8d1104" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,8 +126,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1989425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
