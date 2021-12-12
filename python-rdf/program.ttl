@@ -1,0 +1,14 @@
+@prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix myns: <http://myNamespace.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.ftn.uns.ac.rs/875535517/softversko-inzenjerstvo-i-informacione-tehnologije?period=z> a aiiso:Programme ;
+    myns:brojSemestara 8 ;
+    myns:espb 240 ;
+    myns:nivoStudija "Osnovne akademske studije" ;
+    myns:oblasti "Elektrotehničko i računarsko inženjerstvo" ;
+    myns:obrazovnoPolje "Tehničko-tehnološke nauke" ;
+    aiiso:Module "softversko inzenjerstvo i informacione tehnologije" ;
+    foaf:title "Diplomirani inženjer softvera (Dipl.inž.softv.)" .
+
