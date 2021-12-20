@@ -4,10 +4,5 @@
 
 <http://www.ftn.uns.ac.rs/875535517/softversko-inzenjerstvo-i-informacione-tehnologije?period=z> a aiiso:Programme ;
     aiiso:Module "softversko inzenjerstvo i informacione tehnologije" ;
-    uni:Domain "Elektrotehničko i računarsko inženjerstvo" ;
-    uni:ESPB 240 ;
-    uni:Field "Tehničko-tehnološke nauke" ;
-    uni:LevelOfStudy "Osnovne akademske studije" ;
-    uni:Semesters 8 ;
-    uni:Title "Diplomirani inženjer softvera (Dipl.inž.softv.)" .
+    uni:ESPB 240 .
 

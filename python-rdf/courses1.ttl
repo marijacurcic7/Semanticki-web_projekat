@@ -1,126 +1,136 @@
 @prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix myns: <http://myNamespace.org/> .
+@prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.ftn.uns.ac.rs/n1108388269/softverski-obrasci-i-komponente> a aiiso:Course ;
-    myns:cilj "Ovladavanje osnovnim teorijskim znanjima, tehnikama, alatima i preporučenom praksom iz oblasti softverskih obrazaca (Software Patterns) i razvoja softvera baziranog na komponentama (Component-Based Development – CBD). Osposobljavanje studenata za uočavanje obrazaca u kontekstu razvoja složenih softverskih proizvoda kao i definisanje arhitekture sistema bazirane na softverskim komponentama." ;
-    myns:espb 5 ;
-    myns:formiranjeOcene [ myns:ocenjivanje [ myns:brojPoena 50 ;
-                    myns:obavezna true ;
-                    myns:predispitna false ;
-                    myns:predmetnaAktivnost "Teorijski deo ispita" ],
-                [ myns:brojPoena 50 ;
-                    myns:obavezna true ;
-                    myns:predispitna true ;
-                    myns:predmetnaAktivnost "Odbrana projekta" ] ] ;
-    myns:godina 3 ;
-    myns:ishod "Po okončanju predmeta studenti su sposobni da, u razvoju složenih softverskih aplikacija, uoče i primene softverske obrasce kao i da razumeju prednosti i mane primene preporučenih softverskih obrazaca. Takođe su osposobljeni da za konkretan zadatak izaberu i primene najpogodniju platformu za komponentno baziran razvoj, modeluju arhitekturu, dekomponuju sistem na potreban broj softverskih komponenti, definišu interfejse komponenti i izvrše implementaciju sistema." ;
-    myns:literatura [ dc:source [ dc:creator "E.Gamma, R.Helm, R.johnson, J. Vlaisides" ;
-                    dc:date 2005 ;
-                    dc:language "Engleski" ;
-                    dc:publisher "Addison-Wesley" ;
-                    dc:title "Design Patterns Elements of Reusable Object-Oriented Software" ],
-                [ dc:creator "Szyperski, C. " ;
-                    dc:date 2002 ;
-                    dc:language "Engleski" ;
-                    dc:publisher "Addison-Wesley Longman Publishing Co., Inc. " ;
-                    dc:title "Component Software: Beyond Object-Oriented Programming " ],
-                [ dc:creator "Richards, M." ;
-                    dc:date 2015 ;
-                    dc:language "Engleski" ;
-                    dc:publisher "O’Reilly Media, Inc." ;
-                    dc:title "Software Architecture Patterns" ],
-                [ dc:creator "Richards, M." ;
-                    dc:date 2016 ;
-                    dc:language "Engleski" ;
-                    dc:publisher "O Reilly" ;
-                    dc:title "Microservices AntiPatterns and Pitfalls" ],
-                [ dc:creator "Grand, M. " ;
-                    dc:date 2002 ;
-                    dc:language "Engleski" ;
-                    dc:publisher "John Wiley & Sons, Inc. " ;
-                    dc:title "Patterns in Java: A Catalog of Reusable Design Patterns Illustrated with UML " ],
-                [ dc:creator "Eisele, M." ;
-                    dc:date 2016 ;
-                    dc:language "Engleski" ;
-                    dc:publisher "O`Reilly" ;
-                    dc:title "Modern Java EE Design Patterns" ] ] ;
-    myns:metodologija "Predavanja; Računarske vežbe; Konsultacije. Rešavanje projektnog zadatka kroz rad u okviru projektnih timova. Poslednjih nedelja semestra organizuju se javne prezentacije projektnih zadataka najuspešnijih timova i diskutuju se postignuti rezultati. Odbrana projekta je usmena. Završni ispit je usmeni. Ocena ispita se formira na osnovu uspeha sa odbrane projektnog zadatka i završnog usmenog ispita." ;
-    myns:semestar "zimski" ;
     dc:date "2007-10-01"^^xsd:date ;
     dc:description "Teorijska nastava: Osnovne definicije i istorijat razvoja softverskih obrazaca. Kategorije softverskih obrazaca; Dizajn obrasci; Arhitektonski obrasci. Pregled popularnih obrazaca. Prednosti i mane. Katalozi softverskih obrazaca. Antiobrasci (Anti-Patterns);osnovne osobine; pregled karakterističnih antiobrazaca. Komponentno bazirani razvoj; osnovne definicije; istorijat. Pregled postojećih komponentnih modela. Prednosti i mane. Modelovanje arhitekture aplikacija baziranih na komponentama. Tržišta softverskih komponenti. Praktična nastava: obuka za korišćenje modernih alata za izradu softvera baziranog na komponentama; implementacija projektnog zadatka upotrebom savremenih alata i okvira za razvoj baziran na komponentama uz akcenat na pravilnu primenu softverskih obrazaca." ;
     dc:subject "Primenjene računarske nauke i informatika" ;
     dc:title "Softverski obrasci i komponente" ;
     dc:type "Stručno-aplikativni" ;
-    aiiso:Teaches [ foaf:Person [ myns:vidNastave "Računarske vežbe" ;
-                    foaf:name "Šarenac Balša" ;
-                    foaf:title "Asistent-master" ],
-                [ myns:vidNastave "Predavanja" ;
-                    foaf:name "Dejanović dr Igor" ;
-                    foaf:title "Vanredni profesor" ],
-                [ myns:vidNastave "Računarske vežbe" ;
-                    foaf:name "Kovačević Ivana" ;
-                    foaf:title "Asistent-master" ],
-                [ myns:vidNastave "Računarske vežbe" ;
-                    foaf:name "Popov Jelena" ;
-                    foaf:title "Saradnik u nastavi" ] ] .
-
-[] dc:source [ dc:creator "Goodfellow, I., Bengio, Y., Courville, A." ;
-            dc:date 2017 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "MIT Press, Cambridge" ;
-            dc:title "Deep Learning" ],
-        [ dc:creator "Awad, M., Khanna, R." ;
+    uni:CourseESPB 5 ;
+    uni:Evaluation [ uni:Activity "Teorijski deo ispita" ;
+            uni:Points 50 ;
+            uni:PreExamination false ;
+            uni:Required true ],
+        [ uni:Activity "Odbrana projekta" ;
+            uni:Points 50 ;
+            uni:PreExamination true ;
+            uni:Required true ] ;
+    uni:Literature [ dc:creator "Eisele, M." ;
+            dc:date 2016 ;
+            dc:language "Engleski" ;
+            dc:publisher "O`Reilly" ;
+            dc:title "Modern Java EE Design Patterns" ],
+        [ dc:creator "E.Gamma, R.Helm, R.johnson, J. Vlaisides" ;
+            dc:date 2005 ;
+            dc:language "Engleski" ;
+            dc:publisher "Addison-Wesley" ;
+            dc:title "Design Patterns Elements of Reusable Object-Oriented Software" ],
+        [ dc:creator "Grand, M. " ;
+            dc:date 2002 ;
+            dc:language "Engleski" ;
+            dc:publisher "John Wiley & Sons, Inc. " ;
+            dc:title "Patterns in Java: A Catalog of Reusable Design Patterns Illustrated with UML " ],
+        [ dc:creator "Richards, M." ;
+            dc:date 2016 ;
+            dc:language "Engleski" ;
+            dc:publisher "O Reilly" ;
+            dc:title "Microservices AntiPatterns and Pitfalls" ],
+        [ dc:creator "Szyperski, C. " ;
+            dc:date 2002 ;
+            dc:language "Engleski" ;
+            dc:publisher "Addison-Wesley Longman Publishing Co., Inc. " ;
+            dc:title "Component Software: Beyond Object-Oriented Programming " ],
+        [ dc:creator "Richards, M." ;
             dc:date 2015 ;
             dc:language "Engleski" ;
-            dc:publisher "Apress Media" ;
-            dc:title "Efficient Learning Machines" ],
-        [ dc:creator "Hastie, T., Tibshirani, R., Friedman, J." ;
-            dc:date 2017 ;
-            dc:language "Engleski" ;
-            dc:publisher "Springer, New York" ;
-            dc:title "The Elements of Statistical Learning : Data Mining, Inference, and Prediction" ],
-        [ dc:creator "BISHOP, Christopher M." ;
-            dc:date 2006 ;
-            dc:language "Engleski" ;
-            dc:publisher "Springer, New York" ;
-            dc:title "Pattern Recognition and Machine Learning" ],
-        [ dc:creator "Ian Witten, Eibe Frank, Mark Hall, Christopher Pal" ;
-            dc:date 2017 ;
-            dc:language "Engleski" ;
-            dc:publisher "Morgan Kaufmann" ;
-            dc:title "Data Mining, 4th Edition" ],
-        [ dc:creator "S. Shalev-Schwartz, S. Ben-David" ;
-            dc:date 2014 ;
-            dc:language "Engleski" ;
-            dc:publisher "U elektronskom izdanju: https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" ;
-            dc:title "Understanding Machine Learning: From Theory to Algorithms" ] .
-
-[] foaf:Person [ myns:vidNastave "Računarske vežbe" ;
-            foaf:name "Vidaković Dragan" ;
-            foaf:title "Asistent-master" ],
-        [ myns:vidNastave "Računarske vežbe" ;
-            foaf:name "Grujić Katarina Glorija" ;
-            foaf:title "Asistent-master" ],
-        [ myns:vidNastave "Predavanja" ;
-            foaf:name "Kovačević dr Aleksandar" ;
+            dc:publisher "O’Reilly Media, Inc." ;
+            dc:title "Software Architecture Patterns" ] ;
+    uni:Methodology "Predavanja; Računarske vežbe; Konsultacije. Rešavanje projektnog zadatka kroz rad u okviru projektnih timova. Poslednjih nedelja semestra organizuju se javne prezentacije projektnih zadataka najuspešnijih timova i diskutuju se postignuti rezultati. Odbrana projekta je usmena. Završni ispit je usmeni. Ocena ispita se formira na osnovu uspeha sa odbrane projektnog zadatka i završnog usmenog ispita." ;
+    uni:Purpose "Ovladavanje osnovnim teorijskim znanjima, tehnikama, alatima i preporučenom praksom iz oblasti softverskih obrazaca (Software Patterns) i razvoja softvera baziranog na komponentama (Component-Based Development – CBD). Osposobljavanje studenata za uočavanje obrazaca u kontekstu razvoja složenih softverskih proizvoda kao i definisanje arhitekture sistema bazirane na softverskim komponentama." ;
+    uni:Result "Po okončanju predmeta studenti su sposobni da, u razvoju složenih softverskih aplikacija, uoče i primene softverske obrasce kao i da razumeju prednosti i mane primene preporučenih softverskih obrazaca. Takođe su osposobljeni da za konkretan zadatak izaberu i primene najpogodniju platformu za komponentno baziran razvoj, modeluju arhitekturu, dekomponuju sistem na potreban broj softverskih komponenti, definišu interfejse komponenti i izvrše implementaciju sistema." ;
+    uni:Semester "zimski" ;
+    uni:Year 3 ;
+    foaf:Person [ uni:TypeOfTeaching "Računarske vežbe" ;
+            foaf:name "Popov Jelena" ;
+            foaf:title "Saradnik u nastavi" ],
+        [ uni:TypeOfTeaching "Predavanja" ;
+            foaf:name "Dejanović dr Igor" ;
             foaf:title "Vanredni profesor" ],
-        [ myns:vidNastave "Predavanja" ;
-            foaf:name "Slivka dr Jelena" ;
-            foaf:title "Vanredni profesor" ] .
+        [ uni:TypeOfTeaching "Računarske vežbe" ;
+            foaf:name "Kovačević Ivana" ;
+            foaf:title "Asistent-master" ],
+        [ uni:TypeOfTeaching "Računarske vežbe" ;
+            foaf:name "Šarenac Balša" ;
+            foaf:title "Asistent-master" ] .
 
-[] myns:ocenjivanje [ myns:brojPoena 35 ;
-            myns:obavezna true ;
-            myns:predispitna true ;
-            myns:predmetnaAktivnost "Složeni oblici vežbi" ],
-        [ myns:brojPoena 40 ;
-            myns:obavezna true ;
-            myns:predispitna false ;
-            myns:predmetnaAktivnost "Usmeni deo ispita" ],
-        [ myns:brojPoena 25 ;
-            myns:obavezna true ;
-            myns:predispitna true ;
-            myns:predmetnaAktivnost "Predmetni projekat" ] .
+[] uni:Activity "Usmeni deo ispita" ;
+    uni:Points 40 ;
+    uni:PreExamination false ;
+    uni:Required true .
+
+[] dc:creator "Ian Witten, Eibe Frank, Mark Hall, Christopher Pal" ;
+    dc:date 2017 ;
+    dc:language "Engleski" ;
+    dc:publisher "Morgan Kaufmann" ;
+    dc:title "Data Mining, 4th Edition" .
+
+[] uni:TypeOfTeaching "Predavanja" ;
+    foaf:name "Slivka dr Jelena" ;
+    foaf:title "Vanredni profesor" .
+
+[] dc:creator "Goodfellow, I., Bengio, Y., Courville, A." ;
+    dc:date 2017 ;
+    dc:language "Srpski jezik" ;
+    dc:publisher "MIT Press, Cambridge" ;
+    dc:title "Deep Learning" .
+
+[] uni:TypeOfTeaching "Računarske vežbe" ;
+    foaf:name "Vidaković Dragan" ;
+    foaf:title "Asistent-master" .
+
+[] dc:creator "Awad, M., Khanna, R." ;
+    dc:date 2015 ;
+    dc:language "Engleski" ;
+    dc:publisher "Apress Media" ;
+    dc:title "Efficient Learning Machines" .
+
+[] dc:creator "BISHOP, Christopher M." ;
+    dc:date 2006 ;
+    dc:language "Engleski" ;
+    dc:publisher "Springer, New York" ;
+    dc:title "Pattern Recognition and Machine Learning" .
+
+[] dc:creator "Hastie, T., Tibshirani, R., Friedman, J." ;
+    dc:date 2017 ;
+    dc:language "Engleski" ;
+    dc:publisher "Springer, New York" ;
+    dc:title "The Elements of Statistical Learning : Data Mining, Inference, and Prediction" .
+
+[] uni:Activity "Složeni oblici vežbi" ;
+    uni:Points 35 ;
+    uni:PreExamination true ;
+    uni:Required true .
+
+[] uni:TypeOfTeaching "Predavanja" ;
+    foaf:name "Kovačević dr Aleksandar" ;
+    foaf:title "Vanredni profesor" .
+
+[] dc:creator "S. Shalev-Schwartz, S. Ben-David" ;
+    dc:date 2014 ;
+    dc:language "Engleski" ;
+    dc:publisher "U elektronskom izdanju: https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" ;
+    dc:title "Understanding Machine Learning: From Theory to Algorithms" .
+
+[] uni:TypeOfTeaching "Računarske vežbe" ;
+    foaf:name "Grujić Katarina Glorija" ;
+    foaf:title "Asistent-master" .
+
+[] uni:Activity "Predmetni projekat" ;
+    uni:Points 25 ;
+    uni:PreExamination true ;
+    uni:Required true .
 
