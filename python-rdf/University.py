@@ -25,7 +25,7 @@ class University(DefinedNamespace):
     Result: URIRef
     Semester: URIRef
     Year: URIRef
-    CourseESPB: URIRef
+    # CourseESPB: URIRef
 
     TypeOfTeaching: URIRef
 

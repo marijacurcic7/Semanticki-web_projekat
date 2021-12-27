@@ -10,44 +10,44 @@
     dc:subject "Primenjene računarske nauke i informatika" ;
     dc:title "Mašinsko učenje" ;
     dc:type "Naučno-stručni" ;
-    uni:CourseESPB 6 ;
+    uni:ESPB 6 ;
     uni:Evaluation [ uni:Activity "Usmeni deo ispita" ;
             uni:Points 40 ;
             uni:PreExamination false ;
             uni:Required true ],
-        [ uni:Activity "Složeni oblici vežbi" ;
-            uni:Points 35 ;
-            uni:PreExamination true ;
-            uni:Required true ],
         [ uni:Activity "Predmetni projekat" ;
             uni:Points 25 ;
             uni:PreExamination true ;
+            uni:Required true ],
+        [ uni:Activity "Složeni oblici vežbi" ;
+            uni:Points 35 ;
+            uni:PreExamination true ;
             uni:Required true ] ;
-    uni:Literature [ dc:creator "Ian Witten, Eibe Frank, Mark Hall, Christopher Pal" ;
-            dc:date 2017 ;
+    uni:Literature [ dc:creator "BISHOP, Christopher M." ;
+            dc:date 2006 ;
             dc:language "Engleski" ;
-            dc:publisher "Morgan Kaufmann" ;
-            dc:title "Data Mining, 4th Edition" ],
+            dc:publisher "Springer, New York" ;
+            dc:title "Pattern Recognition and Machine Learning" ],
         [ dc:creator "Goodfellow, I., Bengio, Y., Courville, A." ;
             dc:date 2017 ;
             dc:language "Srpski jezik" ;
             dc:publisher "MIT Press, Cambridge" ;
             dc:title "Deep Learning" ],
-        [ dc:creator "Awad, M., Khanna, R." ;
-            dc:date 2015 ;
-            dc:language "Engleski" ;
-            dc:publisher "Apress Media" ;
-            dc:title "Efficient Learning Machines" ],
-        [ dc:creator "BISHOP, Christopher M." ;
-            dc:date 2006 ;
-            dc:language "Engleski" ;
-            dc:publisher "Springer, New York" ;
-            dc:title "Pattern Recognition and Machine Learning" ],
         [ dc:creator "Hastie, T., Tibshirani, R., Friedman, J." ;
             dc:date 2017 ;
             dc:language "Engleski" ;
             dc:publisher "Springer, New York" ;
             dc:title "The Elements of Statistical Learning : Data Mining, Inference, and Prediction" ],
+        [ dc:creator "Ian Witten, Eibe Frank, Mark Hall, Christopher Pal" ;
+            dc:date 2017 ;
+            dc:language "Engleski" ;
+            dc:publisher "Morgan Kaufmann" ;
+            dc:title "Data Mining, 4th Edition" ],
+        [ dc:creator "Awad, M., Khanna, R." ;
+            dc:date 2015 ;
+            dc:language "Engleski" ;
+            dc:publisher "Apress Media" ;
+            dc:title "Efficient Learning Machines" ],
         [ dc:creator "S. Shalev-Schwartz, S. Ben-David" ;
             dc:date 2014 ;
             dc:language "Engleski" ;
