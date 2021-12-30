@@ -1,0 +1,690 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/vocab/aiiso/schema#"
+     xml:base="http://purl.org/vocab/aiiso/schema"
+     xmlns:cc="http://web.resource.org/cc/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:aiiso="http://purl.org/vocab/aiiso/schema#"
+     xmlns:dctype="http://purl.org/dc/dcmitype/">
+    <owl:Ontology rdf:about="http://purl.org/vocab/aiiso/schema#">
+        <dc:contributor>Chris Wallace</dc:contributor>
+        <dc:contributor>Ian Corns</dc:contributor>
+        <dc:contributor>Sarah Bartlett</dc:contributor>
+        <dc:creator>Nadeem Shabir</dc:creator>
+        <dc:creator>Rob Styles</dc:creator>
+        <dc:date>2008-05-20</dc:date>
+        <dc:identifier>http://purl.org/vocab/aiiso/schema-20080925</dc:identifier>
+        <dc:rights>Copyright © 2008 Talis Information Ltd</dc:rights>
+        <dc:title xml:lang="en">Academic Institution Internal Structure Ontology (AIISO)</dc:title>
+        <dct:hasFormat rdf:resource="http://purl.org/vocab/aiiso/schema-20080925.html"/>
+        <dct:hasFormat rdf:resource="http://purl.org/vocab/aiiso/schema-20080925.rdf"/>
+        <dct:isVersionOf rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <dct:replaces rdf:resource="http://purl.org/vocab/aiiso/schema-20080520"/>
+        <vann:preferredNamespacePrefix>aiiso</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://purl.org/vocab/aiiso/schema#</vann:preferredNamespaceUri>
+        <vann:usageNote rdf:resource="file:/E:/Users/Marija/Desktop/usagenote.html"/>
+        <rdfs:comment xml:lang="en">
+			The Academic Institution Internal Structure Ontology (AIISO) provides classes and properties to describe the internal organizational structure of an academic institution. AIISO is designed to work in partnership with Participation (http://purl.org/vocab/participation/schema), FOAF (http://xmlns.com/foaf/0.1/) and aiiso-roles (http://purl.org/vocab/aiiso-roles/schema) to describe the roles that people play within an institution.
+    	</rdfs:comment>
+        <skos:historyNote></skos:historyNote>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/replaces -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/replaces"/>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/aiiso/schema#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Label"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="_:genid2147483663"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/usageNote -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/usageNote"/>
+    
+
+
+    <!-- http://web.resource.org/cc/license -->
+
+    <owl:AnnotationProperty rdf:about="http://web.resource.org/cc/license"/>
+    
+
+
+    <!-- http://web.resource.org/cc/permits -->
+
+    <owl:AnnotationProperty rdf:about="http://web.resource.org/cc/permits"/>
+    
+
+
+    <!-- http://web.resource.org/cc/requires -->
+
+    <owl:AnnotationProperty rdf:about="http://web.resource.org/cc/requires"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#Label"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#knowledgeGrouping -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#knowledgeGrouping">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A KnowledgeGrouping may be contained by another KnowledgeGrouping or an organizationalUnit using knowledgeGrouping.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">knowledgeGrouping</rdfs:label>
+        <vs:term_status>Deprecated</vs:term_status>
+        <skos:historyNote></skos:historyNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#organization -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#organization">
+        <owl:inverseOf rdf:resource="http://purl.org/vocab/aiiso/schema#part_of"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-09-25</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A foaf Organization may contain other subsidiary Organizations using organization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+        <skos:historyNote></skos:historyNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#organizationalUnit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#organizationalUnit">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#part_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#part_of">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-09-25</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A foaf Organization may refer to its parent Organizations using part_of.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">part of</rdfs:label>
+        <skos:historyNote></skos:historyNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#responsibilityOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#responsibilityOf">
+        <owl:inverseOf rdf:resource="http://purl.org/vocab/aiiso/schema#responsibleFor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/spec/Agent"/>
+        <dct:issued>2008-05-20</dct:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">responsibility of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#responsibleFor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#responsibleFor">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/spec/Agent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <dct:issued>2008-09-25</dct:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">responsible for</rdfs:label>
+        <skos:historyNote></skos:historyNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#teaches">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:range rdf:resource="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+        <dct:issued>2008-09-25</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organization may specify the Knowledge Groupings that it teaches using this property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">teaches</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#code -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/aiiso/schema#code">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The code used by an Institution to refer to a KnowledgeGrouping or Organization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">code</rdfs:label>
+        <skos:historyNote></skos:historyNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/aiiso/schema#description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Description of the KnowledgeGrouping or Organization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+        <skos:historyNote></skos:historyNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#name -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/aiiso/schema#name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Text -->
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Text"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/IMT -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/IMT"/>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Center -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Center">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Center is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a center.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#College -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#College">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A College is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a college.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">College</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Course -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Course">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Course is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a course.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Course</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Department -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Department">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Department is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a department.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Division -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Division">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Division is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a division.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Division</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Faculty -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Faculty">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Faculty is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a faculty.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Faculty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Institute -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Institute">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Institute is a group of people recognised by an organization as forming a cohesive group referred to by the organization as an institute.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Institute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Institution -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Institution">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Institution is the upper most level of an academic institution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Institution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#KnowledgeGrouping -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping">
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A KnowledgeGrouping represents a collection of resources, learning objectives, timetables, and other materials. The more specific subclasses of Subject, Programme, Course and Module are preferred.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">KnowledgeGrouping</rdfs:label>
+        <skos:historyNote></skos:historyNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Module -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Module">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Module is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a module.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Module</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Programme -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Programme">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Programme is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a programme.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Programme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#ResearchGroup -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#ResearchGroup">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Research Group is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a research group.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Research Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#School -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#School">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A School is a group of people recognised by an organization as forming a cohesive group referred to by the organization as a school. This class refers schools within a higher education institution such as &apos;Harvard Law School&apos; it does not refer to schools involved in earlier education.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">School</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#Subject -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#Subject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#KnowledgeGrouping"/>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Subject is a KnowledgeGrouping that represents a cohesive collection of educational material referred to by the owning organization as a subject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema#organizationalUnit -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/aiiso/schema#organizationalUnit"/>
+    
+
+
+    <!-- http://web.resource.org/cc/License -->
+
+    <owl:Class rdf:about="http://web.resource.org/cc/License"/>
+    
+
+
+    <!-- http://web.resource.org/cc/Work -->
+
+    <owl:Class rdf:about="http://web.resource.org/cc/Work"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/spec/Agent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/E:/Users/Marija/Desktop/schema-20080925.rdf -->
+
+    <owl:NamedIndividual rdf:about="file:/E:/Users/Marija/Desktop/schema-20080925.rdf">
+        <rdf:type rdf:resource="http://web.resource.org/cc/Work"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/2.0/uk/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://creativecommons.org/licenses/by/2.0/uk/ -->
+
+    <owl:NamedIndividual rdf:about="http://creativecommons.org/licenses/by/2.0/uk/">
+        <rdf:type rdf:resource="http://web.resource.org/cc/License"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+        <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema-20080925.html -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/vocab/aiiso/schema-20080925.html">
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+        <dc:format>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/dc/terms/IMT"/>
+                <rdf:value>text/html</rdf:value>
+                <rdfs:label xml:lang="en">HTML</rdfs:label>
+            </rdf:Description>
+        </dc:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/vocab/aiiso/schema-20080925.rdf -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/vocab/aiiso/schema-20080925.rdf">
+        <rdf:type rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+        <dc:format>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/dc/terms/IMT"/>
+                <rdf:value>application/rdf+xml</rdf:value>
+                <rdfs:label xml:lang="en">RDF</rdfs:label>
+            </rdf:Description>
+        </dc:format>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#name">
+        <vs:term_status>Deprecated</vs:term_status>
+        <skos:historyNote></skos:historyNote>
+        <dct:issued>2008-05-14</dct:issued>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deprecated in favour of foaf:name. The name given to a KnowledgeGrouping or Organization.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/vocab/aiiso/schema#organizationalUnit">
+        <rdfs:label xml:lang="en">organizational Unit</rdfs:label>
+        <dct:issued>2008-05-14</dct:issued>
+        <skos:historyNote></skos:historyNote>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deprecated due to poor naming, you should use organization and part_of instead. An organizationalUnit may contain other organizationalUnits using organizationalUnit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
+        <rdfs:label xml:lang="en">organizationalUnit</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organizationalUnit is now deprecated, it was used to describe a group of people that form a part of an organizations institutional hierarchy. More specific classes of Institution, Department, Faculty, School, College, Center, Division and Institute exist were previously subclassed from here. They now subclass foaf:Organization.</rdfs:comment>
+        <vs:term_status>Deprecated</vs:term_status>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

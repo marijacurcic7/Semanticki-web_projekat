@@ -1,73 +1,33 @@
 @prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.ftn.uns.ac.rs/1385388292/masinsko-ucenje> a aiiso:Course ;
-    dc:date "2012-11-16"^^xsd:date ;
-    dc:description "(1) Nadgledano obučavanje:  Linearna regresija (jednostruka i višestruka regresija, metod gradijentnog spusta i njegove varijante, analitičko rešenje u zatvorenoj formi, uticaj outlier-a); Neparametarski pristup (metod k najbližih suseda i krernel regresija);  Metod maksimalne verodostojnosti; Klasifikacija (logistička regresija, perceptron, naivni Bajes, metod potpornih vektora, ansambli klasifikatora).  (2) Pravilan dizajn eksperimenata i selekcija optimalnog modela: adekvatne mere performanse za različite probleme; eksperimentalni postupci (unakrsna validacija, podela na trening/validacioni/test skup, adekvatna selekcija i optimizacija modela); preprilagođavanje i regularizacija (grebena regresija, laso regresija, elastična mreža i njihovo poređenje).  (3) Polu-nadgledano obučavanje (pregled osnovnih koncepata i algoritama).  (4) Nenadgledano obučavanje: klasterovanje (algoritam k-sredina i model Gausovih mešavina); redukcija dimenzionalnosti (analiza glavnih komponenti).   (5) Praktični saveti za primenu algoritama mašinskog učenja.  (6) Teorija učenja: Hoeffdingova nejednakost; Vapnik-Červonenkinsova dimenzija; Nagodba aproksimacije i generalizacije. " ;
+<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> a aiiso:Course ;
+    dc:date "2005-10-01"^^xsd:date ;
+    dc:description "Formira se pojedinačno u skladu sa potrebama i oblašću koja je obuhvaćena zadatom temom završnog rada. Student u dogovoru sa mentorom sačinjava završni rad u pismenoj formi u skladu sa predviđenim standardima Fakulteta tehničkih nauka. Student priprema i brani pismeni završni rad javno u dogovoru sa mentorom i u skladu sa predviđenim standardima. Student proučava stručnu literaturu, stručne i diplomske radove studenata koji se bave sličnom tematikom, vrši analize u cilju iznalaženja rešenja konkretnog zadatka koji je definisan zadatkom završnog rada." ;
     dc:subject "Primenjene računarske nauke i informatika" ;
-    dc:title "Mašinsko učenje" ;
-    dc:type "Naučno-stručni" ;
-    uni:ESPB 6 ;
-    uni:Evaluation [ uni:Activity "Usmeni deo ispita" ;
-            uni:Points 40 ;
+    dc:title "Završni rad - izrada i odbrana" ;
+    dc:type "Stručno-aplikativni" ;
+    uni:ESPB 5 ;
+    uni:Evaluation [ uni:Activity "Izrada završnog rada sa teorijskim osnovama" ;
+            uni:Points 50 ;
             uni:PreExamination false ;
             uni:Required true ],
-        [ uni:Activity "Predmetni projekat" ;
-            uni:Points 25 ;
-            uni:PreExamination true ;
-            uni:Required true ],
-        [ uni:Activity "Složeni oblici vežbi" ;
-            uni:Points 35 ;
-            uni:PreExamination true ;
+        [ uni:Activity "Odbrana završnog rada" ;
+            uni:Points 50 ;
+            uni:PreExamination false ;
             uni:Required true ] ;
-    uni:Literature [ dc:creator "BISHOP, Christopher M." ;
-            dc:date 2006 ;
-            dc:language "Engleski" ;
-            dc:publisher "Springer, New York" ;
-            dc:title "Pattern Recognition and Machine Learning" ],
-        [ dc:creator "Goodfellow, I., Bengio, Y., Courville, A." ;
-            dc:date 2017 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "MIT Press, Cambridge" ;
-            dc:title "Deep Learning" ],
-        [ dc:creator "Hastie, T., Tibshirani, R., Friedman, J." ;
-            dc:date 2017 ;
-            dc:language "Engleski" ;
-            dc:publisher "Springer, New York" ;
-            dc:title "The Elements of Statistical Learning : Data Mining, Inference, and Prediction" ],
-        [ dc:creator "Ian Witten, Eibe Frank, Mark Hall, Christopher Pal" ;
-            dc:date 2017 ;
-            dc:language "Engleski" ;
-            dc:publisher "Morgan Kaufmann" ;
-            dc:title "Data Mining, 4th Edition" ],
-        [ dc:creator "Awad, M., Khanna, R." ;
-            dc:date 2015 ;
-            dc:language "Engleski" ;
-            dc:publisher "Apress Media" ;
-            dc:title "Efficient Learning Machines" ],
-        [ dc:creator "S. Shalev-Schwartz, S. Ben-David" ;
-            dc:date 2014 ;
-            dc:language "Engleski" ;
-            dc:publisher "U elektronskom izdanju: https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" ;
-            dc:title "Understanding Machine Learning: From Theory to Algorithms" ] ;
-    uni:Methodology "Studenti na predavanjima uče koncepte i teorijske osnove algoritama mašinskog učenja. Na računarskim vežbama se za svaki od naučenih koncepata studentima zadaje realan problem i diskutuju se moguća rešenja. Nakon toga, studenti samostalno rešavaju zadati problem, trudeći se da primenom naučenih tehnika ostvare maksimalne performanse na zadatom problemu, čime ostvaruju deo bodova za praktični deo ispita. Ostatak bodova sa praktičnog dela studenti ostvaruju putem predmetnog projekta.  Za predmetni projekat studenti samostalno predlažu realan problem iz oblasti mašinskog učenja koji žele da rešavaju i metodologiju kojom planiraju da ga reše. Završni (teorijski) deo ispita studenti polažu usmeno." ;
-    uni:Purpose "Ovladavanje osnovnim konceptima, elementima i tehnikama iz domena mašinskog učenja. Osposobljavanje studenta da razume osnovne modele mašinskog učenja, kao i teorije koja stoji iza njih. Osposobljavanje studenta da za realan problem mašinskog učenja prepozna tip problema i praktično primeni adekvatne algoritme." ;
-    uni:Result "Nakon uspešno završenog kursa, student zna: da definiše i razlikuje osnovne probleme u mašinskom učenju (regresiju, klasifikaciju, klasterovanje i redukciju dimenzionalnosti); koji algoritmi i modeli su adekvatni za rešavanje svakog od osnovnih problema; teoriju iza modela mašinskog učenja; praktične implikacije neophodne za implementaciju datih modela; da dizajnira validan eksperiment kojim može da uporedi performanse različitih modela; da primeni stečeno znanje na realne probleme." ;
+    uni:Literature [ dc:creator "-" ;
+            dc:date "None" ;
+            dc:language "" ;
+            dc:publisher "" ;
+            dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] ;
+    uni:Methodology """Mentor za izradu i odbranu završnog rada bira jedan od ponuđenih modula (isti modul kao i za teorijske osnove) iz kojeg će student da radi završni rad i formuliše temu sa zadacima za izradu završnog rada. Kandidat u konsultacijama sa mentorom i saradnikom samostalno radi na problemu koji mu je zadat. Nakon izrade rada i saglasnosti mentora da je uspešno urađen rad, kandidat brani rad pred komisijom koja se sastoji od najmanje tri člana.
+Tokom izrade završnog rada, mentor može davati dodatna uputstva studentu, upućivati na odrećenu literaturu i dodatno ga usmeravati u cilju izrade kvalitetnog diplomskog rada. U okviru teorijskog dela završnog rada student obavlja konsultacije sa mentorom, a po potrebi i sa drugim nastavnicima koji se bave problematikom iz oblasti teme završnog rada.""" ;
+    uni:Purpose "Cilj izrade i odbrane završnog rada je da student pokaže da poseduje zadovoljavajuću sposobnost primene teorijskih i praktičnih znanja u praks" ;
+    uni:Result """Izradom i odbranom završnog rada studenti koji su završili studije treba da budu sposobni da rešavaju realne probleme iz prakse kao i da nastave školovanje ukoliko se za to opredele. Kompetencije uključuju, pre svega, razvoj sposobnosti kritičnog mišljenja, sposobnosti analize problema, sinteze rešenja, predviđanje ponašanja odabranog rešenja sa jasnom predstavom šta su dobre a šta loše strane odabranog rešenja. Svršeni studenti imaju i sposobnost rešavanja konkretnih problema uz upotrebu naučnih metoda i postupaka. Posebno je važna sposobnost povezivanja osnovnih znanja iz različitih oblasti i njihova primena. Svršeni studenti su osposobljeni za intenzivno korišćenje informaciono-komunikacionih tehnologija.
+Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u praksi i praćenje i primenu novina u struci, kao i za saradnju sa lokalnim socijalnim i međunarodnim okruženjem.""" ;
     uni:Semester "letnji" ;
-    uni:Year 4 ;
-    foaf:Person [ uni:TypeOfTeaching "Predavanja" ;
-            foaf:name "Slivka dr Jelena" ;
-            foaf:title "Vanredni profesor" ],
-        [ uni:TypeOfTeaching "Računarske vežbe" ;
-            foaf:name "Vidaković Dragan" ;
-            foaf:title "Asistent-master" ],
-        [ uni:TypeOfTeaching "Predavanja" ;
-            foaf:name "Kovačević dr Aleksandar" ;
-            foaf:title "Vanredni profesor" ],
-        [ uni:TypeOfTeaching "Računarske vežbe" ;
-            foaf:name "Grujić Katarina Glorija" ;
-            foaf:title "Asistent-master" ] .
+    uni:Year 4 .
 

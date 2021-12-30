@@ -4,133 +4,86 @@
 @prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.ftn.uns.ac.rs/n1108388269/softverski-obrasci-i-komponente> a aiiso:Course ;
-    dc:date "2007-10-01"^^xsd:date ;
-    dc:description "Teorijska nastava: Osnovne definicije i istorijat razvoja softverskih obrazaca. Kategorije softverskih obrazaca; Dizajn obrasci; Arhitektonski obrasci. Pregled popularnih obrazaca. Prednosti i mane. Katalozi softverskih obrazaca. Antiobrasci (Anti-Patterns);osnovne osobine; pregled karakterističnih antiobrazaca. Komponentno bazirani razvoj; osnovne definicije; istorijat. Pregled postojećih komponentnih modela. Prednosti i mane. Modelovanje arhitekture aplikacija baziranih na komponentama. Tržišta softverskih komponenti. Praktična nastava: obuka za korišćenje modernih alata za izradu softvera baziranog na komponentama; implementacija projektnog zadatka upotrebom savremenih alata i okvira za razvoj baziran na komponentama uz akcenat na pravilnu primenu softverskih obrazaca." ;
-    dc:subject "Primenjene računarske nauke i informatika" ;
-    dc:title "Softverski obrasci i komponente" ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija> a aiiso:Course ;
+    dc:date "2013-10-01"^^xsd:date ;
+    dc:description "Uloga industrijske psihologije u poslovanju: definicija, predmet i ciljevi industrijske psihologije; istorijski razvoj; fiziološki i psihološki aspekti rada; cirkadijalni ritmovi i individualne razlike. Prilagođavanje čoveka radu: metode prilagođavanja čoveka radu; analiza posla-osnova prilagođavanja čoveka radu; metode procene radnika i radnih mesta; oblikovanje poslova i organizacija rada; dizajn posla; uloga apsentizma i fluktuacije; radna adaptacija. Radna sposobnost zaposlenih: tehnike redizajniranja posla; patologija rada; umor i monotonija; bezbednost na radu; povrede na radu, prevencija nesreće na radu. Čovek u savremenim tehnološkim sistemima: sistem čovek-mašina; efikasnost sistema; komunikacija u sistemu; tačnost, pouzdanost, raspodela uloga u sistemu; mentalni modeli operatora." ;
+    dc:subject "Proizvodni i uslužni sistemi, organizacija i menadžment" ;
+    dc:title "Industrijska psihologija" ;
     dc:type "Stručno-aplikativni" ;
     uni:ESPB 5 ;
-    uni:Evaluation [ uni:Activity "Odbrana projekta" ;
-            uni:Points 50 ;
+    uni:Evaluation [ uni:Activity "Prisustvo na vežbama" ;
+            uni:Points 5 ;
             uni:PreExamination true ;
             uni:Required true ],
         [ uni:Activity "Teorijski deo ispita" ;
-            uni:Points 50 ;
+            uni:Points 70 ;
             uni:PreExamination false ;
+            uni:Required true ],
+        [ uni:Activity "Test" ;
+            uni:Points 10 ;
+            uni:PreExamination true ;
+            uni:Required true ],
+        [ uni:Activity "Prisustvo na predavanjima" ;
+            uni:Points 5 ;
+            uni:PreExamination true ;
+            uni:Required true ],
+        [ uni:Activity "Test" ;
+            uni:Points 10 ;
+            uni:PreExamination true ;
             uni:Required true ] ;
-    uni:Literature [ dc:creator "Grand, M. " ;
-            dc:date 2002 ;
+    uni:Literature [ dc:creator "Guzina, M." ;
+            dc:date 1966 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Naučna knjiga, Beograd" ;
+            dc:title "Kadrovska psihologija" ],
+        [ dc:creator "Zedeck, S." ;
+            dc:date 2011 ;
             dc:language "Engleski" ;
-            dc:publisher "John Wiley & Sons, Inc. " ;
-            dc:title "Patterns in Java: A Catalog of Reusable Design Patterns Illustrated with UML " ],
-        [ dc:creator "Richards, M." ;
-            dc:date 2015 ;
+            dc:publisher "American Psychological Association" ;
+            dc:title "APA Handbook of Industrial and Organizational Psychology" ],
+        [ dc:creator "Spector, P." ;
+            dc:date 2003 ;
             dc:language "Engleski" ;
-            dc:publisher "O’Reilly Media, Inc." ;
-            dc:title "Software Architecture Patterns" ],
-        [ dc:creator "E.Gamma, R.Helm, R.johnson, J. Vlaisides" ;
-            dc:date 2005 ;
+            dc:publisher "Wiley" ;
+            dc:title "Industrial&Organizational Psychology" ],
+        [ dc:creator "Coovort, M. Thompson, L." ;
+            dc:date 2013 ;
             dc:language "Engleski" ;
-            dc:publisher "Addison-Wesley" ;
-            dc:title "Design Patterns Elements of Reusable Object-Oriented Software" ],
-        [ dc:creator "Eisele, M." ;
-            dc:date 2016 ;
-            dc:language "Engleski" ;
-            dc:publisher "O`Reilly" ;
-            dc:title "Modern Java EE Design Patterns" ],
-        [ dc:creator "Szyperski, C. " ;
-            dc:date 2002 ;
-            dc:language "Engleski" ;
-            dc:publisher "Addison-Wesley Longman Publishing Co., Inc. " ;
-            dc:title "Component Software: Beyond Object-Oriented Programming " ],
-        [ dc:creator "Richards, M." ;
-            dc:date 2016 ;
-            dc:language "Engleski" ;
-            dc:publisher "O Reilly" ;
-            dc:title "Microservices AntiPatterns and Pitfalls" ] ;
-    uni:Methodology "Predavanja; Računarske vežbe; Konsultacije. Rešavanje projektnog zadatka kroz rad u okviru projektnih timova. Poslednjih nedelja semestra organizuju se javne prezentacije projektnih zadataka najuspešnijih timova i diskutuju se postignuti rezultati. Odbrana projekta je usmena. Završni ispit je usmeni. Ocena ispita se formira na osnovu uspeha sa odbrane projektnog zadatka i završnog usmenog ispita." ;
-    uni:Purpose "Ovladavanje osnovnim teorijskim znanjima, tehnikama, alatima i preporučenom praksom iz oblasti softverskih obrazaca (Software Patterns) i razvoja softvera baziranog na komponentama (Component-Based Development – CBD). Osposobljavanje studenata za uočavanje obrazaca u kontekstu razvoja složenih softverskih proizvoda kao i definisanje arhitekture sistema bazirane na softverskim komponentama." ;
-    uni:Result "Po okončanju predmeta studenti su sposobni da, u razvoju složenih softverskih aplikacija, uoče i primene softverske obrasce kao i da razumeju prednosti i mane primene preporučenih softverskih obrazaca. Takođe su osposobljeni da za konkretan zadatak izaberu i primene najpogodniju platformu za komponentno baziran razvoj, modeluju arhitekturu, dekomponuju sistem na potreban broj softverskih komponenti, definišu interfejse komponenti i izvrše implementaciju sistema." ;
-    uni:Semester "zimski" ;
-    uni:Year 3 ;
-    foaf:Person [ uni:TypeOfTeaching "Računarske vežbe" ;
-            foaf:name "Popov Jelena" ;
-            foaf:title "Saradnik u nastavi" ],
-        [ uni:TypeOfTeaching "Računarske vežbe" ;
-            foaf:name "Šarenac Balša" ;
-            foaf:title "Asistent-master" ],
-        [ uni:TypeOfTeaching "Računarske vežbe" ;
-            foaf:name "Kovačević Ivana" ;
-            foaf:title "Asistent-master" ],
+            dc:publisher "" ;
+            dc:title "The Psychology of Workplace Technology" ],
+        [ dc:creator "Čizmić, S." ;
+            dc:date 2007 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Institut za psihologiju, Beograd" ;
+            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ] ;
+    uni:Methodology "Nastava se odvija kroz predavanja i auditorne vežbe, usaglašavanjem teorijskog koncepta sa predavanja i rada na vežbama, u cilju što realnijeg i svestranijeg sagledavanja mogućnosti i uloge ljudskih resursa u organizaciji" ;
+    uni:Purpose "Obrazovni cilj: sticanje znanja iz industrijske psihologije u cilju humanizacije rada, razvoja kompetentnosti u projektovanju posla, procesa industrijalizacije zaposlenih sa ciljem unapređenja ličnih učinaka i povećanja poslovne efikasnosti i efektivnosti organizacije. Industrijska psihologija ukazuje na značaj ostvarivanja optimalnog radnog efekta uz maksimalno prilagođavanje čoveka radu." ;
+    uni:Result "Studenti će biti osposobljeni da: (1) primene praktične tehnike analize posla, radnih mesta zaposlenih u organizacijskim ulogama (2) identifikuju indikatore apsentizma i fluktuacije  (3) steknu znanje o preventivnim merama povreda i nesreća na radu (4) analiziraju funkciju čoveka u tehničkim sistemima (5) usvoje principe optimizacije rada, sredstava za rad i uslova radnog mesta." ;
+    uni:Semester "letnji" ;
+    uni:Year 2 ;
+    foaf:Person [ uni:TypeOfTeaching "Predavanja" ;
+            foaf:name "Grubić-Nešić dr Leposava" ;
+            foaf:title "Redovni profesor" ],
         [ uni:TypeOfTeaching "Predavanja" ;
-            foaf:name "Dejanović dr Igor" ;
+            foaf:name "Katić dr Ivana" ;
+            foaf:title "Vanredni profesor" ],
+        [ uni:TypeOfTeaching "Auditorne vežbe" ;
+            foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ] .
 
-[] dc:creator "BISHOP, Christopher M." ;
-    dc:date 2006 ;
-    dc:language "Engleski" ;
-    dc:publisher "Springer, New York" ;
-    dc:title "Pattern Recognition and Machine Learning" .
+[] dc:creator "-" ;
+    dc:date "None" ;
+    dc:language "" ;
+    dc:publisher "" ;
+    dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" .
 
-[] uni:TypeOfTeaching "Predavanja" ;
-    foaf:name "Slivka dr Jelena" ;
-    foaf:title "Vanredni profesor" .
-
-[] dc:creator "Goodfellow, I., Bengio, Y., Courville, A." ;
-    dc:date 2017 ;
-    dc:language "Srpski jezik" ;
-    dc:publisher "MIT Press, Cambridge" ;
-    dc:title "Deep Learning" .
-
-[] uni:TypeOfTeaching "Računarske vežbe" ;
-    foaf:name "Vidaković Dragan" ;
-    foaf:title "Asistent-master" .
-
-[] uni:Activity "Usmeni deo ispita" ;
-    uni:Points 40 ;
+[] uni:Activity "Izrada završnog rada sa teorijskim osnovama" ;
+    uni:Points 50 ;
     uni:PreExamination false ;
     uni:Required true .
 
-[] dc:creator "Hastie, T., Tibshirani, R., Friedman, J." ;
-    dc:date 2017 ;
-    dc:language "Engleski" ;
-    dc:publisher "Springer, New York" ;
-    dc:title "The Elements of Statistical Learning : Data Mining, Inference, and Prediction" .
-
-[] dc:creator "Ian Witten, Eibe Frank, Mark Hall, Christopher Pal" ;
-    dc:date 2017 ;
-    dc:language "Engleski" ;
-    dc:publisher "Morgan Kaufmann" ;
-    dc:title "Data Mining, 4th Edition" .
-
-[] uni:Activity "Predmetni projekat" ;
-    uni:Points 25 ;
-    uni:PreExamination true ;
+[] uni:Activity "Odbrana završnog rada" ;
+    uni:Points 50 ;
+    uni:PreExamination false ;
     uni:Required true .
-
-[] uni:Activity "Složeni oblici vežbi" ;
-    uni:Points 35 ;
-    uni:PreExamination true ;
-    uni:Required true .
-
-[] uni:TypeOfTeaching "Predavanja" ;
-    foaf:name "Kovačević dr Aleksandar" ;
-    foaf:title "Vanredni profesor" .
-
-[] uni:TypeOfTeaching "Računarske vežbe" ;
-    foaf:name "Grujić Katarina Glorija" ;
-    foaf:title "Asistent-master" .
-
-[] dc:creator "Awad, M., Khanna, R." ;
-    dc:date 2015 ;
-    dc:language "Engleski" ;
-    dc:publisher "Apress Media" ;
-    dc:title "Efficient Learning Machines" .
-
-[] dc:creator "S. Shalev-Schwartz, S. Ben-David" ;
-    dc:date 2014 ;
-    dc:language "Engleski" ;
-    dc:publisher "U elektronskom izdanju: https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" ;
-    dc:title "Understanding Machine Learning: From Theory to Algorithms" .
 
