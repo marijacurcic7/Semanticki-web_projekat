@@ -1,0 +1,262 @@
+@prefix : <http://www.semanticweb.org/marija/ontologies/2021/university#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://purl.org/vocab/aiiso/schema#> .
+@prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university.owl> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:name rdfs:domain schema:Programme,
+        :Domain,
+        :Test .
+
+<http://www.semanticweb.org/marija/ontologies/2021/university> a owl:Ontology ;
+    owl:imports schema:,
+        foaf: .
+
+:DomainProblem a owl:Class ;
+    rdfs:subClassOf :Domain .
+
+:EducationalField a owl:Class ;
+    rdfs:subClassOf schema:Programme .
+
+:LevelOfStudy a owl:Class ;
+    rdfs:subClassOf schema:Programme .
+
+:Methodology a owl:Class ;
+    rdfs:subClassOf schema:Course .
+
+:Purpose a owl:Class ;
+    rdfs:subClassOf schema:Course .
+
+:Result a owl:Class ;
+    rdfs:subClassOf schema:Course .
+
+:ScientificField a owl:Class ;
+    rdfs:subClassOf schema:Programme .
+
+:Title a owl:Class ;
+    rdfs:subClassOf schema:Programme .
+
+:Year a owl:Class ;
+    rdfs:subClassOf schema:Course .
+
+:activity a owl:DatatypeProperty ;
+    rdfs:domain :Evaluation ;
+    rdfs:range xsd:string .
+
+:correct a owl:DatatypeProperty ;
+    rdfs:domain :Answer ;
+    rdfs:range xsd:boolean .
+
+:endDate a owl:DatatypeProperty ;
+    rdfs:domain :Take ;
+    rdfs:range xsd:dateTime .
+
+:espb a owl:DatatypeProperty ;
+    rdfs:domain schema:Course,
+        schema:Programme ;
+    rdfs:range xsd:integer .
+
+:passed a owl:DatatypeProperty ;
+    rdfs:domain :Take ;
+    rdfs:range xsd:boolean .
+
+:points a owl:DatatypeProperty ;
+    rdfs:domain :Evaluation,
+        :Question,
+        :Take,
+        :Test ;
+    rdfs:range xsd:float .
+
+:preExamination a owl:DatatypeProperty ;
+    rdfs:domain :Evaluation ;
+    rdfs:range xsd:boolean .
+
+:required a owl:DatatypeProperty ;
+    rdfs:domain :Evaluation ;
+    rdfs:range xsd:boolean .
+
+:semester a owl:DatatypeProperty ;
+    rdfs:domain schema:Course ;
+    rdfs:range xsd:integer .
+
+:semesters a owl:DatatypeProperty ;
+    rdfs:domain schema:Programme ;
+    rdfs:range xsd:integer .
+
+:startDate a owl:DatatypeProperty ;
+    rdfs:domain :Take ;
+    rdfs:range xsd:dateTime .
+
+:typeOfTeaching a owl:DatatypeProperty ;
+    rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+    rdfs:range xsd:string .
+
+<http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm> a uni:Take ;
+    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
+    uni:endTime "2021-12-27T17:13:36.617000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers <http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm/my-answers> ;
+    uni:of <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> ;
+    uni:passed false ;
+    uni:points 3 ;
+    uni:startTime "2021-12-27T17:13:08.534000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9> a uni:Take ;
+    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
+    uni:endTime "2021-12-27T16:06:30.396000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers <http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9/my-answers> ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 1 ;
+    uni:startTime "2021-12-27T16:06:14.867000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX> a uni:Take ;
+    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
+    uni:endTime "2021-12-26T19:47:50.931000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers <http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX/my-answers> ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 0 ;
+    uni:startTime "2021-12-26T19:47:45.943000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf> a uni:Take ;
+    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
+    uni:endTime "2021-12-26T19:32:17.291000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers <http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf/my-answers> ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 1 ;
+    uni:startTime "2021-12-26T19:32:11.527000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/users/iZrqsjTEP5nwDyy9P7JabCZ4LzbR> foaf:name "Jovan Jovanovic" .
+
+:Literature a owl:Class .
+
+:Question a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Test ;
+            owl:onProperty schema:part_of ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onClass :Answer ;
+            owl:onProperty :hasAnswer ] .
+
+:createdBy a owl:ObjectProperty .
+
+:domain a owl:ObjectProperty .
+
+:doneBy a owl:ObjectProperty .
+
+:hasAnswer a owl:ObjectProperty .
+
+:hasLiterature a owl:ObjectProperty .
+
+:of a owl:ObjectProperty .
+
+<http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm/my-answers> uni:MyAnswer [ uni:Answer "ponytail" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ uni:Answer "a number",
+                "a string",
+                "an object" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ uni:Answer "undescores" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ uni:Answer "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ uni:Answer "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ uni:Answer "a block of code designed to perform a particular task",
+                "a strawberry jam" ;
+            uni:correct false ;
+            uni:points 0 ] .
+
+<http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9/my-answers> uni:MyAnswer [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:Answer "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ] .
+
+<http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX/my-answers> uni:MyAnswer [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ] .
+
+<http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf/my-answers> uni:MyAnswer [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:Answer "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ],
+        [ uni:correct false ;
+            uni:points 0 ] .
+
+:Answer a owl:Class .
+
+:Domain a owl:Class .
+
+<http://www.w3.org/2000/10/swap/pim/contact#Person> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:teaches ;
+            owl:someValuesFrom schema:Course ] .
+
+:Evaluation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:part_of ;
+            owl:someValuesFrom schema:Course ] .
+
+:Take a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+            owl:onProperty :doneBy ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass :Test ;
+            owl:onProperty :of ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+:Test a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Domain ;
+            owl:onProperty :domain ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+            owl:onProperty :createdBy ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+<http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> foaf:name "Petar Petrovic" .
+
+schema:Course rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty schema:part_of ;
+            owl:someValuesFrom schema:Programme ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasLiterature ;
+            owl:someValuesFrom :Literature ] .
+
