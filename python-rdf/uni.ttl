@@ -63,7 +63,15 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:hasLiterature <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> ;
     uni:hasTeachers <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> .
 
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> uni:Evaluation [ uni:activity "Test" ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> uni:Evaluation [ uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Predmetni projekat" ;
+            uni:points 50 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
             uni:required true ],
@@ -73,14 +81,6 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:required true ],
         [ uni:activity "Prisustvo na laboratorijskim vežbama" ;
             uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Predmetni projekat" ;
-            uni:points 50 ;
             uni:preExamination true ;
             uni:required true ] .
 
@@ -95,24 +95,25 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:publisher "" ;
             dc:title "TCP/IP Internet" ] .
 
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> uni:teachers [ a foaf:Person ;
-            uni:typeOfTeaching "Računarske vežbe" ;
-            foaf:name "Lukač dr Željko" ;
-            foaf:title "Docent" ],
-        [ a foaf:Person ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> a uni:Teachers ;
+    uni:teachersList [ a foaf:Person ;
             uni:typeOfTeaching "Računarske vežbe" ;
             foaf:name "Ivanović Sandra" ;
             foaf:title "Asistent-master" ],
         [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Bašičević dr Ilija" ;
-            foaf:title "Redovni profesor" ] .
+            foaf:title "Redovni profesor" ],
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Računarske vežbe" ;
+            foaf:name "Lukač dr Željko" ;
+            foaf:title "Docent" ] .
 
-<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/evaluation> uni:Evaluation [ uni:activity "Odbrana završnog rada" ;
+<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/evaluation> uni:Evaluation [ uni:activity "Izrada završnog rada sa teorijskim osnovama" ;
             uni:points 50 ;
             uni:preExamination false ;
             uni:required true ],
-        [ uni:activity "Izrada završnog rada sa teorijskim osnovama" ;
+        [ uni:activity "Odbrana završnog rada" ;
             uni:points 50 ;
             uni:preExamination false ;
             uni:required true ] .
@@ -123,15 +124,9 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:publisher "" ;
             dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> uni:Evaluation [ uni:activity "Prisustvo na vežbama" ;
-            uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Test" ;
+<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/teachers> a uni:Teachers .
+
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> uni:Evaluation [ uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
             uni:required true ],
@@ -139,27 +134,20 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:points 70 ;
             uni:preExamination false ;
             uni:required true ],
+        [ uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Prisustvo na vežbama" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
         [ uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
             uni:required true ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> uni:Literature [ dc:creator "Guzina, M." ;
-            dc:date 1966 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Naučna knjiga, Beograd" ;
-            dc:title "Kadrovska psihologija" ],
-        [ dc:creator "Čizmić, S." ;
-            dc:date 2007 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Institut za psihologiju, Beograd" ;
-            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ],
-        [ dc:creator "Zedeck, S." ;
-            dc:date 2011 ;
-            dc:language "Engleski" ;
-            dc:publisher "American Psychological Association" ;
-            dc:title "APA Handbook of Industrial and Organizational Psychology" ],
-        [ dc:creator "Spector, P." ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> uni:Literature [ dc:creator "Spector, P." ;
             dc:date 2003 ;
             dc:language "Engleski" ;
             dc:publisher "Wiley" ;
@@ -168,18 +156,34 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:date 2013 ;
             dc:language "Engleski" ;
             dc:publisher "" ;
-            dc:title "The Psychology of Workplace Technology" ] .
+            dc:title "The Psychology of Workplace Technology" ],
+        [ dc:creator "Zedeck, S." ;
+            dc:date 2011 ;
+            dc:language "Engleski" ;
+            dc:publisher "American Psychological Association" ;
+            dc:title "APA Handbook of Industrial and Organizational Psychology" ],
+        [ dc:creator "Guzina, M." ;
+            dc:date 1966 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Naučna knjiga, Beograd" ;
+            dc:title "Kadrovska psihologija" ],
+        [ dc:creator "Čizmić, S." ;
+            dc:date 2007 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Institut za psihologiju, Beograd" ;
+            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> uni:teachers [ a foaf:Person ;
-            uni:typeOfTeaching "Predavanja" ;
-            foaf:name "Grubić-Nešić dr Leposava" ;
-            foaf:title "Redovni profesor" ],
-        [ a foaf:Person ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> a uni:Teachers ;
+    uni:teachersList [ a foaf:Person ;
             uni:typeOfTeaching "Auditorne vežbe" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ],
         [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Katić dr Ivana" ;
-            foaf:title "Vanredni profesor" ] .
+            foaf:title "Vanredni profesor" ],
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Predavanja" ;
+            foaf:name "Grubić-Nešić dr Leposava" ;
+            foaf:title "Redovni profesor" ] .
 
