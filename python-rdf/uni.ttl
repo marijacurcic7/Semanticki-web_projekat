@@ -1,17 +1,10 @@
-@prefix : <http://www.semanticweb.org/marija/ontologies/2021/university#> .
+@prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://purl.org/vocab/aiiso/schema#> .
 @prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university.owl> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-schema:name rdfs:domain schema:Programme,
-        :Domain,
-        :Test .
-
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1> a schema:Course ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1> a aiiso:Course ;
     dc:date "2005-10-01"^^xsd:date ;
     dc:description "Uvod. Projektovanje protokola (pojam protokola, jezici za formanu specifikaciju protokola – SDL, MSC, TTCN, UML). Metodologija realizacije protokola (jezgro, projektantski šablon, biblioteka klasa za realizaciju protokola). Protokoli za upravljanje u Internetu. Uvod u zaštitu računarskih mreža. Prenos audio i video podataka u Internetu." ;
     dc:subject "Računarska tehnika i računarske komunikacije" ;
@@ -27,7 +20,7 @@ schema:name rdfs:domain schema:Programme,
     uni:hasLiterature <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/literature> ;
     uni:hasTeachers <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> .
 
-<http://www.ftn.uns.ac.rs/875535517/softversko-inzenjerstvo-i-informacione-tehnologije?period=z> a schema:Programme ;
+<http://www.ftn.uns.ac.rs/875535517/softversko-inzenjerstvo-i-informacione-tehnologije?period=z> a aiiso:Programme ;
     uni:EducationalField "Tehničko-tehnološke nauke" ;
     uni:LevelOfStudy "Osnovne akademske studije" ;
     uni:ScientificField "Elektrotehničko i računarsko inženjerstvo" ;
@@ -36,7 +29,7 @@ schema:name rdfs:domain schema:Programme,
     uni:name "softversko inzenjerstvo i informacione tehnologije" ;
     uni:semesters 8 .
 
-<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> a schema:Course ;
+<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> a aiiso:Course ;
     dc:date "2005-10-01"^^xsd:date ;
     dc:description "Formira se pojedinačno u skladu sa potrebama i oblašću koja je obuhvaćena zadatom temom završnog rada. Student u dogovoru sa mentorom sačinjava završni rad u pismenoj formi u skladu sa predviđenim standardima Fakulteta tehničkih nauka. Student priprema i brani pismeni završni rad javno u dogovoru sa mentorom i u skladu sa predviđenim standardima. Student proučava stručnu literaturu, stručne i diplomske radove studenata koji se bave sličnom tematikom, vrši analize u cilju iznalaženja rešenja konkretnog zadatka koji je definisan zadatkom završnog rada." ;
     dc:subject "Primenjene računarske nauke i informatika" ;
@@ -54,7 +47,7 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:hasLiterature <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/literature> ;
     uni:hasTeachers <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/teachers> .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija> a schema:Course ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija> a aiiso:Course ;
     dc:date "2013-10-01"^^xsd:date ;
     dc:description "Uloga industrijske psihologije u poslovanju: definicija, predmet i ciljevi industrijske psihologije; istorijski razvoj; fiziološki i psihološki aspekti rada; cirkadijalni ritmovi i individualne razlike. Prilagođavanje čoveka radu: metode prilagođavanja čoveka radu; analiza posla-osnova prilagođavanja čoveka radu; metode procene radnika i radnih mesta; oblikovanje poslova i organizacija rada; dizajn posla; uloga apsentizma i fluktuacije; radna adaptacija. Radna sposobnost zaposlenih: tehnike redizajniranja posla; patologija rada; umor i monotonija; bezbednost na radu; povrede na radu, prevencija nesreće na radu. Čovek u savremenim tehnološkim sistemima: sistem čovek-mašina; efikasnost sistema; komunikacija u sistemu; tačnost, pouzdanost, raspodela uloga u sistemu; mentalni modeli operatora." ;
     dc:subject "Proizvodni i uslužni sistemi, organizacija i menadžment" ;
@@ -70,130 +63,17 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:hasLiterature <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> ;
     uni:hasTeachers <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> .
 
-<http://www.semanticweb.org/marija/ontologies/2021/university> a owl:Ontology ;
-    owl:imports schema:,
-        foaf: .
-
-:DomainProblem a owl:Class ;
-    rdfs:subClassOf :Domain .
-
-:EducationalField a owl:Class ;
-    rdfs:subClassOf schema:Programme .
-
-:LevelOfStudy a owl:Class ;
-    rdfs:subClassOf schema:Programme .
-
-:Methodology a owl:Class ;
-    rdfs:subClassOf schema:Course .
-
-:Purpose a owl:Class ;
-    rdfs:subClassOf schema:Course .
-
-:Result a owl:Class ;
-    rdfs:subClassOf schema:Course .
-
-:ScientificField a owl:Class ;
-    rdfs:subClassOf schema:Programme .
-
-:Title a owl:Class ;
-    rdfs:subClassOf schema:Programme .
-
-:Year a owl:Class ;
-    rdfs:subClassOf schema:Course .
-
-:activity a owl:DatatypeProperty ;
-    rdfs:domain :Evaluation ;
-    rdfs:range xsd:string .
-
-:correct a owl:DatatypeProperty ;
-    rdfs:domain :Answer ;
-    rdfs:range xsd:boolean .
-
-:endDate a owl:DatatypeProperty ;
-    rdfs:domain :Take ;
-    rdfs:range xsd:dateTime .
-
-:espb a owl:DatatypeProperty ;
-    rdfs:domain schema:Course,
-        schema:Programme ;
-    rdfs:range xsd:integer .
-
-:passed a owl:DatatypeProperty ;
-    rdfs:domain :Take ;
-    rdfs:range xsd:boolean .
-
-:points a owl:DatatypeProperty ;
-    rdfs:domain :Evaluation,
-        :Question,
-        :Take,
-        :Test ;
-    rdfs:range xsd:float .
-
-:preExamination a owl:DatatypeProperty ;
-    rdfs:domain :Evaluation ;
-    rdfs:range xsd:boolean .
-
-:required a owl:DatatypeProperty ;
-    rdfs:domain :Evaluation ;
-    rdfs:range xsd:boolean .
-
-:semester a owl:DatatypeProperty ;
-    rdfs:domain schema:Course ;
-    rdfs:range xsd:integer .
-
-:semesters a owl:DatatypeProperty ;
-    rdfs:domain schema:Programme ;
-    rdfs:range xsd:integer .
-
-:startDate a owl:DatatypeProperty ;
-    rdfs:domain :Take ;
-    rdfs:range xsd:dateTime .
-
-:typeOfTeaching a owl:DatatypeProperty ;
-    rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
-    rdfs:range xsd:string .
-
-<http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm> a uni:Take ;
-    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
-    uni:endTime "2021-12-27T17:13:36.617000+00:00"^^xsd:dateTime ;
-    uni:hasAnswers <http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm/my-answers> ;
-    uni:of <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> ;
-    uni:passed false ;
-    uni:points 3 ;
-    uni:startTime "2021-12-27T17:13:08.534000+00:00"^^xsd:dateTime .
-
-<http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9> a uni:Take ;
-    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
-    uni:endTime "2021-12-27T16:06:30.396000+00:00"^^xsd:dateTime ;
-    uni:hasAnswers <http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9/my-answers> ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
-    uni:passed false ;
-    uni:points 1 ;
-    uni:startTime "2021-12-27T16:06:14.867000+00:00"^^xsd:dateTime .
-
-<http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX> a uni:Take ;
-    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
-    uni:endTime "2021-12-26T19:47:50.931000+00:00"^^xsd:dateTime ;
-    uni:hasAnswers <http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX/my-answers> ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
-    uni:passed false ;
-    uni:points 0 ;
-    uni:startTime "2021-12-26T19:47:45.943000+00:00"^^xsd:dateTime .
-
-<http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf> a uni:Take ;
-    uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
-    uni:endTime "2021-12-26T19:32:17.291000+00:00"^^xsd:dateTime ;
-    uni:hasAnswers <http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf/my-answers> ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
-    uni:passed false ;
-    uni:points 1 ;
-    uni:startTime "2021-12-26T19:32:11.527000+00:00"^^xsd:dateTime .
-
-<http://www.sotis/users/iZrqsjTEP5nwDyy9P7JabCZ4LzbR> foaf:name "Jovan Jovanovic" .
-
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> uni:Evaluation [ uni:activity "Teorijski deo ispita" ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> uni:Evaluation [ uni:activity "Test" ;
+            uni:points 10 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Teorijski deo ispita" ;
             uni:points 30 ;
             uni:preExamination false ;
+            uni:required true ],
+        [ uni:activity "Prisustvo na laboratorijskim vežbama" ;
+            uni:points 5 ;
+            uni:preExamination true ;
             uni:required true ],
         [ uni:activity "Prisustvo na predavanjima" ;
             uni:points 5 ;
@@ -201,14 +81,6 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:required true ],
         [ uni:activity "Predmetni projekat" ;
             uni:points 50 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Test" ;
-            uni:points 10 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Prisustvo na laboratorijskim vežbama" ;
-            uni:points 5 ;
             uni:preExamination true ;
             uni:required true ] .
 
@@ -223,15 +95,18 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:publisher "" ;
             dc:title "TCP/IP Internet" ] .
 
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> foaf:Person [ uni:typeOfTeaching "Računarske vežbe" ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> uni:teachers [ a foaf:Person ;
+            uni:typeOfTeaching "Računarske vežbe" ;
+            foaf:name "Lukač dr Željko" ;
+            foaf:title "Docent" ],
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Računarske vežbe" ;
             foaf:name "Ivanović Sandra" ;
             foaf:title "Asistent-master" ],
-        [ uni:typeOfTeaching "Predavanja" ;
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Predavanja" ;
             foaf:name "Bašičević dr Ilija" ;
-            foaf:title "Redovni profesor" ],
-        [ uni:typeOfTeaching "Računarske vežbe" ;
-            foaf:name "Lukač dr Željko" ;
-            foaf:title "Docent" ] .
+            foaf:title "Redovni profesor" ] .
 
 <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/evaluation> uni:Evaluation [ uni:activity "Odbrana završnog rada" ;
             uni:points 50 ;
@@ -248,7 +123,15 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:publisher "" ;
             dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> uni:Evaluation [ uni:activity "Test" ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> uni:Evaluation [ uni:activity "Prisustvo na vežbama" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
             uni:required true ],
@@ -256,20 +139,17 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:points 70 ;
             uni:preExamination false ;
             uni:required true ],
-        [ uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Prisustvo na vežbama" ;
-            uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
         [ uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
             uni:required true ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> uni:Literature [ dc:creator "Čizmić, S." ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> uni:Literature [ dc:creator "Guzina, M." ;
+            dc:date 1966 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Naučna knjiga, Beograd" ;
+            dc:title "Kadrovska psihologija" ],
+        [ dc:creator "Čizmić, S." ;
             dc:date 2007 ;
             dc:language "Srpski jezik" ;
             dc:publisher "Institut za psihologiju, Beograd" ;
@@ -279,311 +159,27 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:language "Engleski" ;
             dc:publisher "American Psychological Association" ;
             dc:title "APA Handbook of Industrial and Organizational Psychology" ],
-        [ dc:creator "Guzina, M." ;
-            dc:date 1966 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Naučna knjiga, Beograd" ;
-            dc:title "Kadrovska psihologija" ],
-        [ dc:creator "Coovort, M. Thompson, L." ;
-            dc:date 2013 ;
-            dc:language "Engleski" ;
-            dc:publisher "" ;
-            dc:title "The Psychology of Workplace Technology" ],
         [ dc:creator "Spector, P." ;
             dc:date 2003 ;
             dc:language "Engleski" ;
             dc:publisher "Wiley" ;
-            dc:title "Industrial&Organizational Psychology" ] .
+            dc:title "Industrial&Organizational Psychology" ],
+        [ dc:creator "Coovort, M. Thompson, L." ;
+            dc:date 2013 ;
+            dc:language "Engleski" ;
+            dc:publisher "" ;
+            dc:title "The Psychology of Workplace Technology" ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> foaf:Person [ uni:typeOfTeaching "Predavanja" ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> uni:teachers [ a foaf:Person ;
+            uni:typeOfTeaching "Predavanja" ;
             foaf:name "Grubić-Nešić dr Leposava" ;
             foaf:title "Redovni profesor" ],
-        [ uni:typeOfTeaching "Predavanja" ;
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Auditorne vežbe" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ],
-        [ uni:typeOfTeaching "Auditorne vežbe" ;
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Predavanja" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ] .
-
-:Literature a owl:Class .
-
-:Question a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Test ;
-            owl:onProperty schema:part_of ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-            owl:onClass :Answer ;
-            owl:onProperty :hasAnswer ] .
-
-:createdBy a owl:ObjectProperty .
-
-:domain a owl:ObjectProperty .
-
-:doneBy a owl:ObjectProperty .
-
-:hasAnswer a owl:ObjectProperty .
-
-:hasLiterature a owl:ObjectProperty .
-
-:of a owl:ObjectProperty .
-
-<http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm/my-answers> uni:MyAnswer [ uni:Answer "a number",
-                "a string",
-                "an object" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ uni:Answer "a block of code designed to perform a particular task",
-                "a strawberry jam" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ uni:Answer "undescores" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ uni:Answer "ponytail" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ uni:Answer "true" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ uni:Answer "true" ;
-            uni:correct true ;
-            uni:points 1 ] .
-
-<http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9/my-answers> uni:MyAnswer [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:Answer "true" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ uni:correct false ;
-            uni:points 0 ] .
-
-<http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX/my-answers> uni:MyAnswer [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ] .
-
-<http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf/my-answers> uni:MyAnswer [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:Answer "true" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ uni:correct false ;
-            uni:points 0 ],
-        [ uni:correct false ;
-            uni:points 0 ] .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions> uni:Question [ uni:DomainProblem "Casting" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/answers> ;
-            uni:points 2 ;
-            uni:text "Select valid casting" ],
-        [ uni:DomainProblem "Lists" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/answers> ;
-            uni:points 1 ;
-            uni:text "Lists are..." ],
-        [ uni:DomainProblem "Strings" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/answers> ;
-            uni:points 1 ;
-            uni:text "Is 'hello' the same as \"hello\"?" ],
-        [ uni:DomainProblem "Variables" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/answers> ;
-            uni:points 1 ;
-            uni:text "Variables are containers for storing data values" ],
-        [ uni:DomainProblem "Data Types" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/answers> ;
-            uni:points 1 ;
-            uni:text "list, tuple, range & dict are types in python" ],
-        [ uni:DomainProblem "Dictionary" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/answers> ;
-            uni:points 3 ;
-            uni:text "Dictionary is a collection which is" ] .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/answers> uni:Answer "no",
-        "yes" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/correctAnswers> uni:Answer "yes" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/answers> uni:Answer "changeable",
-        "not allowing duplicates",
-        "ordered",
-        "tacco Tuesday" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/correctAnswers> uni:Answer "changeable",
-        "not allowing duplicates",
-        "ordered" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/answers> uni:Answer "used for making shopping easier",
-        "used to store multiple items in a single variable." .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/correctAnswers> uni:Answer "used to store multiple items in a single variable." .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/correctAnswers> uni:Answer "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/correctAnswers> uni:Answer "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/answers> uni:Answer "int('3')",
-        "int('number 0')",
-        "int(1)",
-        "int(2.7)" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/correctAnswers> uni:Answer "int('3')",
-        "int(1)",
-        "int(2.7)" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> a uni:Test ;
-    uni:hasQuestions <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions> ;
-    uni:name "JS begginer test" ;
-    uni:points 15 .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions> uni:Question [ uni:DomainProblem "Var" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/answers> ;
-            uni:points 4 ;
-            uni:text "JS variable name can contain" ],
-        [ uni:DomainProblem "Let" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/answers> ;
-            uni:points 1 ;
-            uni:text "Variables defined with let have Block Scope" ],
-        [ uni:DomainProblem "Const" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/answers> ;
-            uni:points 1 ;
-            uni:text "Variables defined with const cannot be Reassigned" ],
-        [ uni:DomainProblem "Data Types" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/answers> ;
-            uni:points 1 ;
-            uni:text "Data type can be" ],
-        [ uni:DomainProblem "Objects" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/answers> ;
-            uni:points 5 ;
-            uni:text "Objects have" ],
-        [ uni:DomainProblem "Functions" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/answers> ;
-            uni:points 3 ;
-            uni:text "A JS function is" ] .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/answers> uni:Answer "digits",
-        "dollar signs",
-        "letters",
-        "undescores" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/correctAnswers> uni:Answer "digits",
-        "dollar signs",
-        "letters",
-        "undescores" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/answers> uni:Answer "a blockchain",
-        "a number",
-        "a string",
-        "an object" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/correctAnswers> uni:Answer "a number",
-        "a string",
-        "an object" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/correctAnswers> uni:Answer "true" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/answers> uni:Answer "a block of code designed to perform a particular task",
-        "a strawberry jam",
-        "executed when \"something\" invokes it (calls it)" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/correctAnswers> uni:Answer "a block of code designed to perform a particular task",
-        "executed when \"something\" invokes it (calls it)" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/answers> uni:Answer "methods",
-        "ponytail",
-        "properties" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/correctAnswers> uni:Answer "methods",
-        "properties" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/correctAnswers> uni:Answer "true" .
-
-:Answer a owl:Class .
-
-:Domain a owl:Class .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> a uni:Test ;
-    uni:hasQuestions <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions> ;
-    uni:name "Python Basics" ;
-    uni:points 9 .
-
-<http://www.w3.org/2000/10/swap/pim/contact#Person> rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty schema:teaches ;
-            owl:someValuesFrom schema:Course ] .
-
-:Evaluation a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty schema:part_of ;
-            owl:someValuesFrom schema:Course ] .
-
-:Take a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
-            owl:onProperty :doneBy ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass :Test ;
-            owl:onProperty :of ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-:Test a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
-            owl:onProperty :createdBy ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass :Domain ;
-            owl:onProperty :domain ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-<http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> foaf:name "Petar Petrovic" .
-
-schema:Course rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :hasLiterature ;
-            owl:someValuesFrom :Literature ],
-        [ a owl:Restriction ;
-            owl:onProperty schema:part_of ;
-            owl:someValuesFrom schema:Programme ] .
 
