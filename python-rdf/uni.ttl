@@ -10,24 +10,24 @@
     dc:subject "Računarska tehnika i računarske komunikacije" ;
     dc:title "Međuračunarske komunikacije i računarske mreže 1" ;
     dc:type "Naučno-stručni" ;
-    uni:Methodology "Predavanja. Tutorijali. Računarske vežbe. Konsultacije. Nastava se izvodi kao blok nastava iz dva dela. U prvom delu blok nastave studenti slušaju predavanja iz teorije u prepodnevnom terminu. U popodnevnom terminu se izvode računarske vežbe. U drugom delu blok nastave, student izrađuje svoj ispitni rad." ;
-    uni:Purpose "Osposobljavanje za projektovanje, realizaciju i testiranje komunikacionih protokola i ovladavanje osnovama TCP/IP Internet tehnologije." ;
-    uni:Result "Osposobljenost za projektovanje, realizaciju i testiranje komunikacionih protokola i vladanje osnovama TCP/IP Internet tehnologije." ;
-    uni:Semester "zimski" ;
-    uni:Year 4 ;
     uni:espb 4 ;
     uni:hasEvaluation <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> ;
     uni:hasLiterature <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/literature> ;
-    uni:hasTeachers <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> .
+    uni:hasTeachers <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> ;
+    uni:methodology "Predavanja. Tutorijali. Računarske vežbe. Konsultacije. Nastava se izvodi kao blok nastava iz dva dela. U prvom delu blok nastave studenti slušaju predavanja iz teorije u prepodnevnom terminu. U popodnevnom terminu se izvode računarske vežbe. U drugom delu blok nastave, student izrađuje svoj ispitni rad." ;
+    uni:purpose "Osposobljavanje za projektovanje, realizaciju i testiranje komunikacionih protokola i ovladavanje osnovama TCP/IP Internet tehnologije." ;
+    uni:result "Osposobljenost za projektovanje, realizaciju i testiranje komunikacionih protokola i vladanje osnovama TCP/IP Internet tehnologije." ;
+    uni:semester "zimski" ;
+    uni:year 4 .
 
 <http://www.ftn.uns.ac.rs/875535517/softversko-inzenjerstvo-i-informacione-tehnologije?period=z> a aiiso:Programme ;
-    uni:EducationalField "Tehničko-tehnološke nauke" ;
-    uni:LevelOfStudy "Osnovne akademske studije" ;
-    uni:ScientificField "Elektrotehničko i računarsko inženjerstvo" ;
-    uni:Title "Diplomirani inženjer softvera (Dipl.inž.softv.)" ;
+    uni:educationalField "Tehničko-tehnološke nauke" ;
     uni:espb 240 ;
+    uni:levelOfStudy "Osnovne akademske studije" ;
     uni:name "softversko inzenjerstvo i informacione tehnologije" ;
-    uni:semesters 8 .
+    uni:scientificField "Elektrotehničko i računarsko inženjerstvo" ;
+    uni:semesters 8 ;
+    uni:title "Diplomirani inženjer softvera (Dipl.inž.softv.)" .
 
 <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> a aiiso:Course ;
     dc:date "2005-10-01"^^xsd:date ;
@@ -35,17 +35,17 @@
     dc:subject "Primenjene računarske nauke i informatika" ;
     dc:title "Završni rad - izrada i odbrana" ;
     dc:type "Stručno-aplikativni" ;
-    uni:Methodology """Mentor za izradu i odbranu završnog rada bira jedan od ponuđenih modula (isti modul kao i za teorijske osnove) iz kojeg će student da radi završni rad i formuliše temu sa zadacima za izradu završnog rada. Kandidat u konsultacijama sa mentorom i saradnikom samostalno radi na problemu koji mu je zadat. Nakon izrade rada i saglasnosti mentora da je uspešno urađen rad, kandidat brani rad pred komisijom koja se sastoji od najmanje tri člana.
-Tokom izrade završnog rada, mentor može davati dodatna uputstva studentu, upućivati na odrećenu literaturu i dodatno ga usmeravati u cilju izrade kvalitetnog diplomskog rada. U okviru teorijskog dela završnog rada student obavlja konsultacije sa mentorom, a po potrebi i sa drugim nastavnicima koji se bave problematikom iz oblasti teme završnog rada.""" ;
-    uni:Purpose "Cilj izrade i odbrane završnog rada je da student pokaže da poseduje zadovoljavajuću sposobnost primene teorijskih i praktičnih znanja u praks" ;
-    uni:Result """Izradom i odbranom završnog rada studenti koji su završili studije treba da budu sposobni da rešavaju realne probleme iz prakse kao i da nastave školovanje ukoliko se za to opredele. Kompetencije uključuju, pre svega, razvoj sposobnosti kritičnog mišljenja, sposobnosti analize problema, sinteze rešenja, predviđanje ponašanja odabranog rešenja sa jasnom predstavom šta su dobre a šta loše strane odabranog rešenja. Svršeni studenti imaju i sposobnost rešavanja konkretnih problema uz upotrebu naučnih metoda i postupaka. Posebno je važna sposobnost povezivanja osnovnih znanja iz različitih oblasti i njihova primena. Svršeni studenti su osposobljeni za intenzivno korišćenje informaciono-komunikacionih tehnologija.
-Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u praksi i praćenje i primenu novina u struci, kao i za saradnju sa lokalnim socijalnim i međunarodnim okruženjem.""" ;
-    uni:Semester "letnji" ;
-    uni:Year 4 ;
     uni:espb 5 ;
     uni:hasEvaluation <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/evaluation> ;
     uni:hasLiterature <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/literature> ;
-    uni:hasTeachers <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/teachers> .
+    uni:hasTeachers <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/teachers> ;
+    uni:methodology """Mentor za izradu i odbranu završnog rada bira jedan od ponuđenih modula (isti modul kao i za teorijske osnove) iz kojeg će student da radi završni rad i formuliše temu sa zadacima za izradu završnog rada. Kandidat u konsultacijama sa mentorom i saradnikom samostalno radi na problemu koji mu je zadat. Nakon izrade rada i saglasnosti mentora da je uspešno urađen rad, kandidat brani rad pred komisijom koja se sastoji od najmanje tri člana.
+Tokom izrade završnog rada, mentor može davati dodatna uputstva studentu, upućivati na odrećenu literaturu i dodatno ga usmeravati u cilju izrade kvalitetnog diplomskog rada. U okviru teorijskog dela završnog rada student obavlja konsultacije sa mentorom, a po potrebi i sa drugim nastavnicima koji se bave problematikom iz oblasti teme završnog rada.""" ;
+    uni:purpose "Cilj izrade i odbrane završnog rada je da student pokaže da poseduje zadovoljavajuću sposobnost primene teorijskih i praktičnih znanja u praks" ;
+    uni:result """Izradom i odbranom završnog rada studenti koji su završili studije treba da budu sposobni da rešavaju realne probleme iz prakse kao i da nastave školovanje ukoliko se za to opredele. Kompetencije uključuju, pre svega, razvoj sposobnosti kritičnog mišljenja, sposobnosti analize problema, sinteze rešenja, predviđanje ponašanja odabranog rešenja sa jasnom predstavom šta su dobre a šta loše strane odabranog rešenja. Svršeni studenti imaju i sposobnost rešavanja konkretnih problema uz upotrebu naučnih metoda i postupaka. Posebno je važna sposobnost povezivanja osnovnih znanja iz različitih oblasti i njihova primena. Svršeni studenti su osposobljeni za intenzivno korišćenje informaciono-komunikacionih tehnologija.
+Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u praksi i praćenje i primenu novina u struci, kao i za saradnju sa lokalnim socijalnim i međunarodnim okruženjem.""" ;
+    uni:semester "letnji" ;
+    uni:year 4 .
 
 <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija> a aiiso:Course ;
     dc:date "2013-10-01"^^xsd:date ;
@@ -53,26 +53,18 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     dc:subject "Proizvodni i uslužni sistemi, organizacija i menadžment" ;
     dc:title "Industrijska psihologija" ;
     dc:type "Stručno-aplikativni" ;
-    uni:Methodology "Nastava se odvija kroz predavanja i auditorne vežbe, usaglašavanjem teorijskog koncepta sa predavanja i rada na vežbama, u cilju što realnijeg i svestranijeg sagledavanja mogućnosti i uloge ljudskih resursa u organizaciji" ;
-    uni:Purpose "Obrazovni cilj: sticanje znanja iz industrijske psihologije u cilju humanizacije rada, razvoja kompetentnosti u projektovanju posla, procesa industrijalizacije zaposlenih sa ciljem unapređenja ličnih učinaka i povećanja poslovne efikasnosti i efektivnosti organizacije. Industrijska psihologija ukazuje na značaj ostvarivanja optimalnog radnog efekta uz maksimalno prilagođavanje čoveka radu." ;
-    uni:Result "Studenti će biti osposobljeni da: (1) primene praktične tehnike analize posla, radnih mesta zaposlenih u organizacijskim ulogama (2) identifikuju indikatore apsentizma i fluktuacije  (3) steknu znanje o preventivnim merama povreda i nesreća na radu (4) analiziraju funkciju čoveka u tehničkim sistemima (5) usvoje principe optimizacije rada, sredstava za rad i uslova radnog mesta." ;
-    uni:Semester "letnji" ;
-    uni:Year 2 ;
     uni:espb 5 ;
     uni:hasEvaluation <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> ;
     uni:hasLiterature <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> ;
-    uni:hasTeachers <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> .
+    uni:hasTeachers <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> ;
+    uni:methodology "Nastava se odvija kroz predavanja i auditorne vežbe, usaglašavanjem teorijskog koncepta sa predavanja i rada na vežbama, u cilju što realnijeg i svestranijeg sagledavanja mogućnosti i uloge ljudskih resursa u organizaciji" ;
+    uni:purpose "Obrazovni cilj: sticanje znanja iz industrijske psihologije u cilju humanizacije rada, razvoja kompetentnosti u projektovanju posla, procesa industrijalizacije zaposlenih sa ciljem unapređenja ličnih učinaka i povećanja poslovne efikasnosti i efektivnosti organizacije. Industrijska psihologija ukazuje na značaj ostvarivanja optimalnog radnog efekta uz maksimalno prilagođavanje čoveka radu." ;
+    uni:result "Studenti će biti osposobljeni da: (1) primene praktične tehnike analize posla, radnih mesta zaposlenih u organizacijskim ulogama (2) identifikuju indikatore apsentizma i fluktuacije  (3) steknu znanje o preventivnim merama povreda i nesreća na radu (4) analiziraju funkciju čoveka u tehničkim sistemima (5) usvoje principe optimizacije rada, sredstava za rad i uslova radnog mesta." ;
+    uni:semester "letnji" ;
+    uni:year 2 .
 
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> uni:Evaluation [ uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Predmetni projekat" ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/evaluation> uni:Evaluation [ uni:activity "Predmetni projekat" ;
             uni:points 50 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Test" ;
-            uni:points 10 ;
             uni:preExamination true ;
             uni:required true ],
         [ uni:activity "Teorijski deo ispita" ;
@@ -82,32 +74,41 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
         [ uni:activity "Prisustvo na laboratorijskim vežbama" ;
             uni:points 5 ;
             uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ uni:activity "Test" ;
+            uni:points 10 ;
+            uni:preExamination true ;
             uni:required true ] .
 
-<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/literature> uni:Literature [ dc:creator "M. Popović, I. Bašičević" ;
+<http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/literature> a uni:Literature ;
+    uni:booksList [ a uni:Book ;
+            dc:creator "M. Popović, I. Bašičević" ;
             dc:date 2016 ;
             dc:language "Srpski jezik" ;
-            dc:publisher "" ;
             dc:title "Međuračunarske komunikacije i računarske mreže I, skripte." ],
-        [ dc:creator "D. Komer" ;
+        [ a uni:Book ;
+            dc:creator "D. Komer" ;
             dc:date 2005 ;
             dc:language "Engleski" ;
-            dc:publisher "" ;
             dc:title "TCP/IP Internet" ] .
 
 <http://www.ftn.uns.ac.rs/2028112889/medjuracunarske-komunikacije-i-racunarske-mreze-1/teachers> a uni:Teachers ;
     uni:teachersList [ a foaf:Person ;
             uni:typeOfTeaching "Računarske vežbe" ;
-            foaf:name "Ivanović Sandra" ;
-            foaf:title "Asistent-master" ],
+            foaf:name "Lukač dr Željko" ;
+            foaf:title "Docent" ],
         [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Bašičević dr Ilija" ;
             foaf:title "Redovni profesor" ],
         [ a foaf:Person ;
             uni:typeOfTeaching "Računarske vežbe" ;
-            foaf:name "Lukač dr Željko" ;
-            foaf:title "Docent" ] .
+            foaf:name "Ivanović Sandra" ;
+            foaf:title "Asistent-master" ] .
 
 <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/evaluation> uni:Evaluation [ uni:activity "Izrada završnog rada sa teorijskim osnovama" ;
             uni:points 50 ;
@@ -118,28 +119,27 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:preExamination false ;
             uni:required true ] .
 
-<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/literature> uni:Literature [ dc:creator "-" ;
-            dc:date "None" ;
-            dc:language "" ;
-            dc:publisher "" ;
+<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/literature> a uni:Literature ;
+    uni:booksList [ a uni:Book ;
+            dc:creator "-" ;
             dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] .
 
 <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana/teachers> a uni:Teachers .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> uni:Evaluation [ uni:activity "Test" ;
-            uni:points 10 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ uni:activity "Teorijski deo ispita" ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/evaluation> uni:Evaluation [ uni:activity "Teorijski deo ispita" ;
             uni:points 70 ;
             uni:preExamination false ;
+            uni:required true ],
+        [ uni:activity "Prisustvo na vežbama" ;
+            uni:points 5 ;
+            uni:preExamination true ;
             uni:required true ],
         [ uni:activity "Prisustvo na predavanjima" ;
             uni:points 5 ;
             uni:preExamination true ;
             uni:required true ],
-        [ uni:activity "Prisustvo na vežbama" ;
-            uni:points 5 ;
+        [ uni:activity "Test" ;
+            uni:points 10 ;
             uni:preExamination true ;
             uni:required true ],
         [ uni:activity "Test" ;
@@ -147,39 +147,44 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:preExamination true ;
             uni:required true ] .
 
-<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> uni:Literature [ dc:creator "Spector, P." ;
+<http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/literature> a uni:Literature ;
+    uni:booksList [ a uni:Book ;
+            dc:creator "Spector, P." ;
             dc:date 2003 ;
             dc:language "Engleski" ;
             dc:publisher "Wiley" ;
             dc:title "Industrial&Organizational Psychology" ],
-        [ dc:creator "Coovort, M. Thompson, L." ;
-            dc:date 2013 ;
-            dc:language "Engleski" ;
-            dc:publisher "" ;
-            dc:title "The Psychology of Workplace Technology" ],
-        [ dc:creator "Zedeck, S." ;
+        [ a uni:Book ;
+            dc:creator "Zedeck, S." ;
             dc:date 2011 ;
             dc:language "Engleski" ;
             dc:publisher "American Psychological Association" ;
             dc:title "APA Handbook of Industrial and Organizational Psychology" ],
-        [ dc:creator "Guzina, M." ;
-            dc:date 1966 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Naučna knjiga, Beograd" ;
-            dc:title "Kadrovska psihologija" ],
-        [ dc:creator "Čizmić, S." ;
+        [ a uni:Book ;
+            dc:creator "Čizmić, S." ;
             dc:date 2007 ;
             dc:language "Srpski jezik" ;
             dc:publisher "Institut za psihologiju, Beograd" ;
-            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ] .
+            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ],
+        [ a uni:Book ;
+            dc:creator "Coovort, M. Thompson, L." ;
+            dc:date 2013 ;
+            dc:language "Engleski" ;
+            dc:title "The Psychology of Workplace Technology" ],
+        [ a uni:Book ;
+            dc:creator "Guzina, M." ;
+            dc:date 1966 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Naučna knjiga, Beograd" ;
+            dc:title "Kadrovska psihologija" ] .
 
 <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija/teachers> a uni:Teachers ;
     uni:teachersList [ a foaf:Person ;
-            uni:typeOfTeaching "Auditorne vežbe" ;
+            uni:typeOfTeaching "Predavanja" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ],
         [ a foaf:Person ;
-            uni:typeOfTeaching "Predavanja" ;
+            uni:typeOfTeaching "Auditorne vežbe" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ],
         [ a foaf:Person ;
