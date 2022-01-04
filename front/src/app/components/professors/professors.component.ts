@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/model/course.model';
 import { Professor } from 'src/app/model/professor.model';
+import { CoursesService } from 'src/app/service/courses.service';
+import { ProfessorsService } from 'src/app/service/professors.service';
 
 @Component({
   selector: 'app-professors',
@@ -9,13 +11,30 @@ import { Professor } from 'src/app/model/professor.model';
 })
 export class ProfessorsComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'teaching', 'title'];
-  professors: Professor[] = [];
-  courses: Course[] = [];
+  displayedColumns: string[] = ['name'];
+  // professors: Professor[] = [];
+  professors: string[] = [];
+  courses: string[] = [];
+  course: string = "";
 
-  constructor() { }
+  constructor(
+    private coursesService: CoursesService,
+    private professorsService: ProfessorsService
+  ) { }
 
   ngOnInit(): void {
+    this.coursesService.getAllCourses().subscribe(result => {
+      this.courses = result;
+    });
+  }
+
+  onCourseChange(event: any): void {
+    this.course = event.value;
+
+    this.professorsService.getProfessors(this.course).subscribe(result => {
+      this.professors = result;
+    })
+
   }
 
 }

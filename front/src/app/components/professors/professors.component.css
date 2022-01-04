@@ -16,3 +16,12 @@ form {
     width: 70%;
     margin: auto;
 }
+
+.mat-form-field {
+    width: 400px;
+}
+
+#naslov {
+    display: center;
+    padding: 1rem;
+}
