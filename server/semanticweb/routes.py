@@ -1,7 +1,15 @@
-from flask import jsonify
-from semanticweb import app, db
-from rdflib import Graph
+from flask import jsonify, request
+from semanticweb import app, db, sparql
 from firebase_admin import auth
+
+
+# allow all origin
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    return response
+
 
 @app.route('/')
 def main():
@@ -29,8 +37,31 @@ def test_rdflib():
     # return 'true'
     return jsonify([(s, p, o) for s, p, o in g])
 
+
 @app.route('/test-auth')
 def test_auth():
     user = auth.get_user_by_email('jovan@teacher.com')
     print(user)
     return 'done'
+
+
+@app.get('/courses')
+def get_courses():
+    return jsonify(sparql.get_all_courses())
+
+
+@app.get('/query_teachers_on_course')
+def query_teachers_on_course():
+    course_name = request.args.get('courseName')
+    return jsonify(sparql.get_teachers(course_name))
+
+
+@app.get('/teachers')
+def get_teachers():
+    return jsonify(sparql.get_all_teachers())
+
+
+@app.get('/query_courses_for_a_given_teacher')
+def query_courses_for_a_given_teacher():
+    teacher_name = request.args.get('teacherName')
+    return jsonify(sparql.get_courses(teacher_name))
