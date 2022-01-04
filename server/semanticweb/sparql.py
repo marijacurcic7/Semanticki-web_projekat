@@ -49,14 +49,21 @@ def get_all_teachers():
 
 def get_courses(teacher_name):
     query = """
-    SELECT DISTINCT ?title
+    SELECT DISTINCT ?title ?type ?methodology ?purpose ?result ?semester ?year ?espb
     WHERE {
     ?course a aiiso:Course .
-    ?course dc:title ?title .
     ?course uni:hasTeachers ?teachers .
     ?teachers uni:teachersList ?person .
-    ?person foaf:name '%s' .  
+    ?person foaf:name '%s' .
+    ?course dc:title ?title . 
+    OPTIONAL { ?course dc:type ?type . }
+    OPTIONAL { ?course uni:methodology ?methodology . }
+    OPTIONAL { ?course uni:purpose ?purpose . }
+    OPTIONAL { ?course uni:result ?result . }
+    OPTIONAL { ?course uni:semester ?semester . }
+    OPTIONAL { ?course uni:year ?year . }
+    OPTIONAL { ?course uni:espb ?espb . }
     }
     """ % (teacher_name)
 
-    return [row.title.value for row in g.query(query)]
+    return [row for row in g.query(query)]
