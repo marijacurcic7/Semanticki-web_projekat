@@ -1,0 +1,39 @@
+<div id="filter-div">
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-select>
+                <mat-option *ngFor="let course of courses" [value]="course.id">
+                    {{course.naziv}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" color="primary">Filter</button>
+
+    </form>
+</div>
+
+<div>
+    <table mat-table [dataSource]="professors" class="mat-elevation-z8" id="professors-table">
+  
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.punoIme}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="teaching">
+        <th mat-header-cell *matHeaderCellDef> Type of teaching </th>
+        <td mat-cell *matCellDef="let element"> {{element.vidNastave}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.zvanje}} </td>
+      </ng-container>
+  
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+  </div>

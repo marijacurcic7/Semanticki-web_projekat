@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item [routerLink] = "['']">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item [routerLink] = "['/professors']">
+        <mat-icon>people_outline</mat-icon>
+        <span>Professors</span>
+      </button>
+      <button mat-menu-item [routerLink] = "['/students']">
+        <mat-icon>people_outline</mat-icon>
+        <span>Students</span>
+      </button>
+      <button mat-menu-item [routerLink] = "['/courses']">
+        <mat-icon>subject</mat-icon>
+        <span>Courses</span>
+      </button>
+    </mat-menu>
+
+    <span>Title</span>
+
+</mat-toolbar>
