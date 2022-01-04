@@ -1,6 +1,15 @@
-from flask import jsonify
-from semanticweb import app, db, spraql
+from flask import jsonify, request
+from semanticweb import app, db, sparql
 from firebase_admin import auth
+
+
+# allow all origin
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    return response
+
 
 @app.route('/')
 def main():
@@ -38,13 +47,10 @@ def test_auth():
 
 @app.get('/get-courses')
 def get_courses():
-    return jsonify(spraql.get_courses())
+    return jsonify(sparql.get_courses())
 
 
-
-# allow all origin
-@app.after_request
-def after_request(response):
-    header = response.headers
-    header['Access-Control-Allow-Origin'] = '*'
-    return response
+@app.get('/get-teachers')
+def get_teachers():
+    course_name = request.args.get('courseName')
+    return jsonify(sparql.get_teachers(course_name))
