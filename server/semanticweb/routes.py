@@ -45,12 +45,23 @@ def test_auth():
     return 'done'
 
 
-@app.get('/get-courses')
+@app.get('/courses')
 def get_courses():
-    return jsonify(sparql.get_courses())
+    return jsonify(sparql.get_all_courses())
 
 
-@app.get('/get-teachers')
-def get_teachers():
+@app.get('/query_teachers_on_course')
+def query_teachers_on_course():
     course_name = request.args.get('courseName')
     return jsonify(sparql.get_teachers(course_name))
+
+
+@app.get('/teachers')
+def get_teachers():
+    return jsonify(sparql.get_all_teachers())
+
+
+@app.get('/query_courses_for_a_given_teacher')
+def query_courses_for_a_given_teacher():
+    teacher_name = request.args.get('teacherName')
+    return jsonify(sparql.get_courses(teacher_name))
