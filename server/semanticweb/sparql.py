@@ -83,3 +83,18 @@ def get_courses_with_more_than_3_books():
     HAVING (count(?book) > 3)
     """
     return [{'courseTitle': row.courseTitle.value, 'bookCount': row.bookCount.value} for row in g.query(query)]
+
+def get_courses_with_espb_and_year(espb_limit, current_year):
+    query = """
+    SELECT ?courseTitle ?year ?espb
+    WHERE {
+    ?course a aiiso:Course .
+    ?course dc:title ?courseTitle .
+    ?course uni:espb ?espb .
+    ?course uni:year ?year .
+    FILTER (?espb > %d) .
+    FILTER (?year = %d) .
+    }
+    GROUP BY ?courseTitle
+    """ % (espb_limit, current_year)
+    return [{'courseTitle':row.courseTitle.value, 'year': row.year.value, 'espb': row.espb.value} for row in g.query(query)]

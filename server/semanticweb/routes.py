@@ -66,6 +66,14 @@ def query_courses_for_a_given_teacher():
     teacher_name = request.args.get('teacherName')
     return jsonify(sparql.get_courses(teacher_name))
 
+
 @app.get('/query_courses_with_more_than_3_books')
 def query_courses_with_more_than_3_books():
     return jsonify(sparql.get_courses_with_more_than_3_books())
+
+
+@app.get('/query_courses_with_espb_and_year')
+def query_courses_with_espb_and_year():
+    espb_limit = int(request.args.get('espbLimit'))
+    year = int(request.args.get('year'))
+    return jsonify(sparql.get_courses_with_espb_and_year(espb_limit, year))
