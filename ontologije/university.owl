@@ -16,7 +16,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://purl.org/vocab/aiiso/schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university">
-        <owl:imports rdf:resource="http://purl.org/vocab/aiiso/schema#"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
     </owl:Ontology>
     
@@ -63,18 +62,6 @@
     <!-- http://purl.org/vocab/aiiso/schema#part_of -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/vocab/aiiso/schema#part_of"/>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#answers -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#answers"/>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswer -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswer"/>
     
 
 
@@ -158,19 +145,45 @@
     
 
 
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#correct -->
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#answersList -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#correct">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#answersList">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#MyAnswer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#endDate -->
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#correct -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#endDate">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#correct">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#MyAnswer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Question"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#educationalField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#educationalField">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#endTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#endTime">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Take"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
@@ -181,6 +194,34 @@
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#levelOfStudy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#levelOfStudy">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#methodology">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#name">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -207,11 +248,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#possibleAnswers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#possibleAnswers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Question"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/marija/ontologies/2021/university#preExamination -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#preExamination">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Evaluation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#purpose">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -225,11 +283,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#result -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#result">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#scientificField -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#scientificField">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/marija/ontologies/2021/university#semester -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#semester">
         <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -243,11 +320,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#startDate -->
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#startTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#startDate">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#startTime">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Take"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
@@ -255,8 +332,17 @@
     <!-- http://www.semanticweb.org/marija/ontologies/2021/university#text -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#text">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Answer"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#title">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -266,6 +352,15 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#typeOfTeaching">
         <rdfs:domain rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#year">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -305,7 +400,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#hasLiterature"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Literature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Book"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -324,11 +419,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Answer -->
+    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Book -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Answer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Test"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Book"/>
     
 
 
@@ -340,39 +433,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#EducationalField -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#EducationalField">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Evaluation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Evaluation"/>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#LevelOfStudy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#LevelOfStudy">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Literature -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Literature"/>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Methodology -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Methodology">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-    </owl:Class>
     
 
 
@@ -380,21 +443,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#MyAnswer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Take"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#answers"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Question"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Purpose -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Purpose">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
     </owl:Class>
     
 
@@ -403,36 +451,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Question">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Test"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswer"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Answer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#hasAnswers"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/marija/ontologies/2021/university#Answer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Result -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Result">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#ScientificField -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#ScientificField">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
     </owl:Class>
     
 
@@ -481,22 +499,6 @@
                 <owl:onClass rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Title -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Title">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Programme"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/marija/ontologies/2021/university#Year -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/marija/ontologies/2021/university#Year">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/aiiso/schema#Course"/>
     </owl:Class>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
