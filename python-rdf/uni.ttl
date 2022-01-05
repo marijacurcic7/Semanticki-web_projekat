@@ -21,8 +21,8 @@
             uni:preExamination false ;
             uni:required true ],
         [ a uni:Evaluation ;
-            uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
+            uni:activity "Test" ;
+            uni:points 10 ;
             uni:preExamination true ;
             uni:required true ],
         [ a uni:Evaluation ;
@@ -31,8 +31,8 @@
             uni:preExamination true ;
             uni:required true ],
         [ a uni:Evaluation ;
-            uni:activity "Test" ;
-            uni:points 10 ;
+            uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
             uni:preExamination true ;
             uni:required true ] ;
     uni:hasLiterature [ a uni:Book ;
@@ -108,11 +108,6 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     dc:type "Stručno-aplikativni" ;
     uni:espb 5 ;
     uni:hasEvaluation [ a uni:Evaluation ;
-            uni:activity "Test" ;
-            uni:points 10 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ a uni:Evaluation ;
             uni:activity "Prisustvo na vežbama" ;
             uni:points 5 ;
             uni:preExamination true ;
@@ -123,13 +118,18 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:preExamination true ;
             uni:required true ],
         [ a uni:Evaluation ;
+            uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ a uni:Evaluation ;
             uni:activity "Teorijski deo ispita" ;
             uni:points 70 ;
             uni:preExamination false ;
             uni:required true ],
         [ a uni:Evaluation ;
-            uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
+            uni:activity "Test" ;
+            uni:points 10 ;
             uni:preExamination true ;
             uni:required true ] ;
     uni:hasLiterature [ a uni:Book ;
@@ -139,40 +139,40 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:publisher "American Psychological Association" ;
             dc:title "APA Handbook of Industrial and Organizational Psychology" ],
         [ a uni:Book ;
-            dc:creator "Čizmić, S." ;
-            dc:date 2007 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Institut za psihologiju, Beograd" ;
-            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ],
-        [ a uni:Book ;
             dc:creator "Guzina, M." ;
             dc:date 1966 ;
             dc:language "Srpski jezik" ;
             dc:publisher "Naučna knjiga, Beograd" ;
             dc:title "Kadrovska psihologija" ],
         [ a uni:Book ;
+            dc:creator "Spector, P." ;
+            dc:date 2003 ;
+            dc:language "Engleski" ;
+            dc:publisher "Wiley" ;
+            dc:title "Industrial&Organizational Psychology" ],
+        [ a uni:Book ;
             dc:creator "Coovort, M. Thompson, L." ;
             dc:date 2013 ;
             dc:language "Engleski" ;
             dc:title "The Psychology of Workplace Technology" ],
         [ a uni:Book ;
-            dc:creator "Spector, P." ;
-            dc:date 2003 ;
-            dc:language "Engleski" ;
-            dc:publisher "Wiley" ;
-            dc:title "Industrial&Organizational Psychology" ] ;
+            dc:creator "Čizmić, S." ;
+            dc:date 2007 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Institut za psihologiju, Beograd" ;
+            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ] ;
     uni:hasTeachers [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ],
         [ a foaf:Person ;
-            uni:typeOfTeaching "Predavanja" ;
-            foaf:name "Grubić-Nešić dr Leposava" ;
-            foaf:title "Redovni profesor" ],
-        [ a foaf:Person ;
             uni:typeOfTeaching "Auditorne vežbe" ;
             foaf:name "Katić dr Ivana" ;
-            foaf:title "Vanredni profesor" ] ;
+            foaf:title "Vanredni profesor" ],
+        [ a foaf:Person ;
+            uni:typeOfTeaching "Predavanja" ;
+            foaf:name "Grubić-Nešić dr Leposava" ;
+            foaf:title "Redovni profesor" ] ;
     uni:methodology "Nastava se odvija kroz predavanja i auditorne vežbe, usaglašavanjem teorijskog koncepta sa predavanja i rada na vežbama, u cilju što realnijeg i svestranijeg sagledavanja mogućnosti i uloge ljudskih resursa u organizaciji" ;
     uni:purpose "Obrazovni cilj: sticanje znanja iz industrijske psihologije u cilju humanizacije rada, razvoja kompetentnosti u projektovanju posla, procesa industrijalizacije zaposlenih sa ciljem unapređenja ličnih učinaka i povećanja poslovne efikasnosti i efektivnosti organizacije. Industrijska psihologija ukazuje na značaj ostvarivanja optimalnog radnog efekta uz maksimalno prilagođavanje čoveka radu." ;
     uni:result "Studenti će biti osposobljeni da: (1) primene praktične tehnike analize posla, radnih mesta zaposlenih u organizacijskim ulogama (2) identifikuju indikatore apsentizma i fluktuacije  (3) steknu znanje o preventivnim merama povreda i nesreća na radu (4) analiziraju funkciju čoveka u tehničkim sistemima (5) usvoje principe optimizacije rada, sredstava za rad i uslova radnog mesta." ;
@@ -180,24 +180,46 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:semester "letnji" ;
     uni:year 2 .
 
+<http://www.sotis/takes/Ina7rDbwxfoEKjKPp3Kp> a uni:Take ;
+    uni:doneBy <http://www.sotis/users/n8LOCi8hwk5vYrwkBm9N55JT2KYV> ;
+    uni:endTime "2022-01-05T20:30:41.722000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "yes" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "int('3')",
+                "int(1)",
+                "int(2.7)" ;
+            uni:correct true ;
+            uni:points 2 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "changeable",
+                "not allowing duplicates",
+                "ordered" ;
+            uni:correct true ;
+            uni:points 3 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "used to store multiple items in a single variable." ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ] ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed true ;
+    uni:points 9 ;
+    uni:startTime "2022-01-05T20:30:18.308000+00:00"^^xsd:dateTime .
+
 <http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm> a uni:Take ;
     uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
     uni:endTime "2021-12-27T17:13:36.617000+00:00"^^xsd:dateTime ;
     uni:hasAnswers [ a uni:MyAnswers ;
-            uni:answersList "ponytail" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
-            uni:answersList "undescores" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
-            uni:answersList "a number",
-                "a string",
-                "an object" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ],
@@ -209,7 +231,21 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:answersList "a block of code designed to perform a particular task",
                 "a strawberry jam" ;
             uni:correct false ;
-            uni:points 0 ] ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "undescores" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "ponytail" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "a number",
+                "a string",
+                "an object" ;
+            uni:correct true ;
+            uni:points 1 ] ;
     uni:of <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> ;
     uni:passed false ;
     uni:points 3 ;
@@ -231,12 +267,12 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:correct false ;
             uni:points 0 ],
         [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
-            uni:points 1 ],
-        [ a uni:MyAnswers ;
-            uni:correct false ;
-            uni:points 0 ] ;
+            uni:points 1 ] ;
     uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
     uni:passed false ;
     uni:points 1 ;
@@ -252,12 +288,12 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:correct false ;
             uni:points 0 ],
         [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ],
-        [ a uni:MyAnswers ;
-            uni:correct false ;
-            uni:points 0 ],
         [ a uni:MyAnswers ;
             uni:correct false ;
             uni:points 0 ],
@@ -268,6 +304,32 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:passed false ;
     uni:points 1 ;
     uni:startTime "2021-12-28T08:54:12.360000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/q4WZ20rJE4nWW9hsCQHA> a uni:Take ;
+    uni:doneBy <http://www.sotis/users/n8LOCi8hwk5vYrwkBm9N55JT2KYV> ;
+    uni:endTime "2022-01-05T21:26:26.170000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:answersList "false",
+                "true" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "enables to represent information about resources in the form of graph ",
+                "is a framework for creating triples" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "a markup language" ;
+            uni:correct true ;
+            uni:points 1 ] ;
+    uni:of <http://www.sotis/tests/JNoL6meKgY9RcGsQcD7p> ;
+    uni:passed true ;
+    uni:points 3 ;
+    uni:startTime "2022-01-05T21:25:52.677000+00:00"^^xsd:dateTime .
 
 <http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX> a uni:Take ;
     uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
@@ -302,15 +364,15 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:correct false ;
             uni:points 0 ],
         [ a uni:MyAnswers ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
         [ a uni:MyAnswers ;
             uni:correct false ;
             uni:points 0 ],
@@ -322,23 +384,65 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:points 1 ;
     uni:startTime "2021-12-26T19:32:11.527000+00:00"^^xsd:dateTime .
 
+<http://www.sotis/tests/JNoL6meKgY9RcGsQcD7p> a uni:Test ;
+    uni:hasQuestions [ a uni:Question ;
+            uni:DomainProblem "RDF" ;
+            uni:correctAnswers "enables to represent information about resources in the form of graph ",
+                "is a framework for creating triples" ;
+            uni:points 1 ;
+            uni:possibleAnswers "enables to represent information about resources in the form of graph ",
+                "is a framework for creating triples" ;
+            uni:text "Which of the following is true for RDF?" ],
+        [ a uni:Question ;
+            uni:DomainProblem "RDFS" ;
+            uni:correctAnswers "true" ;
+            uni:points 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text " it is possible to create hierarchies of classes and properties with RDFS." ],
+        [ a uni:Question ;
+            uni:DomainProblem "OWL" ;
+            uni:correctAnswers "true" ;
+            uni:points 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "OWL extends RDFS by adding more advanced constructs to describe semantics of RDF statements." ],
+        [ a uni:Question ;
+            uni:DomainProblem "XML" ;
+            uni:correctAnswers "a markup language" ;
+            uni:points 1 ;
+            uni:possibleAnswers "a markup language",
+                "a programming language" ;
+            uni:text "What kind of a language is XML?" ] ;
+    uni:name "Semantic web basics" ;
+    uni:points 4 .
+
 <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> a uni:Test ;
     uni:hasQuestions [ a uni:Question ;
-            uni:DomainProblem "Functions" ;
-            uni:correctAnswers "a block of code designed to perform a particular task",
-                "executed when \"something\" invokes it (calls it)" ;
-            uni:maxPoints 3 ;
-            uni:possibleAnswers "a block of code designed to perform a particular task",
-                "a strawberry jam",
-                "executed when \"something\" invokes it (calls it)" ;
-            uni:text "A JS function is" ],
+            uni:DomainProblem "Data Types" ;
+            uni:correctAnswers "a number",
+                "a string",
+                "an object" ;
+            uni:points 1 ;
+            uni:possibleAnswers "a blockchain",
+                "a number",
+                "a string",
+                "an object" ;
+            uni:text "Data type can be" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Let" ;
+            uni:correctAnswers "true" ;
+            uni:points 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "Variables defined with let have Block Scope" ],
         [ a uni:Question ;
             uni:DomainProblem "Var" ;
             uni:correctAnswers "digits",
                 "dollar signs",
                 "letters",
                 "undescores" ;
-            uni:maxPoints 4 ;
+            uni:points 4 ;
             uni:possibleAnswers "digits",
                 "dollar signs",
                 "letters",
@@ -348,90 +452,84 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:DomainProblem "Objects" ;
             uni:correctAnswers "methods",
                 "properties" ;
-            uni:maxPoints 5 ;
+            uni:points 5 ;
             uni:possibleAnswers "methods",
                 "ponytail",
                 "properties" ;
             uni:text "Objects have" ],
         [ a uni:Question ;
-            uni:DomainProblem "Data Types" ;
-            uni:correctAnswers "a number",
-                "a string",
-                "an object" ;
-            uni:maxPoints 1 ;
-            uni:possibleAnswers "a blockchain",
-                "a number",
-                "a string",
-                "an object" ;
-            uni:text "Data type can be" ],
-        [ a uni:Question ;
             uni:DomainProblem "Const" ;
             uni:correctAnswers "true" ;
-            uni:maxPoints 1 ;
+            uni:points 1 ;
             uni:possibleAnswers "false",
                 "true" ;
             uni:text "Variables defined with const cannot be Reassigned" ],
         [ a uni:Question ;
-            uni:DomainProblem "Let" ;
-            uni:correctAnswers "true" ;
-            uni:maxPoints 1 ;
-            uni:possibleAnswers "false",
-                "true" ;
-            uni:text "Variables defined with let have Block Scope" ] ;
+            uni:DomainProblem "Functions" ;
+            uni:correctAnswers "a block of code designed to perform a particular task",
+                "executed when \"something\" invokes it (calls it)" ;
+            uni:points 3 ;
+            uni:possibleAnswers "a block of code designed to perform a particular task",
+                "a strawberry jam",
+                "executed when \"something\" invokes it (calls it)" ;
+            uni:text "A JS function is" ] ;
     uni:name "JS begginer test" ;
     uni:points 15 .
 
+<http://www.sotis/users/n8LOCi8hwk5vYrwkBm9N55JT2KYV> a foaf:Person ;
+    foaf:name "Nenad Nenadovic" .
+
 <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> a uni:Test ;
     uni:hasQuestions [ a uni:Question ;
-            uni:DomainProblem "Lists" ;
-            uni:correctAnswers "used to store multiple items in a single variable." ;
-            uni:maxPoints 1 ;
-            uni:possibleAnswers "used for making shopping easier",
-                "used to store multiple items in a single variable." ;
-            uni:text "Lists are..." ],
+            uni:DomainProblem "Variables" ;
+            uni:correctAnswers "true" ;
+            uni:points 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "Variables are containers for storing data values" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Data Types" ;
+            uni:correctAnswers "true" ;
+            uni:points 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "list, tuple, range & dict are types in python" ],
         [ a uni:Question ;
             uni:DomainProblem "Dictionary" ;
             uni:correctAnswers "changeable",
                 "not allowing duplicates",
                 "ordered" ;
-            uni:maxPoints 3 ;
+            uni:points 3 ;
             uni:possibleAnswers "changeable",
                 "not allowing duplicates",
                 "ordered",
                 "tacco Tuesday" ;
             uni:text "Dictionary is a collection which is" ],
         [ a uni:Question ;
-            uni:DomainProblem "Data Types" ;
-            uni:correctAnswers "true" ;
-            uni:maxPoints 1 ;
-            uni:possibleAnswers "false",
-                "true" ;
-            uni:text "list, tuple, range & dict are types in python" ],
+            uni:DomainProblem "Lists" ;
+            uni:correctAnswers "used to store multiple items in a single variable." ;
+            uni:points 1 ;
+            uni:possibleAnswers "used for making shopping easier",
+                "used to store multiple items in a single variable." ;
+            uni:text "Lists are..." ],
+        [ a uni:Question ;
+            uni:DomainProblem "Strings" ;
+            uni:correctAnswers "yes" ;
+            uni:points 1 ;
+            uni:possibleAnswers "no",
+                "yes" ;
+            uni:text "Is 'hello' the same as \"hello\"?" ],
         [ a uni:Question ;
             uni:DomainProblem "Casting" ;
             uni:correctAnswers "int('3')",
                 "int(1)",
                 "int(2.7)" ;
-            uni:maxPoints 2 ;
+            uni:points 2 ;
             uni:possibleAnswers "int('3')",
                 "int('number 0')",
                 "int(1)",
                 "int(2.7)" ;
-            uni:text "Select valid casting" ],
-        [ a uni:Question ;
-            uni:DomainProblem "Variables" ;
-            uni:correctAnswers "true" ;
-            uni:maxPoints 1 ;
-            uni:possibleAnswers "false",
-                "true" ;
-            uni:text "Variables are containers for storing data values" ],
-        [ a uni:Question ;
-            uni:DomainProblem "Strings" ;
-            uni:correctAnswers "yes" ;
-            uni:maxPoints 1 ;
-            uni:possibleAnswers "no",
-                "yes" ;
-            uni:text "Is 'hello' the same as \"hello\"?" ] ;
+            uni:text "Select valid casting" ] ;
     uni:name "Python Basics" ;
     uni:points 9 .
 
