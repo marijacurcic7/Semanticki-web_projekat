@@ -84,6 +84,7 @@ def get_courses_with_more_than_3_books():
     """
     return [{'courseTitle': row.courseTitle.value, 'bookCount': row.bookCount.value} for row in g.query(query)]
 
+
 def get_courses_with_espb_and_year(espb_limit, current_year):
     query = """
     SELECT ?courseTitle ?year ?espb
@@ -97,4 +98,30 @@ def get_courses_with_espb_and_year(espb_limit, current_year):
     }
     GROUP BY ?courseTitle
     """ % (espb_limit, current_year)
-    return [{'courseTitle':row.courseTitle.value, 'year': row.year.value, 'espb': row.espb.value} for row in g.query(query)]
+    return [{'courseTitle': row.courseTitle.value, 'year': row.year.value, 'espb': row.espb.value} for row in g.query(query)]
+
+
+def get_scientific_fields(semester):
+    query = """
+    SELECT ?scientificField
+    WHERE {
+    ?course a aiiso:Course .
+    ?course uni:semester '%s' .
+    ?course uni:scientificField ?scientificField .
+    }
+    """ % (semester)
+    return [row.scientificField.value for row in g.query(query)]
+
+
+def get_courses_with_semester_and_scientific_field(semester, scientific_field):
+    query = """
+    SELECT ?courseTitle
+    WHERE {
+    ?course a aiiso:Course .
+    ?course dc:title ?courseTitle .
+    ?course uni:semester '%s' .
+    ?course uni:scientificField '%s'.
+    }
+    GROUP BY ?courseTitle
+    """ % (semester, scientific_field)
+    return [row.courseTitle.value for row in g.query(query)]

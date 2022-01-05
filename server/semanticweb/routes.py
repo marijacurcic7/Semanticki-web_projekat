@@ -77,3 +77,16 @@ def query_courses_with_espb_and_year():
     espb_limit = int(request.args.get('espbLimit'))
     year = int(request.args.get('year'))
     return jsonify(sparql.get_courses_with_espb_and_year(espb_limit, year))
+
+
+@app.get('/scientific_fields_in_semester')
+def get_scientific_fields():
+    semester = request.args.get('semester')
+    return jsonify(sparql.get_scientific_fields(semester))
+
+
+@app.get('/query_courses_with_semester_and_scientific_field')
+def query_courses_with_semester_and_scientific_field():
+    semester = request.args.get('semester')
+    scientific_field = request.args.get('scientificField')
+    return jsonify(sparql.get_courses_with_semester_and_scientific_field(semester, scientific_field))
