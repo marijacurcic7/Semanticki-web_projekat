@@ -55,7 +55,7 @@ def get_courses(teacher_name):
     ?course uni:hasTeachers ?teachers .
     ?teachers uni:teachersList ?person .
     ?person foaf:name '%s' .
-    ?course dc:title ?title . 
+    ?course dc:title ?title .
     OPTIONAL { ?course dc:type ?type . }
     OPTIONAL { ?course uni:methodology ?methodology . }
     OPTIONAL { ?course uni:purpose ?purpose . }
@@ -67,3 +67,19 @@ def get_courses(teacher_name):
     """ % (teacher_name)
 
     return [row for row in g.query(query)]
+
+
+def get_courses_with_more_than_3_books():
+    query = """
+    SELECT ?courseTitle (count(?book) as ?bookCount)
+    WHERE {
+    ?course a aiiso:Course .
+    ?course dc:title ?courseTitle .
+    ?course uni:hasLiterature ?literature .
+    ?literature uni:booksList ?book .
+    ?book dc:title ?bookTitle .
+    }
+    GROUP BY ?courseTitle
+    HAVING (count(?book) > 3)
+    """
+    return [{'courseTitle': row.courseTitle.value, 'bookCount': row.bookCount.value} for row in g.query(query)]
