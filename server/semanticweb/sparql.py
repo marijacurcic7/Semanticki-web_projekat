@@ -20,8 +20,7 @@ def get_teachers(course_name):
     WHERE {
     ?course a aiiso:Course .
     ?course dc:title ?courseName .
-    ?course uni:hasTeachers ?teachers .
-    ?teachers uni:teachersList ?person .
+    ?course uni:hasTeachers ?person .
     ?person foaf:title ?title .
     ?person foaf:name ?name .
     FILTER (?courseName='%s') .
@@ -52,8 +51,7 @@ def get_courses(teacher_name):
     SELECT DISTINCT ?title ?type ?methodology ?purpose ?result ?semester ?year ?espb
     WHERE {
     ?course a aiiso:Course .
-    ?course uni:hasTeachers ?teachers .
-    ?teachers uni:teachersList ?person .
+    ?course uni:hasTeachers ?person .
     ?person foaf:name '%s' .
     ?course dc:title ?title .
     OPTIONAL { ?course dc:type ?type . }
@@ -75,8 +73,7 @@ def get_courses_with_more_than_3_books():
     WHERE {
     ?course a aiiso:Course .
     ?course dc:title ?courseTitle .
-    ?course uni:hasLiterature ?literature .
-    ?literature uni:booksList ?book .
+    ?course uni:hasLiterature ?book .
     ?book dc:title ?bookTitle .
     }
     GROUP BY ?courseTitle

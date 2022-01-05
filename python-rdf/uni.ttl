@@ -9,18 +9,13 @@
     dc:description "Uvod. Projektovanje protokola (pojam protokola, jezici za formanu specifikaciju protokola – SDL, MSC, TTCN, UML). Metodologija realizacije protokola (jezgro, projektantski šablon, biblioteka klasa za realizaciju protokola). Protokoli za upravljanje u Internetu. Uvod u zaštitu računarskih mreža. Prenos audio i video podataka u Internetu." ;
     dc:title "Međuračunarske komunikacije i računarske mreže 1" ;
     dc:type "Naučno-stručni" ;
-    uni:booksList [ a uni:Book ;
-            dc:creator "D. Komer" ;
-            dc:date 2005 ;
-            dc:language "Engleski" ;
-            dc:title "TCP/IP Internet" ],
-        [ a uni:Book ;
-            dc:creator "M. Popović, I. Bašičević" ;
-            dc:date 2016 ;
-            dc:language "Srpski jezik" ;
-            dc:title "Međuračunarske komunikacije i računarske mreže I, skripte." ] ;
     uni:espb 4 ;
     uni:hasEvaluation [ a uni:Evaluation ;
+            uni:activity "Test" ;
+            uni:points 10 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ a uni:Evaluation ;
             uni:activity "Predmetni projekat" ;
             uni:points 50 ;
             uni:preExamination true ;
@@ -36,15 +31,20 @@
             uni:preExamination false ;
             uni:required true ],
         [ a uni:Evaluation ;
-            uni:activity "Test" ;
-            uni:points 10 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ a uni:Evaluation ;
             uni:activity "Prisustvo na laboratorijskim vežbama" ;
             uni:points 5 ;
             uni:preExamination true ;
             uni:required true ] ;
+    uni:hasLiterature [ a uni:Book ;
+            dc:creator "D. Komer" ;
+            dc:date 2005 ;
+            dc:language "Engleski" ;
+            dc:title "TCP/IP Internet" ],
+        [ a uni:Book ;
+            dc:creator "M. Popović, I. Bašičević" ;
+            dc:date 2016 ;
+            dc:language "Srpski jezik" ;
+            dc:title "Međuračunarske komunikacije i računarske mreže I, skripte." ] ;
     uni:hasTeachers [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Bašičević dr Ilija" ;
@@ -78,9 +78,6 @@
     dc:description "Formira se pojedinačno u skladu sa potrebama i oblašću koja je obuhvaćena zadatom temom završnog rada. Student u dogovoru sa mentorom sačinjava završni rad u pismenoj formi u skladu sa predviđenim standardima Fakulteta tehničkih nauka. Student priprema i brani pismeni završni rad javno u dogovoru sa mentorom i u skladu sa predviđenim standardima. Student proučava stručnu literaturu, stručne i diplomske radove studenata koji se bave sličnom tematikom, vrši analize u cilju iznalaženja rešenja konkretnog zadatka koji je definisan zadatkom završnog rada." ;
     dc:title "Završni rad - izrada i odbrana" ;
     dc:type "Stručno-aplikativni" ;
-    uni:booksList [ a uni:Book ;
-            dc:creator "-" ;
-            dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] ;
     uni:espb 5 ;
     uni:hasEvaluation [ a uni:Evaluation ;
             uni:activity "Odbrana završnog rada" ;
@@ -92,6 +89,9 @@
             uni:points 50 ;
             uni:preExamination false ;
             uni:required true ] ;
+    uni:hasLiterature [ a uni:Book ;
+            dc:creator "-" ;
+            dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] ;
     uni:methodology """Mentor za izradu i odbranu završnog rada bira jedan od ponuđenih modula (isti modul kao i za teorijske osnove) iz kojeg će student da radi završni rad i formuliše temu sa zadacima za izradu završnog rada. Kandidat u konsultacijama sa mentorom i saradnikom samostalno radi na problemu koji mu je zadat. Nakon izrade rada i saglasnosti mentora da je uspešno urađen rad, kandidat brani rad pred komisijom koja se sastoji od najmanje tri člana.
 Tokom izrade završnog rada, mentor može davati dodatna uputstva studentu, upućivati na odrećenu literaturu i dodatno ga usmeravati u cilju izrade kvalitetnog diplomskog rada. U okviru teorijskog dela završnog rada student obavlja konsultacije sa mentorom, a po potrebi i sa drugim nastavnicima koji se bave problematikom iz oblasti teme završnog rada.""" ;
     uni:purpose "Cilj izrade i odbrane završnog rada je da student pokaže da poseduje zadovoljavajuću sposobnost primene teorijskih i praktičnih znanja u praks" ;
@@ -106,47 +106,8 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     dc:description "Uloga industrijske psihologije u poslovanju: definicija, predmet i ciljevi industrijske psihologije; istorijski razvoj; fiziološki i psihološki aspekti rada; cirkadijalni ritmovi i individualne razlike. Prilagođavanje čoveka radu: metode prilagođavanja čoveka radu; analiza posla-osnova prilagođavanja čoveka radu; metode procene radnika i radnih mesta; oblikovanje poslova i organizacija rada; dizajn posla; uloga apsentizma i fluktuacije; radna adaptacija. Radna sposobnost zaposlenih: tehnike redizajniranja posla; patologija rada; umor i monotonija; bezbednost na radu; povrede na radu, prevencija nesreće na radu. Čovek u savremenim tehnološkim sistemima: sistem čovek-mašina; efikasnost sistema; komunikacija u sistemu; tačnost, pouzdanost, raspodela uloga u sistemu; mentalni modeli operatora." ;
     dc:title "Industrijska psihologija" ;
     dc:type "Stručno-aplikativni" ;
-    uni:booksList [ a uni:Book ;
-            dc:creator "Spector, P." ;
-            dc:date 2003 ;
-            dc:language "Engleski" ;
-            dc:publisher "Wiley" ;
-            dc:title "Industrial&Organizational Psychology" ],
-        [ a uni:Book ;
-            dc:creator "Zedeck, S." ;
-            dc:date 2011 ;
-            dc:language "Engleski" ;
-            dc:publisher "American Psychological Association" ;
-            dc:title "APA Handbook of Industrial and Organizational Psychology" ],
-        [ a uni:Book ;
-            dc:creator "Coovort, M. Thompson, L." ;
-            dc:date 2013 ;
-            dc:language "Engleski" ;
-            dc:title "The Psychology of Workplace Technology" ],
-        [ a uni:Book ;
-            dc:creator "Guzina, M." ;
-            dc:date 1966 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Naučna knjiga, Beograd" ;
-            dc:title "Kadrovska psihologija" ],
-        [ a uni:Book ;
-            dc:creator "Čizmić, S." ;
-            dc:date 2007 ;
-            dc:language "Srpski jezik" ;
-            dc:publisher "Institut za psihologiju, Beograd" ;
-            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ] ;
     uni:espb 5 ;
     uni:hasEvaluation [ a uni:Evaluation ;
-            uni:activity "Teorijski deo ispita" ;
-            uni:points 70 ;
-            uni:preExamination false ;
-            uni:required true ],
-        [ a uni:Evaluation ;
-            uni:activity "Test" ;
-            uni:points 10 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ a uni:Evaluation ;
             uni:activity "Prisustvo na predavanjima" ;
             uni:points 5 ;
             uni:preExamination true ;
@@ -160,19 +121,58 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
+            uni:required true ],
+        [ a uni:Evaluation ;
+            uni:activity "Teorijski deo ispita" ;
+            uni:points 70 ;
+            uni:preExamination false ;
+            uni:required true ],
+        [ a uni:Evaluation ;
+            uni:activity "Test" ;
+            uni:points 10 ;
+            uni:preExamination true ;
             uni:required true ] ;
+    uni:hasLiterature [ a uni:Book ;
+            dc:creator "Zedeck, S." ;
+            dc:date 2011 ;
+            dc:language "Engleski" ;
+            dc:publisher "American Psychological Association" ;
+            dc:title "APA Handbook of Industrial and Organizational Psychology" ],
+        [ a uni:Book ;
+            dc:creator "Coovort, M. Thompson, L." ;
+            dc:date 2013 ;
+            dc:language "Engleski" ;
+            dc:title "The Psychology of Workplace Technology" ],
+        [ a uni:Book ;
+            dc:creator "Spector, P." ;
+            dc:date 2003 ;
+            dc:language "Engleski" ;
+            dc:publisher "Wiley" ;
+            dc:title "Industrial&Organizational Psychology" ],
+        [ a uni:Book ;
+            dc:creator "Čizmić, S." ;
+            dc:date 2007 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Institut za psihologiju, Beograd" ;
+            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ],
+        [ a uni:Book ;
+            dc:creator "Guzina, M." ;
+            dc:date 1966 ;
+            dc:language "Srpski jezik" ;
+            dc:publisher "Naučna knjiga, Beograd" ;
+            dc:title "Kadrovska psihologija" ] ;
     uni:hasTeachers [ a foaf:Person ;
+            uni:typeOfTeaching "Predavanja" ;
+            foaf:name "Katić dr Ivana" ;
+            foaf:title "Vanredni profesor" ],
+        [ a foaf:Person ;
             uni:typeOfTeaching "Auditorne vežbe" ;
             foaf:name "Katić dr Ivana" ;
             foaf:title "Vanredni profesor" ],
         [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Grubić-Nešić dr Leposava" ;
-            foaf:title "Redovni profesor" ],
-        [ a foaf:Person ;
-            uni:typeOfTeaching "Predavanja" ;
-            foaf:name "Katić dr Ivana" ;
-            foaf:title "Vanredni profesor" ] ;
+            foaf:title "Redovni profesor" ] ;
     uni:methodology "Nastava se odvija kroz predavanja i auditorne vežbe, usaglašavanjem teorijskog koncepta sa predavanja i rada na vežbama, u cilju što realnijeg i svestranijeg sagledavanja mogućnosti i uloge ljudskih resursa u organizaciji" ;
     uni:purpose "Obrazovni cilj: sticanje znanja iz industrijske psihologije u cilju humanizacije rada, razvoja kompetentnosti u projektovanju posla, procesa industrijalizacije zaposlenih sa ciljem unapređenja ličnih učinaka i povećanja poslovne efikasnosti i efektivnosti organizacije. Industrijska psihologija ukazuje na značaj ostvarivanja optimalnog radnog efekta uz maksimalno prilagođavanje čoveka radu." ;
     uni:result "Studenti će biti osposobljeni da: (1) primene praktične tehnike analize posla, radnih mesta zaposlenih u organizacijskim ulogama (2) identifikuju indikatore apsentizma i fluktuacije  (3) steknu znanje o preventivnim merama povreda i nesreća na radu (4) analiziraju funkciju čoveka u tehničkim sistemima (5) usvoje principe optimizacije rada, sredstava za rad i uslova radnog mesta." ;
