@@ -20,8 +20,7 @@ def get_teachers(course_name):
     WHERE {
     ?course a aiiso:Course .
     ?course dc:title ?courseName .
-    ?course uni:hasTeachers ?teachers .
-    ?teachers uni:teachersList ?person .
+    ?course uni:hasTeachers ?person .
     ?person foaf:title ?title .
     ?person foaf:name ?name .
     FILTER (?courseName='%s') .
@@ -52,10 +51,9 @@ def get_courses(teacher_name):
     SELECT DISTINCT ?title ?type ?methodology ?purpose ?result ?semester ?year ?espb
     WHERE {
     ?course a aiiso:Course .
-    ?course uni:hasTeachers ?teachers .
-    ?teachers uni:teachersList ?person .
+    ?course uni:hasTeachers ?person .
     ?person foaf:name '%s' .
-    ?course dc:title ?title . 
+    ?course dc:title ?title .
     OPTIONAL { ?course dc:type ?type . }
     OPTIONAL { ?course uni:methodology ?methodology . }
     OPTIONAL { ?course uni:purpose ?purpose . }
@@ -67,3 +65,60 @@ def get_courses(teacher_name):
     """ % (teacher_name)
 
     return [row for row in g.query(query)]
+
+
+def get_courses_with_more_than_3_books():
+    query = """
+    SELECT ?courseTitle (count(?book) as ?bookCount)
+    WHERE {
+    ?course a aiiso:Course .
+    ?course dc:title ?courseTitle .
+    ?course uni:hasLiterature ?book .
+    ?book dc:title ?bookTitle .
+    }
+    GROUP BY ?courseTitle
+    HAVING (count(?book) > 3)
+    """
+    return [{'courseTitle': row.courseTitle.value, 'bookCount': row.bookCount.value} for row in g.query(query)]
+
+
+def get_courses_with_espb_and_year(espb_limit, current_year):
+    query = """
+    SELECT ?courseTitle ?year ?espb
+    WHERE {
+    ?course a aiiso:Course .
+    ?course dc:title ?courseTitle .
+    ?course uni:espb ?espb .
+    ?course uni:year ?year .
+    FILTER (?espb > %d) .
+    FILTER (?year = %d) .
+    }
+    GROUP BY ?courseTitle
+    """ % (espb_limit, current_year)
+    return [{'courseTitle': row.courseTitle.value, 'year': row.year.value, 'espb': row.espb.value} for row in g.query(query)]
+
+
+def get_scientific_fields(semester):
+    query = """
+    SELECT ?scientificField
+    WHERE {
+    ?course a aiiso:Course .
+    ?course uni:semester '%s' .
+    ?course uni:scientificField ?scientificField .
+    }
+    """ % (semester)
+    return [row.scientificField.value for row in g.query(query)]
+
+
+def get_courses_with_semester_and_scientific_field(semester, scientific_field):
+    query = """
+    SELECT ?courseTitle
+    WHERE {
+    ?course a aiiso:Course .
+    ?course dc:title ?courseTitle .
+    ?course uni:semester '%s' .
+    ?course uni:scientificField '%s'.
+    }
+    GROUP BY ?courseTitle
+    """ % (semester, scientific_field)
+    return [row.courseTitle.value for row in g.query(query)]

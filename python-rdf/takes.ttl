@@ -1,0 +1,151 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university.owl> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.sotis/takes/j96Cu1ldf97IbaA6TvGm> a uni:Take ;
+    uni:doneBy [ a foaf:Person ;
+            foaf:name "Petar Petrovic" ] ;
+    uni:endTime "2021-12-27T17:13:36.617000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "ponytail" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "undescores" ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "a number",
+                "a string",
+                "an object" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "a block of code designed to perform a particular task",
+                "a strawberry jam" ;
+            uni:correct false ;
+            uni:points 0 ] ;
+    uni:of <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> ;
+    uni:passed false ;
+    uni:points 3 ;
+    uni:startTime "2021-12-27T17:13:08.534000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/kXeuCrNbnaqpwZlr94D9> a uni:Take ;
+    uni:doneBy [ a foaf:Person ;
+            foaf:name "Petar Petrovic" ] ;
+    uni:endTime "2021-12-27T16:06:30.396000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ] ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 1 ;
+    uni:startTime "2021-12-27T16:06:14.867000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/ngL0zmAg40Ikbj0rFCP0> a uni:Take ;
+    uni:doneBy [ a foaf:Person ;
+            foaf:name "Petar Petrovic" ] ;
+    uni:endTime "2021-12-28T09:03:43.931000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ] ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 1 ;
+    uni:startTime "2021-12-28T08:54:12.360000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/tm2pZgn5Iu44MUbID3AX> a uni:Take ;
+    uni:doneBy [ a foaf:Person ;
+            foaf:name "Petar Petrovic" ] ;
+    uni:endTime "2021-12-26T19:47:50.931000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ] ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 0 ;
+    uni:startTime "2021-12-26T19:47:45.943000+00:00"^^xsd:dateTime .
+
+<http://www.sotis/takes/xsKEanzz3UNtMOKxn7Nf> a uni:Take ;
+    uni:doneBy [ a foaf:Person ;
+            foaf:name "Petar Petrovic" ] ;
+    uni:endTime "2021-12-26T19:32:17.291000+00:00"^^xsd:dateTime ;
+    uni:hasAnswers [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ] ;
+    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:passed false ;
+    uni:points 1 ;
+    uni:startTime "2021-12-26T19:32:11.527000+00:00"^^xsd:dateTime .
+

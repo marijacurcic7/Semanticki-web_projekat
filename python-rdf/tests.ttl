@@ -2,155 +2,115 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> a uni:Test ;
-    uni:hasQuestions <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions> ;
+    uni:hasQuestions [ a uni:Question ;
+            uni:DomainProblem "Variables" ;
+            uni:correctAnswers "true" ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "Variables are containers for storing data values" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Dictionary" ;
+            uni:correctAnswers "changeable",
+                "not allowing duplicates",
+                "ordered" ;
+            uni:maxPoints 3 ;
+            uni:possibleAnswers "changeable",
+                "not allowing duplicates",
+                "ordered",
+                "tacco Tuesday" ;
+            uni:text "Dictionary is a collection which is" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Lists" ;
+            uni:correctAnswers "used to store multiple items in a single variable." ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "used for making shopping easier",
+                "used to store multiple items in a single variable." ;
+            uni:text "Lists are..." ],
+        [ a uni:Question ;
+            uni:DomainProblem "Casting" ;
+            uni:correctAnswers "int('3')",
+                "int(1)",
+                "int(2.7)" ;
+            uni:maxPoints 2 ;
+            uni:possibleAnswers "int('3')",
+                "int('number 0')",
+                "int(1)",
+                "int(2.7)" ;
+            uni:text "Select valid casting" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Strings" ;
+            uni:correctAnswers "yes" ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "no",
+                "yes" ;
+            uni:text "Is 'hello' the same as \"hello\"?" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Data Types" ;
+            uni:correctAnswers "true" ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "list, tuple, range & dict are types in python" ] ;
     uni:name "Python Basics" ;
     uni:points 9 .
 
 <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> a uni:Test ;
-    uni:hasQuestions <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions> ;
+    uni:hasQuestions [ a uni:Question ;
+            uni:DomainProblem "Var" ;
+            uni:correctAnswers "digits",
+                "dollar signs",
+                "letters",
+                "undescores" ;
+            uni:maxPoints 4 ;
+            uni:possibleAnswers "digits",
+                "dollar signs",
+                "letters",
+                "undescores" ;
+            uni:text "JS variable name can contain" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Functions" ;
+            uni:correctAnswers "a block of code designed to perform a particular task",
+                "executed when \"something\" invokes it (calls it)" ;
+            uni:maxPoints 3 ;
+            uni:possibleAnswers "a block of code designed to perform a particular task",
+                "a strawberry jam",
+                "executed when \"something\" invokes it (calls it)" ;
+            uni:text "A JS function is" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Data Types" ;
+            uni:correctAnswers "a number",
+                "a string",
+                "an object" ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "a blockchain",
+                "a number",
+                "a string",
+                "an object" ;
+            uni:text "Data type can be" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Let" ;
+            uni:correctAnswers "true" ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "Variables defined with let have Block Scope" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Objects" ;
+            uni:correctAnswers "methods",
+                "properties" ;
+            uni:maxPoints 5 ;
+            uni:possibleAnswers "methods",
+                "ponytail",
+                "properties" ;
+            uni:text "Objects have" ],
+        [ a uni:Question ;
+            uni:DomainProblem "Const" ;
+            uni:correctAnswers "true" ;
+            uni:maxPoints 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "Variables defined with const cannot be Reassigned" ] ;
     uni:name "JS begginer test" ;
     uni:points 15 .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions> uni:Question [ uni:DomainProblem "Data Types" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/answers> ;
-            uni:points 1 ;
-            uni:text "list, tuple, range & dict are types in python" ],
-        [ uni:DomainProblem "Strings" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/answers> ;
-            uni:points 1 ;
-            uni:text "Is 'hello' the same as \"hello\"?" ],
-        [ uni:DomainProblem "Variables" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/answers> ;
-            uni:points 1 ;
-            uni:text "Variables are containers for storing data values" ],
-        [ uni:DomainProblem "Lists" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/answers> ;
-            uni:points 1 ;
-            uni:text "Lists are..." ],
-        [ uni:DomainProblem "Dictionary" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/answers> ;
-            uni:points 3 ;
-            uni:text "Dictionary is a collection which is" ],
-        [ uni:DomainProblem "Casting" ;
-            uni:correctAnswer <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/answers> ;
-            uni:points 2 ;
-            uni:text "Select valid casting" ] .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/answers> uni:Answer "no",
-        "yes" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/4gxhx/correctAnswers> uni:Answer "yes" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/answers> uni:Answer "changeable",
-        "not allowing duplicates",
-        "ordered",
-        "tacco Tuesday" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/cn29v/correctAnswers> uni:Answer "changeable",
-        "not allowing duplicates",
-        "ordered" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/answers> uni:Answer "used for making shopping easier",
-        "used to store multiple items in a single variable." .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/e74yo/correctAnswers> uni:Answer "used to store multiple items in a single variable." .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/o2er3/correctAnswers> uni:Answer "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/oi6eoj/correctAnswers> uni:Answer "true" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/answers> uni:Answer "int('3')",
-        "int('number 0')",
-        "int(1)",
-        "int(2.7)" .
-
-<http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC/questions/umui8/correctAnswers> uni:Answer "int('3')",
-        "int(1)",
-        "int(2.7)" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions> uni:Question [ uni:DomainProblem "Objects" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/answers> ;
-            uni:points 5 ;
-            uni:text "Objects have" ],
-        [ uni:DomainProblem "Functions" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/answers> ;
-            uni:points 3 ;
-            uni:text "A JS function is" ],
-        [ uni:DomainProblem "Var" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/answers> ;
-            uni:points 4 ;
-            uni:text "JS variable name can contain" ],
-        [ uni:DomainProblem "Let" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/answers> ;
-            uni:points 1 ;
-            uni:text "Variables defined with let have Block Scope" ],
-        [ uni:DomainProblem "Const" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/answers> ;
-            uni:points 1 ;
-            uni:text "Variables defined with const cannot be Reassigned" ],
-        [ uni:DomainProblem "Data Types" ;
-            uni:correctAnswer <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/correctAnswers> ;
-            uni:hasAnswers <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/answers> ;
-            uni:points 1 ;
-            uni:text "Data type can be" ] .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/answers> uni:Answer "digits",
-        "dollar signs",
-        "letters",
-        "undescores" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/3j0tw/correctAnswers> uni:Answer "digits",
-        "dollar signs",
-        "letters",
-        "undescores" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/answers> uni:Answer "a blockchain",
-        "a number",
-        "a string",
-        "an object" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/tp9hk/correctAnswers> uni:Answer "a number",
-        "a string",
-        "an object" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/uhqhfk/correctAnswers> uni:Answer "true" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/answers> uni:Answer "a block of code designed to perform a particular task",
-        "a strawberry jam",
-        "executed when \"something\" invokes it (calls it)" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/x9ens/correctAnswers> uni:Answer "a block of code designed to perform a particular task",
-        "executed when \"something\" invokes it (calls it)" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/answers> uni:Answer "methods",
-        "ponytail",
-        "properties" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/ygo8l/correctAnswers> uni:Answer "methods",
-        "properties" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/answers> uni:Answer "false",
-        "true" .
-
-<http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY/questions/zeenx/correctAnswers> uni:Answer "true" .
 
