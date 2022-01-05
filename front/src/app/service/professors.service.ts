@@ -16,9 +16,15 @@ export class ProfessorsService {
     queryParams = {
 			params: new HttpParams()
 				.set('courseName', String(courseName)),
-    	};
+    }
     
     return this.http.get<any[]>("http://localhost:8090/query_teachers_on_course", queryParams);
+
+  }
+
+  getAllProfessors() {
+
+    return this.http.get<any[]>("http://localhost:8090/teachers");
 
   }
 }

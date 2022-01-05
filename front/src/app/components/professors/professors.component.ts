@@ -33,7 +33,7 @@ export class ProfessorsComponent implements OnInit {
 
     this.professorsService.getProfessors(this.course).subscribe(result => {
       this.professors = result;
-    })
+    });
 
   }
 

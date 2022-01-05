@@ -1,7 +1,9 @@
 export interface Course {
-    id: string,
+    // id: string,
     naziv: string,
-    godina: number,
-    semestar: string,
+    brojKnjiga?: number,
+    godina?: number,
+    espb?: number,
+    // semestar: string,
     
 }
