@@ -90,3 +90,28 @@ def query_courses_with_semester_and_scientific_field():
     semester = request.args.get('semester')
     scientific_field = request.args.get('scientificField')
     return jsonify(sparql.get_courses_with_semester_and_scientific_field(semester, scientific_field))
+
+
+@app.get('/query_sorted_students_by_test_results')
+def query_sorted_students_by_test_results():
+    sort_type = request.args.get('sort', None)  # expecting asc or desc
+    if sort_type != 'DESC':
+        sort_type = 'ASC'
+    return jsonify(sparql.get_sorted_students_by_test_results(sort_type))
+
+
+@app.get('/query_sorted_courses_by_test_results')
+def query_sorted_courses_by_test_results():
+    sort_type = request.args.get('sort', None)  # expecting asc or desc
+    if sort_type != 'DESC':
+        sort_type = 'ASC'
+    return jsonify(sparql.get_sorted_courses_by_test_results(sort_type))
+
+
+@app.get('/query_sorted_tests_by_duration')
+def query_sorted_tests_by_duration():
+    # expecting minDuration or maxDuration
+    sort_by = request.args.get('sort', None)
+    if sort_by != 'minDuration':
+        sort_by = 'maxDuration'
+    return jsonify(sparql.get_sorted_tests_by_duration(sort_by))

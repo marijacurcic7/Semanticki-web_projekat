@@ -1,4 +1,6 @@
+from datetime import timedelta
 from semanticweb import g
+from json import dumps
 
 
 def get_all_courses():
@@ -122,3 +124,67 @@ def get_courses_with_semester_and_scientific_field(semester, scientific_field):
     GROUP BY ?courseTitle
     """ % (semester, scientific_field)
     return [row.courseTitle.value for row in g.query(query)]
+
+
+def get_sorted_students_by_test_results(sort_type: str):
+    query = """
+    SELECT ?personName ?points ?testName
+    WHERE {
+    ?person foaf:name ?personName .
+    ?take a uni:Take .
+    ?take uni:points ?points .
+    ?take uni:doneBy ?person .
+    ?take uni:partOf ?test .
+    ?test uni:name ?testName .
+    }
+    ORDER BY %s(?points) ?personName
+    """ % (sort_type)
+    return [(row.personName.value, row.points.value, row.testName.value) for row in g.query(query)]
+
+
+def get_sorted_courses_by_test_results(sort_type: str):
+    query = """
+    SELECT ?testName ?courseName (avg(?points) as ?avgPoints)
+    WHERE {
+    ?person foaf:name ?personName .
+    ?take a uni:Take .
+    ?take uni:points ?points .
+    ?take uni:doneBy ?person .
+    ?take uni:partOf ?test .
+    ?test uni:name ?testName .
+    ?test uni:partOf ?course .
+    ?course dc:title ?courseName .
+    }
+    GROUP BY ?testName  ?courseName
+    ORDER BY %s(?avgPoints) ?testName
+    """ % (sort_type)
+    return [(float(row.avgPoints.value), row.courseName.value) for row in g.query(query)]
+
+
+def get_sorted_tests_by_duration(sort_by: str):
+    # get min and max duration for each test
+    query = """
+    SELECT  ?testName (max(?duration) as ?maxDuration) (min(?duration) as ?minDuration)
+    WHERE {
+    ?take uni:partOf ?test .
+    ?test uni:name ?testName .
+
+    # get duration and take
+    {
+        SELECT ?take (?endTime - ?startTime as ?duration)
+        WHERE {
+            ?take a uni:Take .
+            ?take uni:startTime ?startTime .
+            ?take uni:endTime ?endTime .
+        }
+    }
+    }
+    GROUP BY ?testName
+    ORDER BY DESC(?%s)
+    """ % (sort_by)
+
+    return [{
+            'testName': row.testName.value,
+            'maxDurationInSec': row.maxDuration.value.total_seconds(),
+            'minDurationInSec': row.minDuration.value.total_seconds(),
+            } for row in g.query(query)]
