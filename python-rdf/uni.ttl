@@ -11,11 +11,6 @@
     dc:type "Naučno-stručni" ;
     uni:espb 4 ;
     uni:hasEvaluation [ a uni:Evaluation ;
-            uni:activity "Predmetni projekat" ;
-            uni:points 50 ;
-            uni:preExamination true ;
-            uni:required true ],
-        [ a uni:Evaluation ;
             uni:activity "Teorijski deo ispita" ;
             uni:points 30 ;
             uni:preExamination false ;
@@ -26,13 +21,18 @@
             uni:preExamination true ;
             uni:required true ],
         [ a uni:Evaluation ;
+            uni:activity "Prisustvo na predavanjima" ;
+            uni:points 5 ;
+            uni:preExamination true ;
+            uni:required true ],
+        [ a uni:Evaluation ;
             uni:activity "Prisustvo na laboratorijskim vežbama" ;
             uni:points 5 ;
             uni:preExamination true ;
             uni:required true ],
         [ a uni:Evaluation ;
-            uni:activity "Prisustvo na predavanjima" ;
-            uni:points 5 ;
+            uni:activity "Predmetni projekat" ;
+            uni:points 50 ;
             uni:preExamination true ;
             uni:required true ] ;
     uni:hasLiterature [ a uni:Book ;
@@ -73,34 +73,6 @@
     uni:semesters 8 ;
     uni:title "Diplomirani inženjer softvera (Dipl.inž.softv.)" .
 
-<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> a aiiso:Course ;
-    dc:date "2005-10-01"^^xsd:date ;
-    dc:description "Formira se pojedinačno u skladu sa potrebama i oblašću koja je obuhvaćena zadatom temom završnog rada. Student u dogovoru sa mentorom sačinjava završni rad u pismenoj formi u skladu sa predviđenim standardima Fakulteta tehničkih nauka. Student priprema i brani pismeni završni rad javno u dogovoru sa mentorom i u skladu sa predviđenim standardima. Student proučava stručnu literaturu, stručne i diplomske radove studenata koji se bave sličnom tematikom, vrši analize u cilju iznalaženja rešenja konkretnog zadatka koji je definisan zadatkom završnog rada." ;
-    dc:title "Završni rad - izrada i odbrana" ;
-    dc:type "Stručno-aplikativni" ;
-    uni:espb 5 ;
-    uni:hasEvaluation [ a uni:Evaluation ;
-            uni:activity "Odbrana završnog rada" ;
-            uni:points 50 ;
-            uni:preExamination false ;
-            uni:required true ],
-        [ a uni:Evaluation ;
-            uni:activity "Izrada završnog rada sa teorijskim osnovama" ;
-            uni:points 50 ;
-            uni:preExamination false ;
-            uni:required true ] ;
-    uni:hasLiterature [ a uni:Book ;
-            dc:creator "-" ;
-            dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] ;
-    uni:methodology """Mentor za izradu i odbranu završnog rada bira jedan od ponuđenih modula (isti modul kao i za teorijske osnove) iz kojeg će student da radi završni rad i formuliše temu sa zadacima za izradu završnog rada. Kandidat u konsultacijama sa mentorom i saradnikom samostalno radi na problemu koji mu je zadat. Nakon izrade rada i saglasnosti mentora da je uspešno urađen rad, kandidat brani rad pred komisijom koja se sastoji od najmanje tri člana.
-Tokom izrade završnog rada, mentor može davati dodatna uputstva studentu, upućivati na odrećenu literaturu i dodatno ga usmeravati u cilju izrade kvalitetnog diplomskog rada. U okviru teorijskog dela završnog rada student obavlja konsultacije sa mentorom, a po potrebi i sa drugim nastavnicima koji se bave problematikom iz oblasti teme završnog rada.""" ;
-    uni:purpose "Cilj izrade i odbrane završnog rada je da student pokaže da poseduje zadovoljavajuću sposobnost primene teorijskih i praktičnih znanja u praks" ;
-    uni:result """Izradom i odbranom završnog rada studenti koji su završili studije treba da budu sposobni da rešavaju realne probleme iz prakse kao i da nastave školovanje ukoliko se za to opredele. Kompetencije uključuju, pre svega, razvoj sposobnosti kritičnog mišljenja, sposobnosti analize problema, sinteze rešenja, predviđanje ponašanja odabranog rešenja sa jasnom predstavom šta su dobre a šta loše strane odabranog rešenja. Svršeni studenti imaju i sposobnost rešavanja konkretnih problema uz upotrebu naučnih metoda i postupaka. Posebno je važna sposobnost povezivanja osnovnih znanja iz različitih oblasti i njihova primena. Svršeni studenti su osposobljeni za intenzivno korišćenje informaciono-komunikacionih tehnologija.
-Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u praksi i praćenje i primenu novina u struci, kao i za saradnju sa lokalnim socijalnim i međunarodnim okruženjem.""" ;
-    uni:scientificField "Primenjene računarske nauke i informatika" ;
-    uni:semester "letnji" ;
-    uni:year 4 .
-
 <http://www.ftn.uns.ac.rs/n651874809/industrijska-psihologija> a aiiso:Course ;
     dc:date "2013-10-01"^^xsd:date ;
     dc:description "Uloga industrijske psihologije u poslovanju: definicija, predmet i ciljevi industrijske psihologije; istorijski razvoj; fiziološki i psihološki aspekti rada; cirkadijalni ritmovi i individualne razlike. Prilagođavanje čoveka radu: metode prilagođavanja čoveka radu; analiza posla-osnova prilagođavanja čoveka radu; metode procene radnika i radnih mesta; oblikovanje poslova i organizacija rada; dizajn posla; uloga apsentizma i fluktuacije; radna adaptacija. Radna sposobnost zaposlenih: tehnike redizajniranja posla; patologija rada; umor i monotonija; bezbednost na radu; povrede na radu, prevencija nesreće na radu. Čovek u savremenim tehnološkim sistemima: sistem čovek-mašina; efikasnost sistema; komunikacija u sistemu; tačnost, pouzdanost, raspodela uloga u sistemu; mentalni modeli operatora." ;
@@ -108,6 +80,11 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     dc:type "Stručno-aplikativni" ;
     uni:espb 5 ;
     uni:hasEvaluation [ a uni:Evaluation ;
+            uni:activity "Teorijski deo ispita" ;
+            uni:points 70 ;
+            uni:preExamination false ;
+            uni:required true ],
+        [ a uni:Evaluation ;
             uni:activity "Prisustvo na vežbama" ;
             uni:points 5 ;
             uni:preExamination true ;
@@ -123,16 +100,16 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:preExamination true ;
             uni:required true ],
         [ a uni:Evaluation ;
-            uni:activity "Teorijski deo ispita" ;
-            uni:points 70 ;
-            uni:preExamination false ;
-            uni:required true ],
-        [ a uni:Evaluation ;
             uni:activity "Test" ;
             uni:points 10 ;
             uni:preExamination true ;
             uni:required true ] ;
     uni:hasLiterature [ a uni:Book ;
+            dc:creator "Coovort, M. Thompson, L." ;
+            dc:date 2013 ;
+            dc:language "Engleski" ;
+            dc:title "The Psychology of Workplace Technology" ],
+        [ a uni:Book ;
             dc:creator "Zedeck, S." ;
             dc:date 2011 ;
             dc:language "Engleski" ;
@@ -145,22 +122,17 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             dc:publisher "Naučna knjiga, Beograd" ;
             dc:title "Kadrovska psihologija" ],
         [ a uni:Book ;
-            dc:creator "Spector, P." ;
-            dc:date 2003 ;
-            dc:language "Engleski" ;
-            dc:publisher "Wiley" ;
-            dc:title "Industrial&Organizational Psychology" ],
-        [ a uni:Book ;
-            dc:creator "Coovort, M. Thompson, L." ;
-            dc:date 2013 ;
-            dc:language "Engleski" ;
-            dc:title "The Psychology of Workplace Technology" ],
-        [ a uni:Book ;
             dc:creator "Čizmić, S." ;
             dc:date 2007 ;
             dc:language "Srpski jezik" ;
             dc:publisher "Institut za psihologiju, Beograd" ;
-            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ] ;
+            dc:title "Ljudski faktor - osnovi inženjerske psihologije" ],
+        [ a uni:Book ;
+            dc:creator "Spector, P." ;
+            dc:date 2003 ;
+            dc:language "Engleski" ;
+            dc:publisher "Wiley" ;
+            dc:title "Industrial&Organizational Psychology" ] ;
     uni:hasTeachers [ a foaf:Person ;
             uni:typeOfTeaching "Predavanja" ;
             foaf:name "Katić dr Ivana" ;
@@ -184,10 +156,6 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:doneBy <http://www.sotis/users/n8LOCi8hwk5vYrwkBm9N55JT2KYV> ;
     uni:endTime "2022-01-05T20:30:41.722000+00:00"^^xsd:dateTime ;
     uni:hasAnswers [ a uni:MyAnswers ;
-            uni:answersList "true" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ a uni:MyAnswers ;
             uni:answersList "yes" ;
             uni:correct true ;
             uni:points 1 ],
@@ -210,8 +178,12 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
         [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
             uni:points 1 ] ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:partOf <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
     uni:passed true ;
     uni:points 9 ;
     uni:startTime "2022-01-05T20:30:18.308000+00:00"^^xsd:dateTime .
@@ -223,6 +195,10 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "ponytail" ;
+            uni:correct false ;
+            uni:points 0 ],
         [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
@@ -237,16 +213,12 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:correct false ;
             uni:points 0 ],
         [ a uni:MyAnswers ;
-            uni:answersList "ponytail" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
             uni:answersList "a number",
                 "a string",
                 "an object" ;
             uni:correct true ;
             uni:points 1 ] ;
-    uni:of <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> ;
+    uni:partOf <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> ;
     uni:passed false ;
     uni:points 3 ;
     uni:startTime "2021-12-27T17:13:08.534000+00:00"^^xsd:dateTime .
@@ -273,7 +245,7 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ] ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:partOf <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
     uni:passed false ;
     uni:points 1 ;
     uni:startTime "2021-12-27T16:06:14.867000+00:00"^^xsd:dateTime .
@@ -291,16 +263,16 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:correct false ;
             uni:points 0 ],
         [ a uni:MyAnswers ;
+            uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ],
         [ a uni:MyAnswers ;
             uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
-            uni:correct false ;
             uni:points 0 ] ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:partOf <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
     uni:passed false ;
     uni:points 1 ;
     uni:startTime "2021-12-28T08:54:12.360000+00:00"^^xsd:dateTime .
@@ -309,24 +281,24 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:doneBy <http://www.sotis/users/n8LOCi8hwk5vYrwkBm9N55JT2KYV> ;
     uni:endTime "2022-01-05T21:26:26.170000+00:00"^^xsd:dateTime ;
     uni:hasAnswers [ a uni:MyAnswers ;
-            uni:answersList "false",
-                "true" ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
-            uni:answersList "true" ;
-            uni:correct true ;
-            uni:points 1 ],
-        [ a uni:MyAnswers ;
             uni:answersList "enables to represent information about resources in the form of graph ",
                 "is a framework for creating triples" ;
             uni:correct true ;
             uni:points 1 ],
         [ a uni:MyAnswers ;
+            uni:answersList "true" ;
+            uni:correct true ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
             uni:answersList "a markup language" ;
             uni:correct true ;
-            uni:points 1 ] ;
-    uni:of <http://www.sotis/tests/JNoL6meKgY9RcGsQcD7p> ;
+            uni:points 1 ],
+        [ a uni:MyAnswers ;
+            uni:answersList "false",
+                "true" ;
+            uni:correct false ;
+            uni:points 0 ] ;
+    uni:partOf <http://www.sotis/tests/JNoL6meKgY9RcGsQcD7p> ;
     uni:passed true ;
     uni:points 3 ;
     uni:startTime "2022-01-05T21:25:52.677000+00:00"^^xsd:dateTime .
@@ -352,7 +324,7 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
         [ a uni:MyAnswers ;
             uni:correct false ;
             uni:points 0 ] ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:partOf <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
     uni:passed false ;
     uni:points 0 ;
     uni:startTime "2021-12-26T19:47:45.943000+00:00"^^xsd:dateTime .
@@ -361,9 +333,6 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
     uni:doneBy <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> ;
     uni:endTime "2021-12-26T19:32:17.291000+00:00"^^xsd:dateTime ;
     uni:hasAnswers [ a uni:MyAnswers ;
-            uni:correct false ;
-            uni:points 0 ],
-        [ a uni:MyAnswers ;
             uni:answersList "true" ;
             uni:correct true ;
             uni:points 1 ],
@@ -378,14 +347,24 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:points 0 ],
         [ a uni:MyAnswers ;
             uni:correct false ;
+            uni:points 0 ],
+        [ a uni:MyAnswers ;
+            uni:correct false ;
             uni:points 0 ] ;
-    uni:of <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
+    uni:partOf <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> ;
     uni:passed false ;
     uni:points 1 ;
     uni:startTime "2021-12-26T19:32:11.527000+00:00"^^xsd:dateTime .
 
 <http://www.sotis/tests/JNoL6meKgY9RcGsQcD7p> a uni:Test ;
     uni:hasQuestions [ a uni:Question ;
+            uni:DomainProblem "XML" ;
+            uni:correctAnswers "a markup language" ;
+            uni:points 1 ;
+            uni:possibleAnswers "a markup language",
+                "a programming language" ;
+            uni:text "What kind of a language is XML?" ],
+        [ a uni:Question ;
             uni:DomainProblem "RDF" ;
             uni:correctAnswers "enables to represent information about resources in the form of graph ",
                 "is a framework for creating triples" ;
@@ -406,29 +385,21 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:points 1 ;
             uni:possibleAnswers "false",
                 "true" ;
-            uni:text "OWL extends RDFS by adding more advanced constructs to describe semantics of RDF statements." ],
-        [ a uni:Question ;
-            uni:DomainProblem "XML" ;
-            uni:correctAnswers "a markup language" ;
-            uni:points 1 ;
-            uni:possibleAnswers "a markup language",
-                "a programming language" ;
-            uni:text "What kind of a language is XML?" ] ;
+            uni:text "OWL extends RDFS by adding more advanced constructs to describe semantics of RDF statements." ] ;
     uni:name "Semantic web basics" ;
+    uni:partOf <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> ;
     uni:points 4 .
 
 <http://www.sotis/tests/TpBxQo8I8h0b8NZ8SkCY> a uni:Test ;
     uni:hasQuestions [ a uni:Question ;
-            uni:DomainProblem "Data Types" ;
-            uni:correctAnswers "a number",
-                "a string",
-                "an object" ;
-            uni:points 1 ;
-            uni:possibleAnswers "a blockchain",
-                "a number",
-                "a string",
-                "an object" ;
-            uni:text "Data type can be" ],
+            uni:DomainProblem "Functions" ;
+            uni:correctAnswers "a block of code designed to perform a particular task",
+                "executed when \"something\" invokes it (calls it)" ;
+            uni:points 3 ;
+            uni:possibleAnswers "a block of code designed to perform a particular task",
+                "a strawberry jam",
+                "executed when \"something\" invokes it (calls it)" ;
+            uni:text "A JS function is" ],
         [ a uni:Question ;
             uni:DomainProblem "Let" ;
             uni:correctAnswers "true" ;
@@ -449,6 +420,17 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
                 "undescores" ;
             uni:text "JS variable name can contain" ],
         [ a uni:Question ;
+            uni:DomainProblem "Data Types" ;
+            uni:correctAnswers "a number",
+                "a string",
+                "an object" ;
+            uni:points 1 ;
+            uni:possibleAnswers "a blockchain",
+                "a number",
+                "a string",
+                "an object" ;
+            uni:text "Data type can be" ],
+        [ a uni:Question ;
             uni:DomainProblem "Objects" ;
             uni:correctAnswers "methods",
                 "properties" ;
@@ -463,37 +445,50 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
             uni:points 1 ;
             uni:possibleAnswers "false",
                 "true" ;
-            uni:text "Variables defined with const cannot be Reassigned" ],
-        [ a uni:Question ;
-            uni:DomainProblem "Functions" ;
-            uni:correctAnswers "a block of code designed to perform a particular task",
-                "executed when \"something\" invokes it (calls it)" ;
-            uni:points 3 ;
-            uni:possibleAnswers "a block of code designed to perform a particular task",
-                "a strawberry jam",
-                "executed when \"something\" invokes it (calls it)" ;
-            uni:text "A JS function is" ] ;
+            uni:text "Variables defined with const cannot be Reassigned" ] ;
     uni:name "JS begginer test" ;
+    uni:partOf <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> ;
     uni:points 15 .
 
 <http://www.sotis/users/n8LOCi8hwk5vYrwkBm9N55JT2KYV> a foaf:Person ;
     foaf:name "Nenad Nenadovic" .
 
+<http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> a aiiso:Course ;
+    dc:date "2005-10-01"^^xsd:date ;
+    dc:description "Formira se pojedinačno u skladu sa potrebama i oblašću koja je obuhvaćena zadatom temom završnog rada. Student u dogovoru sa mentorom sačinjava završni rad u pismenoj formi u skladu sa predviđenim standardima Fakulteta tehničkih nauka. Student priprema i brani pismeni završni rad javno u dogovoru sa mentorom i u skladu sa predviđenim standardima. Student proučava stručnu literaturu, stručne i diplomske radove studenata koji se bave sličnom tematikom, vrši analize u cilju iznalaženja rešenja konkretnog zadatka koji je definisan zadatkom završnog rada." ;
+    dc:title "Završni rad - izrada i odbrana" ;
+    dc:type "Stručno-aplikativni" ;
+    uni:espb 5 ;
+    uni:hasEvaluation [ a uni:Evaluation ;
+            uni:activity "Izrada završnog rada sa teorijskim osnovama" ;
+            uni:points 50 ;
+            uni:preExamination false ;
+            uni:required true ],
+        [ a uni:Evaluation ;
+            uni:activity "Odbrana završnog rada" ;
+            uni:points 50 ;
+            uni:preExamination false ;
+            uni:required true ] ;
+    uni:hasLiterature [ a uni:Book ;
+            dc:creator "-" ;
+            dc:title "Aktuelni časopisi svih godina izdavanja i odbranjeni završni radovi iz date oblasti" ] ;
+    uni:methodology """Mentor za izradu i odbranu završnog rada bira jedan od ponuđenih modula (isti modul kao i za teorijske osnove) iz kojeg će student da radi završni rad i formuliše temu sa zadacima za izradu završnog rada. Kandidat u konsultacijama sa mentorom i saradnikom samostalno radi na problemu koji mu je zadat. Nakon izrade rada i saglasnosti mentora da je uspešno urađen rad, kandidat brani rad pred komisijom koja se sastoji od najmanje tri člana.
+Tokom izrade završnog rada, mentor može davati dodatna uputstva studentu, upućivati na odrećenu literaturu i dodatno ga usmeravati u cilju izrade kvalitetnog diplomskog rada. U okviru teorijskog dela završnog rada student obavlja konsultacije sa mentorom, a po potrebi i sa drugim nastavnicima koji se bave problematikom iz oblasti teme završnog rada.""" ;
+    uni:purpose "Cilj izrade i odbrane završnog rada je da student pokaže da poseduje zadovoljavajuću sposobnost primene teorijskih i praktičnih znanja u praks" ;
+    uni:result """Izradom i odbranom završnog rada studenti koji su završili studije treba da budu sposobni da rešavaju realne probleme iz prakse kao i da nastave školovanje ukoliko se za to opredele. Kompetencije uključuju, pre svega, razvoj sposobnosti kritičnog mišljenja, sposobnosti analize problema, sinteze rešenja, predviđanje ponašanja odabranog rešenja sa jasnom predstavom šta su dobre a šta loše strane odabranog rešenja. Svršeni studenti imaju i sposobnost rešavanja konkretnih problema uz upotrebu naučnih metoda i postupaka. Posebno je važna sposobnost povezivanja osnovnih znanja iz različitih oblasti i njihova primena. Svršeni studenti su osposobljeni za intenzivno korišćenje informaciono-komunikacionih tehnologija.
+Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u praksi i praćenje i primenu novina u struci, kao i za saradnju sa lokalnim socijalnim i međunarodnim okruženjem.""" ;
+    uni:scientificField "Primenjene računarske nauke i informatika" ;
+    uni:semester "letnji" ;
+    uni:year 4 .
+
 <http://www.sotis/tests/3OLGExDi6sO7C4eYhfMC> a uni:Test ;
     uni:hasQuestions [ a uni:Question ;
-            uni:DomainProblem "Variables" ;
-            uni:correctAnswers "true" ;
+            uni:DomainProblem "Strings" ;
+            uni:correctAnswers "yes" ;
             uni:points 1 ;
-            uni:possibleAnswers "false",
-                "true" ;
-            uni:text "Variables are containers for storing data values" ],
-        [ a uni:Question ;
-            uni:DomainProblem "Data Types" ;
-            uni:correctAnswers "true" ;
-            uni:points 1 ;
-            uni:possibleAnswers "false",
-                "true" ;
-            uni:text "list, tuple, range & dict are types in python" ],
+            uni:possibleAnswers "no",
+                "yes" ;
+            uni:text "Is 'hello' the same as \"hello\"?" ],
         [ a uni:Question ;
             uni:DomainProblem "Dictionary" ;
             uni:correctAnswers "changeable",
@@ -506,6 +501,13 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
                 "tacco Tuesday" ;
             uni:text "Dictionary is a collection which is" ],
         [ a uni:Question ;
+            uni:DomainProblem "Variables" ;
+            uni:correctAnswers "true" ;
+            uni:points 1 ;
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "Variables are containers for storing data values" ],
+        [ a uni:Question ;
             uni:DomainProblem "Lists" ;
             uni:correctAnswers "used to store multiple items in a single variable." ;
             uni:points 1 ;
@@ -513,12 +515,12 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
                 "used to store multiple items in a single variable." ;
             uni:text "Lists are..." ],
         [ a uni:Question ;
-            uni:DomainProblem "Strings" ;
-            uni:correctAnswers "yes" ;
+            uni:DomainProblem "Data Types" ;
+            uni:correctAnswers "true" ;
             uni:points 1 ;
-            uni:possibleAnswers "no",
-                "yes" ;
-            uni:text "Is 'hello' the same as \"hello\"?" ],
+            uni:possibleAnswers "false",
+                "true" ;
+            uni:text "list, tuple, range & dict are types in python" ],
         [ a uni:Question ;
             uni:DomainProblem "Casting" ;
             uni:correctAnswers "int('3')",
@@ -531,6 +533,7 @@ Svršeni studenti ovog nivoa studija poseduju kompetenciju za primenu znanja u p
                 "int(2.7)" ;
             uni:text "Select valid casting" ] ;
     uni:name "Python Basics" ;
+    uni:partOf <http://www.ftn.uns.ac.rs/n636239540/zavrsni-rad---izrada-i-odbrana> ;
     uni:points 9 .
 
 <http://www.sotis/users/G3gsPt0O5oVDJwz9vfAjuRICbqZs> a foaf:Person ;
