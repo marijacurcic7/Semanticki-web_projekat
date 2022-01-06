@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1641468512748" name="http://purl.org/dc/elements/1.1/" uri="dublincore.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1641468512748" name="http://purl.org/vocab/aiiso/schema" uri="schema-20080925.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1641468512748" name="http://www.semanticweb.org/marija/ontologies/2021/11/untitled-ontology-25" uri="university2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1641468512748" name="http://www.semanticweb.org/marija/ontologies/2021/university" uri="university.owl"/>
-    </group>
-</catalog>
