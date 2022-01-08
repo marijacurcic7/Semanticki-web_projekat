@@ -26,6 +26,10 @@ export class ProfessorsComponent implements OnInit {
     this.coursesService.getAllCourses().subscribe(result => {
       this.courses = result;
     });
+
+    this.professorsService.getProfessorsProgram("siit").subscribe(result => {
+      console.log(result);
+    })
   }
 
   onCourseChange(event: any): void {

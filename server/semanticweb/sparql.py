@@ -122,3 +122,41 @@ def get_courses_with_semester_and_scientific_field(semester, scientific_field):
     GROUP BY ?courseTitle
     """ % (semester, scientific_field)
     return [row.courseTitle.value for row in g.query(query)]
+
+
+def get_teachers_on_programme(program_name):
+    query = """
+        SELECT DISTINCT ?name
+        WHERE {
+        ?program a aiiso:Programme .
+        ?program dc:title ?programName .
+        ?course a aiiso:Course .
+        ?course uni:partOf ?program .
+        ?course uni:hasTeachers ?person .
+        ?person foaf:title ?title .
+        ?person foaf:name ?name .
+        FILTER (?programName='%s') .
+        FILTER regex(?title, "profesor") .
+        } 
+    """ % (program_name)
+    result = g.query(query)
+    teachers = [row.name.value for row in result]
+    return teachers
+
+
+# def get_students_on_course(course_name):
+#     query = """
+#         SELECT DISTINCT ?name
+#         WHERE {
+#         ?course a aiiso:Course .
+#         ?course dc:title ?courseName .
+#         ?course uni:hasTeachers ?person .
+#         ?person foaf:title ?title .
+#         ?person foaf:name ?name .
+#         FILTER (?courseName='%s') .
+#         FILTER regex(?title, "profesor") .
+#         } 
+#     """ % (course_name)
+#     result = g.query(query)
+#     students = [row.name.value for row in result]
+#     return teachers

@@ -13,10 +13,10 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix schema: <http://purl.org/vocab/aiiso/schema#> .
-@base <http://www.semanticweb.org/marija/ontologies/2021/university> .
+@base <http://www.semanticweb.org/marija/ontologies/2021/university#> .
 
-<http://www.semanticweb.org/marija/ontologies/2021/university> rdf:type owl:Ontology ;
-                                                                owl:imports foaf: .
+<http://www.semanticweb.org/marija/ontologies/2021/university#> rdf:type owl:Ontology ;
+                                                                 owl:imports foaf: .
 
 #################################################################
 #    Annotation properties
@@ -97,6 +97,12 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswers
 :correctAnswers rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Question .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#domainProblem
+:domainProblem rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Question ;
+               rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#educationalField
@@ -221,7 +227,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#typeOfTeaching
 :typeOfTeaching rdf:type owl:DatatypeProperty ;
-                rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+                rdfs:domain foaf:Person ;
                 rdfs:range xsd:string .
 
 
@@ -238,10 +244,6 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  http://purl.org/vocab/aiiso/schema#Course
 schema:Course rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasDomainProblems ;
-                                owl:someValuesFrom :DomainProblem
-                              ] ,
-                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasEvaluation ;
                                 owl:someValuesFrom :Evaluation
                               ] ,
@@ -267,23 +269,16 @@ schema:Programme rdf:type owl:Class .
 :Book rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/marija/ontologies/2021/university#DomainProblem
-:DomainProblem rdf:type owl:Class ;
-               rdfs:subClassOf schema:Course .
-
-
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Evaluation
 :Evaluation rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#MyAnswer
-:MyAnswer rdf:type owl:Class ;
-          rdfs:subClassOf :Take .
+:MyAnswer rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Question
-:Question rdf:type owl:Class ;
-          rdfs:subClassOf :Test .
+:Question rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Take
@@ -295,7 +290,7 @@ schema:Programme rdf:type owl:Class .
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :doneBy ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person>
+                        owl:onClass foaf:Person
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :partOf ;
@@ -319,7 +314,7 @@ schema:Programme rdf:type owl:Class .
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :createdBy ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person>
+                        owl:onClass foaf:Person
                       ] .
 
 

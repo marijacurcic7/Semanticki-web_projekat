@@ -10,6 +10,7 @@ export class ProfessorsService {
     private http: HttpClient
   ) { }
 
+  
   getProfessors(courseName: string) {
 		let queryParams = {};
 
@@ -19,12 +20,22 @@ export class ProfessorsService {
     }
     
     return this.http.get<any[]>("http://localhost:8090/query_teachers_on_course", queryParams);
-
   }
 
+
+  getProfessorsProgram(programName: string) {
+		let queryParams = {};
+
+    queryParams = {
+			params: new HttpParams()
+				.set('programName', String(programName)),
+    }
+    
+    return this.http.get<any[]>("http://localhost:8090/query_teachers_on_programme", queryParams);
+  }
+
+
   getAllProfessors() {
-
     return this.http.get<any[]>("http://localhost:8090/teachers");
-
   }
 }

@@ -90,3 +90,10 @@ def query_courses_with_semester_and_scientific_field():
     semester = request.args.get('semester')
     scientific_field = request.args.get('scientificField')
     return jsonify(sparql.get_courses_with_semester_and_scientific_field(semester, scientific_field))
+
+
+@app.get('/query_teachers_on_programme')
+def query_teachers_on_programme():
+    program_name = request.args.get('programName')
+    return jsonify(sparql.get_teachers_on_programme(program_name))
+    
