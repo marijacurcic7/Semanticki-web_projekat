@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/schemas/vehicles#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:registeredTo rdf:type rdf:Property;
+  rdfs:domain ex:MotorVehicle;
+  rdfs:range ex:Person.
+
+ex:Person rdf:type rdfs:Class.
+
+ex:rearSeatLegRoom a rdf:Property;
+  rdfs:domain ex:PassengerVehicle;
+  rdfs:range xsd:integer.
+
+ex:driver rdf:type rdf:Property;
+  rdfs:domain ex:MotorVehicle;
+  rdfs:range ex:Person.
+
+ex:primaryDriver rdf:type rdf:Property .
+ex:primaryDriver rdfs:subPropertyOf ex:driver .
