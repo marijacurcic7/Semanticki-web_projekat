@@ -131,7 +131,7 @@ def get_teachers_on_programme(program_name):
         SELECT DISTINCT ?name
         WHERE {
         ?program a aiiso:Programme .
-        ?program dc:title ?programName .
+        ?program uni:name ?programName .
         ?course a aiiso:Course .
         ?course uni:partOf ?program .
         ?course uni:hasTeachers ?person .
@@ -146,22 +146,7 @@ def get_teachers_on_programme(program_name):
     return teachers
 
 
-# def get_students_on_course(course_name):
-#     query = """
-#         SELECT DISTINCT ?name
-#         WHERE {
-#         ?course a aiiso:Course .
-#         ?course dc:title ?courseName .
-#         ?course uni:hasTeachers ?person .
-#         ?person foaf:title ?title .
-#         ?person foaf:name ?name .
-#         FILTER (?courseName='%s') .
-#         FILTER regex(?title, "profesor") .
-#         } 
-#     """ % (course_name)
-#     result = g.query(query)
-#     students = [row.name.value for row in result]
-#     return teachers
+
 
 
 def get_sorted_students_by_test_results(sort_type: str):

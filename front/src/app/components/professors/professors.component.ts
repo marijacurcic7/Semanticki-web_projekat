@@ -27,7 +27,7 @@ export class ProfessorsComponent implements OnInit {
       this.courses = result;
     });
 
-    this.professorsService.getProfessorsProgram("siit").subscribe(result => {
+    this.professorsService.getProfessorsProgram("softversko inzenjerstvo i informacione tehnologije").subscribe(result => {
       console.log(result);
     })
   }
