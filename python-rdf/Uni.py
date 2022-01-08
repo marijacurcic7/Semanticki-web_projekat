@@ -7,7 +7,7 @@ class UNI(DefinedNamespace):
 
     # classes
     Book : URIRef
-    DomainProblem : URIRef
+    
     Evaluation : URIRef
     MyAnswer : URIRef
     Question : URIRef
@@ -16,6 +16,7 @@ class UNI(DefinedNamespace):
     
     # properties
     createdBy : URIRef
+    domainProblem : URIRef
     doneBy : URIRef
     hasAnswers : URIRef
     hasDomainProblems : URIRef
