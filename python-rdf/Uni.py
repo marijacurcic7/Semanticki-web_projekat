@@ -50,4 +50,4 @@ class UNI(DefinedNamespace):
     typeOfTeaching : URIRef
     year : URIRef
 
-    _NS = Namespace("http://www.semanticweb.org/marija/ontologies/2021/university.owl")
+    _NS = Namespace("http://www.semanticweb.org/marija/ontologies/2021/university#")
