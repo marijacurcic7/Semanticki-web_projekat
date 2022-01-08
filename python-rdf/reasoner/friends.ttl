@@ -1,0 +1,1131 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/donna> a foaf:Person ;
+    owl:sameAs <http://example.org/donna> ;
+    foaf:mbox <mailto:donna@example.org> ;
+    foaf:name "Donna Fales" ;
+    foaf:nick "donna" ;
+    foaf:skypeID "donna" .
+
+<http://example.org/edward> a foaf:Person ;
+    owl:sameAs <http://example.org/edward> ;
+    foaf:mbox "e.scissorhands@example.org" ;
+    foaf:name "Edward Scissorhands" ;
+    foaf:nick "ed" .
+
+dc:date a owl:AnnotationProperty ;
+    owl:sameAs dc:date .
+
+dc:description a owl:AnnotationProperty ;
+    owl:sameAs dc:description .
+
+dc:title a owl:AnnotationProperty ;
+    owl:sameAs dc:title .
+
+rdf:HTML a rdfs:Datatype ;
+    owl:sameAs rdf:HTML .
+
+rdf:PlainLiteral a rdfs:Datatype ;
+    owl:sameAs rdf:PlainLiteral .
+
+rdf:XMLLiteral a rdfs:Datatype ;
+    owl:sameAs rdf:XMLLiteral .
+
+rdf:langString a rdfs:Datatype ;
+    owl:sameAs rdf:langString .
+
+rdf:type owl:sameAs rdf:type .
+
+rdfs:comment a owl:AnnotationProperty ;
+    owl:sameAs rdfs:comment .
+
+rdfs:domain owl:sameAs rdfs:domain .
+
+rdfs:isDefinedBy a owl:AnnotationProperty ;
+    owl:sameAs rdfs:isDefinedBy .
+
+rdfs:label a owl:AnnotationProperty ;
+    owl:sameAs rdfs:label .
+
+rdfs:range owl:sameAs rdfs:range .
+
+rdfs:seeAlso a owl:AnnotationProperty ;
+    owl:sameAs rdfs:seeAlso .
+
+rdfs:subClassOf owl:sameAs rdfs:subClassOf .
+
+rdfs:subPropertyOf owl:sameAs rdfs:subPropertyOf .
+
+xsd:NCName a rdfs:Datatype ;
+    owl:sameAs xsd:NCName .
+
+xsd:NMTOKEN a rdfs:Datatype ;
+    owl:sameAs xsd:NMTOKEN .
+
+xsd:Name a rdfs:Datatype ;
+    owl:sameAs xsd:Name .
+
+xsd:anyURI a rdfs:Datatype ;
+    owl:sameAs xsd:anyURI .
+
+xsd:base64Binary a rdfs:Datatype ;
+    owl:sameAs xsd:base64Binary .
+
+xsd:boolean a rdfs:Datatype ;
+    owl:sameAs xsd:boolean .
+
+xsd:byte a rdfs:Datatype ;
+    owl:sameAs xsd:byte .
+
+xsd:date a rdfs:Datatype ;
+    owl:sameAs xsd:date .
+
+xsd:dateTime a rdfs:Datatype ;
+    owl:sameAs xsd:dateTime .
+
+xsd:dateTimeStamp a rdfs:Datatype ;
+    owl:sameAs xsd:dateTimeStamp .
+
+xsd:decimal a rdfs:Datatype ;
+    owl:sameAs xsd:decimal .
+
+xsd:double a rdfs:Datatype ;
+    owl:sameAs xsd:double .
+
+xsd:float a rdfs:Datatype ;
+    owl:sameAs xsd:float .
+
+xsd:hexBinary a rdfs:Datatype ;
+    owl:sameAs xsd:hexBinary .
+
+xsd:int a rdfs:Datatype ;
+    owl:sameAs xsd:int .
+
+xsd:integer a rdfs:Datatype ;
+    owl:sameAs xsd:integer .
+
+xsd:language a rdfs:Datatype ;
+    owl:sameAs xsd:language .
+
+xsd:long a rdfs:Datatype ;
+    owl:sameAs xsd:long .
+
+xsd:negativeInteger a rdfs:Datatype ;
+    owl:sameAs xsd:negativeInteger .
+
+xsd:nonNegativeInteger a rdfs:Datatype ;
+    owl:sameAs xsd:nonNegativeInteger .
+
+xsd:nonPositiveInteger a rdfs:Datatype ;
+    owl:sameAs xsd:nonPositiveInteger .
+
+xsd:normalizedString a rdfs:Datatype ;
+    owl:sameAs xsd:normalizedString .
+
+xsd:positiveInteger a rdfs:Datatype ;
+    owl:sameAs xsd:positiveInteger .
+
+xsd:short a rdfs:Datatype ;
+    owl:sameAs xsd:short .
+
+xsd:string a rdfs:Datatype ;
+    owl:sameAs xsd:string .
+
+xsd:time a rdfs:Datatype ;
+    owl:sameAs xsd:time .
+
+xsd:token a rdfs:Datatype ;
+    owl:sameAs xsd:token .
+
+xsd:unsignedByte a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedByte .
+
+xsd:unsignedInt a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedInt .
+
+xsd:unsignedLong a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedLong .
+
+xsd:unsignedShort a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedShort .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty ;
+    owl:sameAs owl:backwardCompatibleWith .
+
+owl:deprecated a owl:AnnotationProperty ;
+    owl:sameAs owl:deprecated .
+
+owl:equivalentClass owl:sameAs owl:equivalentClass .
+
+owl:equivalentProperty owl:sameAs owl:equivalentProperty .
+
+owl:incompatibleWith a owl:AnnotationProperty ;
+    owl:sameAs owl:incompatibleWith .
+
+owl:inverseOf owl:sameAs owl:inverseOf .
+
+owl:priorVersion a owl:AnnotationProperty ;
+    owl:sameAs owl:priorVersion .
+
+owl:rational a rdfs:Datatype ;
+    owl:sameAs owl:rational .
+
+owl:sameAs owl:sameAs owl:sameAs .
+
+owl:versionInfo a owl:AnnotationProperty ;
+    owl:sameAs owl:versionInfo .
+
+vs:term_status a owl:AnnotationProperty ;
+    owl:sameAs vs:term_status .
+
+foaf:membershipClass a owl:AnnotationProperty ;
+    rdfs:label "membershipClass" ;
+    rdfs:comment "Indicates the class of individuals that are a member of a Group" ;
+    rdfs:isDefinedBy foaf: ;
+    owl:sameAs foaf:membershipClass ;
+    vs:term_status "unstable" .
+
+wot:assurance a owl:AnnotationProperty ;
+    owl:sameAs wot:assurance .
+
+wot:src_assurance a owl:AnnotationProperty ;
+    owl:sameAs wot:src_assurance .
+
+owl:Ontology owl:sameAs owl:Ontology .
+
+<mailto:donna@example.org> a owl:Thing ;
+    owl:sameAs <mailto:donna@example.org> .
+
+"A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." owl:sameAs "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." .
+
+"A .plan comment, in the tradition of finger and '.plan' files." owl:sameAs "A .plan comment, in the tradition of finger and '.plan' files." .
+
+"A Myers Briggs (MBTI) personality classification." owl:sameAs "A Myers Briggs (MBTI) personality classification." .
+
+"A Skype ID" owl:sameAs "A Skype ID" .
+
+"A Yahoo chat ID" owl:sameAs "A Yahoo chat ID" .
+
+"A checksum for the DNA of some thing. Joke." owl:sameAs "A checksum for the DNA of some thing. Joke." .
+
+"A current project this person works on." owl:sameAs "A current project this person works on." .
+
+"A depiction of some thing." owl:sameAs "A depiction of some thing." .
+
+"A derived thumbnail image." owl:sameAs "A derived thumbnail image." .
+
+"A document that this thing is the primary topic of." owl:sameAs "A document that this thing is the primary topic of." .
+
+"A homepage for some thing." owl:sameAs "A homepage for some thing." .
+
+"A homepage of a school attended by the person." owl:sameAs "A homepage of a school attended by the person." .
+
+"A jabber ID for something." owl:sameAs "A jabber ID for something." .
+
+"A link to the publications of this person." owl:sameAs "A link to the publications of this person." .
+
+"A location that something is based near, for some broadly human notion of near." owl:sameAs "A location that something is based near, for some broadly human notion of near." .
+
+"A logo representing some thing." owl:sameAs "A logo representing some thing." .
+
+"A page about a topic of interest to this person." owl:sameAs "A page about a topic of interest to this person." .
+
+"A page or document about this thing." owl:sameAs "A page or document about this thing." .
+
+"A person known by this person (indicating some level of reciprocated interaction between the parties)." owl:sameAs "A person known by this person (indicating some level of reciprocated interaction between the parties)." .
+
+"A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel)." owl:sameAs "A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel)." .
+
+"A project this person has previously worked on." owl:sameAs "A project this person has previously worked on." .
+
+"A sha1sum hash, in hex." owl:sameAs "A sha1sum hash, in hex." .
+
+"A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." owl:sameAs "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." .
+
+"A string expressing what the user is happy for the general public (normally) to know about their current activity." owl:sameAs "A string expressing what the user is happy for the general public (normally) to know about their current activity." .
+
+"A textual geekcode for this person, see http://www.geekcode.com/geek.html" owl:sameAs "A textual geekcode for this person, see http://www.geekcode.com/geek.html" .
+
+"A theme." owl:sameAs "A theme." .
+
+"A thing depicted in this representation." owl:sameAs "A thing depicted in this representation." .
+
+"A thing of interest to this person." owl:sameAs "A thing of interest to this person." .
+
+"A tipjar document for this agent, describing means for payment and reward." owl:sameAs "A tipjar document for this agent, describing means for payment and reward." .
+
+"A topic of some page or document." owl:sameAs "A topic of some page or document." .
+
+"A weblog of some thing (whether person, group, company etc.)." owl:sameAs "A weblog of some thing (whether person, group, company etc.)." .
+
+"A work info homepage of some person; a page about their work for some organization." owl:sameAs "A work info homepage of some person; a page about their work for some organization." .
+
+"A workplace homepage of some person; the homepage of an organization they work for." owl:sameAs "A workplace homepage of some person; the homepage of an organization they work for." .
+
+"AIM chat ID" owl:sameAs "AIM chat ID" .
+
+"An AIM chat ID" owl:sameAs "An AIM chat ID" .
+
+"An ICQ chat ID" owl:sameAs "An ICQ chat ID" .
+
+"An MSN chat ID" owl:sameAs "An MSN chat ID" .
+
+"An OpenID for an Agent." owl:sameAs "An OpenID for an Agent." .
+
+"An agent that  made this thing." owl:sameAs "An agent that  made this thing." .
+
+"An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)." owl:sameAs "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)." .
+
+"An organization funding a project or person." owl:sameAs "An organization funding a project or person." .
+
+"DNA checksum" owl:sameAs "DNA checksum" .
+
+"Donna Fales" owl:sameAs "Donna Fales" .
+
+"Edward Scissorhands" owl:sameAs "Edward Scissorhands" .
+
+"Friend of a Friend (FOAF) vocabulary" owl:sameAs "Friend of a Friend (FOAF) vocabulary" .
+
+"ICQ chat ID" owl:sameAs "ICQ chat ID" .
+
+"Indicates a homepage of the service provide for this online account." owl:sameAs "Indicates a homepage of the service provide for this online account." .
+
+"Indicates a member of a Group" owl:sameAs "Indicates a member of a Group" .
+
+"Indicates the class of individuals that are a member of a Group" owl:sameAs "Indicates the class of individuals that are a member of a Group" .
+
+"Indicates the name (identifier) associated with this online account." owl:sameAs "Indicates the name (identifier) associated with this online account." .
+
+"MSN chat ID" owl:sameAs "MSN chat ID" .
+
+"Skype ID" owl:sameAs "Skype ID" .
+
+"Something that was made by this agent." owl:sameAs "Something that was made by this agent." .
+
+"Surname" owl:sameAs "Surname" .
+
+"The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." owl:sameAs "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." .
+
+"The age in years of some agent." owl:sameAs "The age in years of some agent." .
+
+"The birthday of this Agent, represented in mm-dd string form, eg. '12-31'." owl:sameAs "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'." .
+
+"The first name of a person." owl:sameAs "The first name of a person." .
+
+"The gender of this Agent (typically but not necessarily 'male' or 'female')." owl:sameAs "The gender of this Agent (typically but not necessarily 'male' or 'female')." .
+
+"The last name of a person." owl:sameAs "The last name of a person." .
+
+"The primary topic of some page or document." owl:sameAs "The primary topic of some page or document." .
+
+"The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox." owl:sameAs "The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox." .
+
+"The surname of some person." owl:sameAs "The surname of some person." .
+
+"The underlying or 'focal' entity associated with some SKOS-described concept." owl:sameAs "The underlying or 'focal' entity associated with some SKOS-described concept." .
+
+"Thing" owl:sameAs "Thing" .
+
+"Title (Mr, Mrs, Ms, Dr. etc)" owl:sameAs "Title (Mr, Mrs, Ms, Dr. etc)" .
+
+"Yahoo chat ID" owl:sameAs "Yahoo chat ID" .
+
+"account name" owl:sameAs "account name" .
+
+"account service homepage" owl:sameAs "account service homepage" .
+
+"age" owl:sameAs "age" .
+
+"based near" owl:sameAs "based near" .
+
+"birthday" owl:sameAs "birthday" .
+
+"current project" owl:sameAs "current project" .
+
+"depiction" owl:sameAs "depiction" .
+
+"depicts" owl:sameAs "depicts" .
+
+"e.scissorhands@example.org" a owl:Thing ;
+    owl:sameAs "e.scissorhands@example.org" .
+
+"ed" owl:sameAs "ed" .
+
+"familyName" owl:sameAs "familyName" .
+
+"family_name" owl:sameAs "family_name" .
+
+"firstName" owl:sameAs "firstName" .
+
+"focus" owl:sameAs "focus" .
+
+"funded by" owl:sameAs "funded by" .
+
+"geekcode" owl:sameAs "geekcode" .
+
+"gender" owl:sameAs "gender" .
+
+"homepage" owl:sameAs "homepage" .
+
+"image" owl:sameAs "image" .
+
+"interest" owl:sameAs "interest" .
+
+"is primary topic of" owl:sameAs "is primary topic of" .
+
+"jabber ID" owl:sameAs "jabber ID" .
+
+"knows" owl:sameAs "knows" .
+
+"lastName" owl:sameAs "lastName" .
+
+"logo" owl:sameAs "logo" .
+
+"made" owl:sameAs "made" .
+
+"maker" owl:sameAs "maker" .
+
+"member" owl:sameAs "member" .
+
+"membershipClass" owl:sameAs "membershipClass" .
+
+"myersBriggs" owl:sameAs "myersBriggs" .
+
+"nickname" owl:sameAs "nickname" .
+
+"openid" owl:sameAs "openid" .
+
+"page" owl:sameAs "page" .
+
+"past project" owl:sameAs "past project" .
+
+"personal mailbox" owl:sameAs "personal mailbox" .
+
+"phone" owl:sameAs "phone" .
+
+"plan" owl:sameAs "plan" .
+
+"primary topic" owl:sameAs "primary topic" .
+
+"publications" owl:sameAs "publications" .
+
+"schoolHomepage" owl:sameAs "schoolHomepage" .
+
+"sha1sum (hex)" owl:sameAs "sha1sum (hex)" .
+
+"sha1sum of a personal mailbox URI name" owl:sameAs "sha1sum of a personal mailbox URI name" .
+
+"status" owl:sameAs "status" .
+
+"theme" owl:sameAs "theme" .
+
+"thumbnail" owl:sameAs "thumbnail" .
+
+"tipjar" owl:sameAs "tipjar" .
+
+"title" owl:sameAs "title" .
+
+"topic" owl:sameAs "topic" .
+
+"topic_interest" owl:sameAs "topic_interest" .
+
+"weblog" owl:sameAs "weblog" .
+
+"work info homepage" owl:sameAs "work info homepage" .
+
+"workplace homepage" owl:sameAs "workplace homepage" .
+
+owl:Class owl:sameAs owl:Class .
+
+owl:Nothing a owl:Class ;
+    rdfs:subClassOf owl:Nothing,
+        owl:Thing ;
+    owl:equivalentClass owl:Nothing ;
+    owl:sameAs owl:Nothing .
+
+foaf:Person owl:sameAs foaf:Person .
+
+foaf:account a owl:ObjectProperty ;
+    rdfs:label "account" ;
+    rdfs:comment "Indicates an account held by this agent." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:account ;
+    owl:equivalentProperty foaf:account ;
+    owl:sameAs foaf:account ;
+    vs:term_status "testing" .
+
+foaf:accountName a owl:DatatypeProperty ;
+    rdfs:label "account name" ;
+    rdfs:comment "Indicates the name (identifier) associated with this online account." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:accountName ;
+    owl:equivalentProperty foaf:accountName ;
+    owl:sameAs foaf:accountName ;
+    vs:term_status "testing" .
+
+foaf:accountServiceHomepage a owl:ObjectProperty ;
+    rdfs:label "account service homepage" ;
+    rdfs:comment "Indicates a homepage of the service provide for this online account." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:accountServiceHomepage ;
+    owl:equivalentProperty foaf:accountServiceHomepage ;
+    owl:sameAs foaf:accountServiceHomepage ;
+    vs:term_status "testing" .
+
+foaf:age a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "age" ;
+    rdfs:comment "The age in years of some agent." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:age ;
+    owl:equivalentProperty foaf:age ;
+    owl:sameAs foaf:age ;
+    vs:term_status "unstable" .
+
+foaf:aimChatID a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "AIM chat ID" ;
+    rdfs:comment "An AIM chat ID" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:aimChatID,
+        foaf:nick ;
+    owl:equivalentProperty foaf:aimChatID ;
+    owl:sameAs foaf:aimChatID ;
+    vs:term_status "testing" .
+
+foaf:based_near a owl:ObjectProperty ;
+    rdfs:label "based near" ;
+    rdfs:comment "A location that something is based near, for some broadly human notion of near." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:based_near ;
+    owl:equivalentProperty foaf:based_near ;
+    owl:sameAs foaf:based_near ;
+    vs:term_status "testing" .
+
+foaf:birthday a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "birthday" ;
+    rdfs:comment "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:birthday ;
+    owl:equivalentProperty foaf:birthday ;
+    owl:sameAs foaf:birthday ;
+    vs:term_status "unstable" .
+
+foaf:currentProject a owl:ObjectProperty ;
+    rdfs:label "current project" ;
+    rdfs:comment "A current project this person works on." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:currentProject ;
+    owl:equivalentProperty foaf:currentProject ;
+    owl:sameAs foaf:currentProject ;
+    vs:term_status "testing" .
+
+foaf:dnaChecksum a owl:DatatypeProperty ;
+    rdfs:label "DNA checksum" ;
+    rdfs:comment "A checksum for the DNA of some thing. Joke." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:dnaChecksum ;
+    owl:equivalentProperty foaf:dnaChecksum ;
+    owl:sameAs foaf:dnaChecksum ;
+    vs:term_status "archaic" .
+
+foaf:familyName a owl:DatatypeProperty ;
+    rdfs:label "familyName" ;
+    rdfs:comment "The family name of some person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:familyName ;
+    owl:equivalentProperty foaf:familyName ;
+    owl:sameAs foaf:familyName ;
+    vs:term_status "testing" .
+
+foaf:family_name a owl:DatatypeProperty ;
+    rdfs:label "family_name" ;
+    rdfs:comment "The family name of some person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:family_name ;
+    owl:equivalentProperty foaf:family_name ;
+    owl:sameAs foaf:family_name ;
+    vs:term_status "archaic" .
+
+foaf:firstName a owl:DatatypeProperty ;
+    rdfs:label "firstName" ;
+    rdfs:comment "The first name of a person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:firstName ;
+    owl:equivalentProperty foaf:firstName ;
+    owl:sameAs foaf:firstName ;
+    vs:term_status "testing" .
+
+foaf:focus a owl:ObjectProperty ;
+    rdfs:label "focus" ;
+    rdfs:comment "The underlying or 'focal' entity associated with some SKOS-described concept." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:focus ;
+    owl:equivalentProperty foaf:focus ;
+    owl:sameAs foaf:focus ;
+    vs:term_status "testing" .
+
+foaf:fundedBy a owl:ObjectProperty ;
+    rdfs:label "funded by" ;
+    rdfs:comment "An organization funding a project or person." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:fundedBy ;
+    owl:equivalentProperty foaf:fundedBy ;
+    owl:sameAs foaf:fundedBy ;
+    vs:term_status "archaic" .
+
+foaf:geekcode a owl:DatatypeProperty ;
+    rdfs:label "geekcode" ;
+    rdfs:comment "A textual geekcode for this person, see http://www.geekcode.com/geek.html" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:geekcode ;
+    owl:equivalentProperty foaf:geekcode ;
+    owl:sameAs foaf:geekcode ;
+    vs:term_status "archaic" .
+
+foaf:gender a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "gender" ;
+    rdfs:comment "The gender of this Agent (typically but not necessarily 'male' or 'female')." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:gender ;
+    owl:equivalentProperty foaf:gender ;
+    owl:sameAs foaf:gender ;
+    vs:term_status "testing" .
+
+foaf:givenName a owl:DatatypeProperty ;
+    rdfs:label "Given name" ;
+    rdfs:comment "The given name of some person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:givenName ;
+    owl:equivalentProperty foaf:givenName ;
+    owl:sameAs foaf:givenName ;
+    vs:term_status "testing" .
+
+foaf:givenname a owl:DatatypeProperty ;
+    rdfs:label "Given name" ;
+    rdfs:comment "The given name of some person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:givenname ;
+    owl:equivalentProperty foaf:givenname ;
+    owl:sameAs foaf:givenname ;
+    vs:term_status "archaic" .
+
+foaf:holdsAccount a owl:ObjectProperty ;
+    rdfs:label "account" ;
+    rdfs:comment "Indicates an account held by this agent." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:holdsAccount ;
+    owl:equivalentProperty foaf:holdsAccount ;
+    owl:sameAs foaf:holdsAccount ;
+    vs:term_status "archaic" .
+
+foaf:homepage a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "homepage" ;
+    rdfs:comment "A homepage for some thing." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:homepage,
+        foaf:isPrimaryTopicOf,
+        foaf:page ;
+    owl:equivalentProperty foaf:homepage ;
+    owl:sameAs foaf:homepage ;
+    vs:term_status "stable" .
+
+foaf:icqChatID a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ICQ chat ID" ;
+    rdfs:comment "An ICQ chat ID" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:icqChatID,
+        foaf:nick ;
+    owl:equivalentProperty foaf:icqChatID ;
+    owl:sameAs foaf:icqChatID ;
+    vs:term_status "testing" .
+
+foaf:img a owl:ObjectProperty ;
+    rdfs:label "image" ;
+    rdfs:comment "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:depiction,
+        foaf:img ;
+    owl:equivalentProperty foaf:img ;
+    owl:sameAs foaf:img ;
+    vs:term_status "testing" .
+
+foaf:interest a owl:ObjectProperty ;
+    rdfs:label "interest" ;
+    rdfs:comment "A page about a topic of interest to this person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:interest ;
+    owl:equivalentProperty foaf:interest ;
+    owl:sameAs foaf:interest ;
+    vs:term_status "testing" .
+
+foaf:jabberID a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "jabber ID" ;
+    rdfs:comment "A jabber ID for something." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:jabberID ;
+    owl:equivalentProperty foaf:jabberID ;
+    owl:sameAs foaf:jabberID ;
+    vs:term_status "testing" .
+
+foaf:knows a owl:ObjectProperty ;
+    rdfs:label "knows" ;
+    rdfs:comment "A person known by this person (indicating some level of reciprocated interaction between the parties)." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:knows ;
+    owl:equivalentProperty foaf:knows ;
+    owl:sameAs foaf:knows ;
+    vs:term_status "stable" .
+
+foaf:lastName a owl:DatatypeProperty ;
+    rdfs:label "lastName" ;
+    rdfs:comment "The last name of a person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:lastName ;
+    owl:equivalentProperty foaf:lastName ;
+    owl:sameAs foaf:lastName ;
+    vs:term_status "testing" .
+
+foaf:logo a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "logo" ;
+    rdfs:comment "A logo representing some thing." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:logo ;
+    owl:equivalentProperty foaf:logo ;
+    owl:sameAs foaf:logo ;
+    vs:term_status "testing" .
+
+foaf:made a owl:ObjectProperty ;
+    rdfs:label "made" ;
+    rdfs:comment "Something that was made by this agent." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:made ;
+    owl:equivalentProperty foaf:made ;
+    owl:inverseOf foaf:maker ;
+    owl:sameAs foaf:made ;
+    vs:term_status "stable" .
+
+foaf:mbox a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "personal mailbox" ;
+    rdfs:comment "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:mbox ;
+    owl:equivalentProperty foaf:mbox ;
+    owl:sameAs foaf:mbox ;
+    vs:term_status "stable" .
+
+foaf:mbox_sha1sum a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "sha1sum of a personal mailbox URI name" ;
+    rdfs:comment "The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:mbox_sha1sum ;
+    owl:equivalentProperty foaf:mbox_sha1sum ;
+    owl:sameAs foaf:mbox_sha1sum ;
+    vs:term_status "testing" .
+
+foaf:member a owl:ObjectProperty ;
+    rdfs:label "member" ;
+    rdfs:comment "Indicates a member of a Group" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:member ;
+    owl:equivalentProperty foaf:member ;
+    owl:sameAs foaf:member ;
+    vs:term_status "stable" .
+
+foaf:msnChatID a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "MSN chat ID" ;
+    rdfs:comment "An MSN chat ID" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:msnChatID,
+        foaf:nick ;
+    owl:equivalentProperty foaf:msnChatID ;
+    owl:sameAs foaf:msnChatID ;
+    vs:term_status "testing" .
+
+foaf:myersBriggs a owl:DatatypeProperty ;
+    rdfs:label "myersBriggs" ;
+    rdfs:comment "A Myers Briggs (MBTI) personality classification." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:myersBriggs ;
+    owl:equivalentProperty foaf:myersBriggs ;
+    owl:sameAs foaf:myersBriggs ;
+    vs:term_status "testing" .
+
+foaf:name a owl:DatatypeProperty ;
+    rdfs:subPropertyOf foaf:name ;
+    owl:equivalentProperty foaf:name ;
+    owl:sameAs foaf:name .
+
+foaf:openid a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "openid" ;
+    rdfs:comment "An OpenID for an Agent." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:isPrimaryTopicOf,
+        foaf:openid,
+        foaf:page ;
+    owl:equivalentProperty foaf:openid ;
+    owl:sameAs foaf:openid ;
+    vs:term_status "testing" .
+
+foaf:pastProject a owl:ObjectProperty ;
+    rdfs:label "past project" ;
+    rdfs:comment "A project this person has previously worked on." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:pastProject ;
+    owl:equivalentProperty foaf:pastProject ;
+    owl:sameAs foaf:pastProject ;
+    vs:term_status "testing" .
+
+foaf:phone a owl:ObjectProperty ;
+    rdfs:label "phone" ;
+    rdfs:comment "A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel)." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:phone ;
+    owl:equivalentProperty foaf:phone ;
+    owl:sameAs foaf:phone ;
+    vs:term_status "testing" .
+
+foaf:plan a owl:DatatypeProperty ;
+    rdfs:label "plan" ;
+    rdfs:comment "A .plan comment, in the tradition of finger and '.plan' files." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:plan ;
+    owl:equivalentProperty foaf:plan ;
+    owl:sameAs foaf:plan ;
+    vs:term_status "testing" .
+
+foaf:publications a owl:ObjectProperty ;
+    rdfs:label "publications" ;
+    rdfs:comment "A link to the publications of this person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:publications ;
+    owl:equivalentProperty foaf:publications ;
+    owl:sameAs foaf:publications ;
+    vs:term_status "testing" .
+
+foaf:schoolHomepage a owl:ObjectProperty ;
+    rdfs:label "schoolHomepage" ;
+    rdfs:comment "A homepage of a school attended by the person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:schoolHomepage ;
+    owl:equivalentProperty foaf:schoolHomepage ;
+    owl:sameAs foaf:schoolHomepage ;
+    vs:term_status "testing" .
+
+foaf:sha1 a owl:DatatypeProperty ;
+    rdfs:label "sha1sum (hex)" ;
+    rdfs:comment "A sha1sum hash, in hex." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:sha1 ;
+    owl:equivalentProperty foaf:sha1 ;
+    owl:sameAs foaf:sha1 ;
+    vs:term_status "unstable" .
+
+foaf:skypeID a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Skype ID" ;
+    rdfs:comment "A Skype ID" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:nick,
+        foaf:skypeID ;
+    owl:equivalentProperty foaf:skypeID ;
+    owl:sameAs foaf:skypeID ;
+    vs:term_status "testing" .
+
+foaf:status a owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:comment "A string expressing what the user is happy for the general public (normally) to know about their current activity." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:status ;
+    owl:equivalentProperty foaf:status ;
+    owl:sameAs foaf:status ;
+    vs:term_status "unstable" .
+
+foaf:surname a owl:DatatypeProperty ;
+    rdfs:label "Surname" ;
+    rdfs:comment "The surname of some person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:surname ;
+    owl:equivalentProperty foaf:surname ;
+    owl:sameAs foaf:surname ;
+    vs:term_status "archaic" .
+
+foaf:theme a owl:ObjectProperty ;
+    rdfs:label "theme" ;
+    rdfs:comment "A theme." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:theme ;
+    owl:equivalentProperty foaf:theme ;
+    owl:sameAs foaf:theme ;
+    vs:term_status "archaic" .
+
+foaf:thumbnail a owl:ObjectProperty ;
+    rdfs:label "thumbnail" ;
+    rdfs:comment "A derived thumbnail image." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:thumbnail ;
+    owl:equivalentProperty foaf:thumbnail ;
+    owl:sameAs foaf:thumbnail ;
+    vs:term_status "testing" .
+
+foaf:tipjar a owl:ObjectProperty ;
+    rdfs:label "tipjar" ;
+    rdfs:comment "A tipjar document for this agent, describing means for payment and reward." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:page,
+        foaf:tipjar ;
+    owl:equivalentProperty foaf:tipjar ;
+    owl:sameAs foaf:tipjar ;
+    vs:term_status "testing" .
+
+foaf:title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:comment "Title (Mr, Mrs, Ms, Dr. etc)" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:title ;
+    owl:equivalentProperty foaf:title ;
+    owl:sameAs foaf:title ;
+    vs:term_status "testing" .
+
+foaf:topic_interest a owl:ObjectProperty ;
+    rdfs:label "topic_interest" ;
+    rdfs:comment "A thing of interest to this person." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:topic_interest ;
+    owl:equivalentProperty foaf:topic_interest ;
+    owl:sameAs foaf:topic_interest ;
+    vs:term_status "testing" .
+
+foaf:weblog a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "weblog" ;
+    rdfs:comment "A weblog of some thing (whether person, group, company etc.)." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:page,
+        foaf:weblog ;
+    owl:equivalentProperty foaf:weblog ;
+    owl:sameAs foaf:weblog ;
+    vs:term_status "stable" .
+
+foaf:workInfoHomepage a owl:ObjectProperty ;
+    rdfs:label "work info homepage" ;
+    rdfs:comment "A work info homepage of some person; a page about their work for some organization." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:workInfoHomepage ;
+    owl:equivalentProperty foaf:workInfoHomepage ;
+    owl:sameAs foaf:workInfoHomepage ;
+    vs:term_status "testing" .
+
+foaf:workplaceHomepage a owl:ObjectProperty ;
+    rdfs:label "workplace homepage" ;
+    rdfs:comment "A workplace homepage of some person; the homepage of an organization they work for." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:workplaceHomepage ;
+    owl:equivalentProperty foaf:workplaceHomepage ;
+    owl:sameAs foaf:workplaceHomepage ;
+    vs:term_status "testing" .
+
+foaf:yahooChatID a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Yahoo chat ID" ;
+    rdfs:comment "A Yahoo chat ID" ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf foaf:nick,
+        foaf:yahooChatID ;
+    owl:equivalentProperty foaf:yahooChatID ;
+    owl:sameAs foaf:yahooChatID ;
+    vs:term_status "testing" .
+
+"Given name" owl:sameAs "Given name" .
+
+"Indicates an account held by this agent." owl:sameAs "Indicates an account held by this agent." .
+
+"The family name of some person." owl:sameAs "The family name of some person." .
+
+"The given name of some person." owl:sameAs "The given name of some person." .
+
+"account" owl:sameAs "account" .
+
+"donna" a rdfs:Literal ;
+    owl:sameAs "donna" .
+
+foaf:depiction a owl:ObjectProperty ;
+    rdfs:label "depiction" ;
+    rdfs:comment "A depiction of some thing." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:depiction ;
+    owl:equivalentProperty foaf:depiction ;
+    owl:inverseOf foaf:depicts ;
+    owl:sameAs foaf:depiction ;
+    vs:term_status "testing" .
+
+foaf:depicts a owl:ObjectProperty ;
+    rdfs:label "depicts" ;
+    rdfs:comment "A thing depicted in this representation." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:depicts ;
+    owl:equivalentProperty foaf:depicts ;
+    owl:sameAs foaf:depicts ;
+    vs:term_status "testing" .
+
+foaf:maker a owl:ObjectProperty ;
+    rdfs:label "maker" ;
+    rdfs:comment "An agent that  made this thing." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:maker ;
+    owl:equivalentProperty foaf:maker ;
+    owl:sameAs foaf:maker ;
+    vs:term_status "stable" .
+
+foaf:primaryTopic a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "primary topic" ;
+    rdfs:comment "The primary topic of some page or document." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:primaryTopic ;
+    owl:equivalentProperty foaf:primaryTopic ;
+    owl:sameAs foaf:primaryTopic ;
+    vs:term_status "stable" .
+
+foaf:topic a owl:ObjectProperty ;
+    rdfs:label "topic" ;
+    rdfs:comment "A topic of some page or document." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf foaf:topic ;
+    owl:equivalentProperty foaf:topic ;
+    owl:sameAs foaf:topic ;
+    vs:term_status "testing" .
+
+owl:FunctionalProperty owl:sameAs owl:FunctionalProperty .
+
+foaf:isPrimaryTopicOf a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is primary topic of" ;
+    rdfs:comment "A document that this thing is the primary topic of." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:isPrimaryTopicOf,
+        foaf:page ;
+    owl:equivalentProperty foaf:isPrimaryTopicOf ;
+    owl:inverseOf foaf:primaryTopic ;
+    owl:sameAs foaf:isPrimaryTopicOf ;
+    vs:term_status "stable" .
+
+"unstable" owl:sameAs "unstable" .
+
+foaf:nick a owl:DatatypeProperty ;
+    rdfs:label "nickname" ;
+    rdfs:comment "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:nick ;
+    owl:equivalentProperty foaf:nick ;
+    owl:sameAs foaf:nick ;
+    vs:term_status "testing" .
+
+foaf:page a owl:ObjectProperty ;
+    rdfs:label "page" ;
+    rdfs:comment "A page or document about this thing." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy foaf: ;
+    rdfs:subPropertyOf foaf:page ;
+    owl:equivalentProperty foaf:page ;
+    owl:inverseOf foaf:topic ;
+    owl:sameAs foaf:page ;
+    vs:term_status "stable" .
+
+"archaic" owl:sameAs "archaic" .
+
+"stable" owl:sameAs "stable" .
+
+owl:InverseFunctionalProperty owl:sameAs owl:InverseFunctionalProperty .
+
+owl:AnnotationProperty owl:sameAs owl:AnnotationProperty .
+
+rdfs:Literal a rdfs:Datatype ;
+    owl:sameAs rdfs:Literal .
+
+owl:DatatypeProperty owl:sameAs owl:DatatypeProperty .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass owl:Thing ;
+    owl:sameAs owl:Thing .
+
+rdfs:Datatype owl:sameAs rdfs:Datatype .
+
+"testing" owl:sameAs "testing" .
+
+owl:ObjectProperty owl:sameAs owl:ObjectProperty .
+
+foaf: a owl:Ontology ;
+    dc:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." ;
+    dc:title "Friend of a Friend (FOAF) vocabulary" ;
+    owl:sameAs foaf: .
+

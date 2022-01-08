@@ -1,7 +1,6 @@
 from flask import jsonify, request
-from semanticweb import app, db, sparql
+from semanticweb import app, db, sparql, Graph
 from firebase_admin import auth
-
 
 # allow all origin
 @app.after_request

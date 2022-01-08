@@ -2,7 +2,7 @@ from flask import Flask
 from firebase_admin import firestore, initialize_app, credentials
 from os import environ
 from rdflib import Graph
-
+from owlrl import DeductiveClosure, OWLRL_Semantics
 
 environ['FIRESTORE_EMULATOR_HOST'] = 'localhost:8080'
 environ['FIREBASE_AUTH_EMULATOR_HOST'] = 'localhost:8083'
@@ -15,9 +15,13 @@ db = firestore.client()
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
-# load uni.ttl
+# load RDF data from uni.ttl
 g = Graph()
 g.parse('../python-rdf/uni.ttl')
+# load ontology
+g.parse('../ontologije/university_ontology.ttl')
+# turn on reasoner
+DeductiveClosure(OWLRL_Semantics).expand(g)
 
 # import ssl
 # ssl._create_default_https_context = ssl._create_unverified_context

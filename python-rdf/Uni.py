@@ -7,7 +7,7 @@ class UNI(DefinedNamespace):
 
     # classes
     Book : URIRef
-    DomainProblem : URIRef
+    
     Evaluation : URIRef
     MyAnswer : URIRef
     Question : URIRef
@@ -16,6 +16,7 @@ class UNI(DefinedNamespace):
     
     # properties
     createdBy : URIRef
+    domainProblem : URIRef
     doneBy : URIRef
     hasAnswers : URIRef
     hasDomainProblems : URIRef
@@ -50,4 +51,4 @@ class UNI(DefinedNamespace):
     typeOfTeaching : URIRef
     year : URIRef
 
-    _NS = Namespace("http://www.semanticweb.org/marija/ontologies/2021/university.owl")
+    _NS = Namespace("http://www.semanticweb.org/marija/ontologies/2021/university#")
