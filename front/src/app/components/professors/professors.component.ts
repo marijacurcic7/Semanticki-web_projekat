@@ -27,9 +27,10 @@ export class ProfessorsComponent implements OnInit {
       this.courses = result;
     });
 
-    this.professorsService.getProfessorsProgram("softversko inzenjerstvo i informacione tehnologije").subscribe(result => {
-      console.log(result);
-    })
+    // this.professorsService.getProfessorsProgram("softversko inzenjerstvo i informacione tehnologije").subscribe(result => {
+    //   console.log(result);
+    // });
+
   }
 
   onCourseChange(event: any): void {
@@ -38,6 +39,11 @@ export class ProfessorsComponent implements OnInit {
     this.professorsService.getProfessors(this.course).subscribe(result => {
       this.professors = result;
     });
+
+    this.professorsService.getStudentsCourse(this.course).subscribe(result => {
+      console.log(result);
+    });
+
 
   }
 

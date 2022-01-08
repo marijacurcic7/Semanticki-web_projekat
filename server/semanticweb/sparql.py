@@ -146,7 +146,23 @@ def get_teachers_on_programme(program_name):
     return teachers
 
 
-
+def get_students_on_course(course_name):
+    query = """
+        SELECT DISTINCT ?name
+        WHERE {
+            ?take a uni:Take .
+            ?take uni:doneBy ?student .
+            ?take uni:partOf ?test .
+            ?test uni:partOf ?course .
+            ?course a aiiso:Course .
+            ?course dc:title ?courseName .
+            ?student foaf:name ?name .
+            FILTER (?courseName='%s') .
+        } 
+    """ % (course_name)
+    result = g.query(query)
+    students = [row.name.value for row in result]
+    return students
 
 
 def get_sorted_students_by_test_results(sort_type: str):

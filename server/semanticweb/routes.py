@@ -96,7 +96,13 @@ def query_teachers_on_programme():
     program_name = request.args.get('programName')
     return jsonify(sparql.get_teachers_on_programme(program_name))
     
-    
+
+@app.get('/query_students_on_course')
+def query_students_on_course():
+    cousre_name = request.args.get('courseName')
+    return jsonify(sparql.get_students_on_course(cousre_name))
+
+
 @app.get('/query_sorted_students_by_test_results')
 def query_sorted_students_by_test_results():
     sort_type = request.args.get('sort', None)  # expecting asc or desc
