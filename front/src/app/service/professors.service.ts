@@ -39,6 +39,11 @@ export class ProfessorsService {
     return this.http.get<any[]>("http://localhost:8090/teachers");
   }
 
+
+  getAllPrograms() {
+    return this.http.get<any[]>("http://localhost:8090/programs");
+  }
+
   getStudentsCourse(courseName: string) {
     let queryParams = {};
 

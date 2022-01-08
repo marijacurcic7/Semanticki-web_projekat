@@ -16,6 +16,19 @@ def get_all_courses():
     return courses
 
 
+def get_all_programs():
+    query = """
+    SELECT DISTINCT ?name
+    WHERE {
+    ?program a aiiso:Programme .
+    ?program uni:name ?name .
+    }
+    """
+    result = g.query(query)
+    programs = [row.name.value for row in result]
+    return programs
+
+
 def get_teachers(course_name):
     query = """
     SELECT DISTINCT ?name

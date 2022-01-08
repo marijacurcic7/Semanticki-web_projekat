@@ -49,6 +49,11 @@ def get_courses():
     return jsonify(sparql.get_all_courses())
 
 
+@app.get('/programs')
+def get_programs():
+    return jsonify(sparql.get_all_programs())
+
+
 @app.get('/query_teachers_on_course')
 def query_teachers_on_course():
     course_name = request.args.get('courseName')
