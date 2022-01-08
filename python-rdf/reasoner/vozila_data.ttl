@@ -1,0 +1,8 @@
+@prefix ex: <http://example.org/schemas/vehicles#> .
+@prefix exthings: <http://example.org/instances#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+exthings:johnSmithsCar a ex:PassengerVehicle;
+  ex:registeredTo <http://www.example.org/staffid/85740>;
+ ex:rearSeatLegRoom "127"^^xsd:integer;
+ ex:primaryDriver <http://www.example.org/staffid/85740>. 

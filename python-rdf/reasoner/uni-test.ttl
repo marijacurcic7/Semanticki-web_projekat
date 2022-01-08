@@ -8,18 +8,26 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 schema1:name a owl:AnnotationProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb10,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb8,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb9,
         schema1:Programme,
         :Domain,
         :Test,
         owl:Thing ;
     owl:sameAs schema1:name .
 
-<http://www.semanticweb.org/marija/ontologies/2021/university> a owl:Ontology ;
+<http://www.example.com/take/1> a _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
+        uni:Take,
+        owl:Thing ;
+    uni:doneBy <http://www.example.com/person/pera> ;
+    owl:sameAs <http://www.example.com/take/1> .
+
+: a owl:Ontology ;
     owl:imports foaf: ;
-    owl:sameAs <http://www.semanticweb.org/marija/ontologies/2021/university> .
+    owl:sameAs : .
 
 rdf:HTML a rdfs:Datatype ;
     owl:sameAs rdf:HTML .
@@ -157,9 +165,6 @@ owl:priorVersion a owl:AnnotationProperty ;
 owl:qualifiedCardinality a owl:AnnotationProperty ;
     owl:sameAs owl:qualifiedCardinality .
 
-owl:rational a rdfs:Datatype ;
-    owl:sameAs owl:rational .
-
 owl:sameAs owl:sameAs owl:sameAs .
 
 owl:someValuesFrom owl:sameAs owl:someValuesFrom .
@@ -169,10 +174,13 @@ owl:versionInfo a owl:AnnotationProperty ;
 
 foaf:name owl:sameAs foaf:name .
 
-<http://www.example.com/person/pera> owl:sameAs <http://www.example.com/person/pera> ;
+<http://www.example.com/person/pera> a foaf:Person ;
+    owl:sameAs <http://www.example.com/person/pera> ;
     foaf:name "Pera Peric" .
 
 :Domain owl:sameAs :Domain .
+
+<http://www.w3.org/2000/10/swap/pim/contact#Person> owl:sameAs <http://www.w3.org/2000/10/swap/pim/contact#Person> .
 
 xsd:decimal a rdfs:Datatype ;
     owl:sameAs xsd:decimal .
@@ -198,22 +206,14 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :activity .
 
 :answersList a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        :MyAnswer,
-        uni:Take,
+    rdfs:domain :MyAnswer,
         owl:Thing ;
     rdfs:subPropertyOf :answersList ;
     owl:equivalentProperty :answersList ;
     owl:sameAs :answersList .
 
 :correct a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        :MyAnswer,
-        uni:Take,
+    rdfs:domain :MyAnswer,
         owl:Thing ;
     rdfs:range xsd:boolean ;
     rdfs:subPropertyOf :correct ;
@@ -221,15 +221,19 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :correct .
 
 :correctAnswers a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
-        :Question,
-        :Test,
+    rdfs:domain :Question,
         owl:Thing ;
     rdfs:subPropertyOf :correctAnswers ;
     owl:equivalentProperty :correctAnswers ;
     owl:sameAs :correctAnswers .
+
+:domainProblem a owl:DatatypeProperty ;
+    rdfs:domain :Question,
+        owl:Thing ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf :domainProblem ;
+    owl:equivalentProperty :domainProblem ;
+    owl:sameAs :domainProblem .
 
 :educationalField a owl:DatatypeProperty ;
     rdfs:domain schema1:Programme,
@@ -240,9 +244,9 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :educationalField .
 
 :endTime a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
         uni:Take,
         owl:Thing ;
     rdfs:range xsd:dateTimeStamp ;
@@ -251,11 +255,10 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :endTime .
 
 :espb a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         schema1:Programme,
         owl:Thing ;
@@ -263,6 +266,11 @@ foaf: owl:sameAs foaf: .
     rdfs:subPropertyOf :espb ;
     owl:equivalentProperty :espb ;
     owl:sameAs :espb .
+
+:hasDomainProblems a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasDomainProblems ;
+    owl:equivalentProperty :hasDomainProblems ;
+    owl:sameAs :hasDomainProblems .
 
 :levelOfStudy a owl:DatatypeProperty ;
     rdfs:domain schema1:Programme,
@@ -273,11 +281,10 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :levelOfStudy .
 
 :methodology a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         owl:Thing ;
     rdfs:range xsd:string ;
@@ -286,9 +293,9 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :methodology .
 
 :name a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb10,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb8,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb9,
         schema1:Programme,
         :Test,
         owl:Thing ;
@@ -298,9 +305,9 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :name .
 
 :passed a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
         uni:Take,
         owl:Thing ;
     rdfs:range xsd:boolean ;
@@ -309,12 +316,12 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :passed .
 
 :points a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        _:n369d40913c71476db11798b1e778b000b9,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb10,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb8,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb9,
         :Evaluation,
         :MyAnswer,
         :Question,
@@ -327,11 +334,7 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :points .
 
 :possibleAnswers a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
-        :Question,
-        :Test,
+    rdfs:domain :Question,
         owl:Thing ;
     rdfs:subPropertyOf :possibleAnswers ;
     owl:equivalentProperty :possibleAnswers ;
@@ -346,11 +349,10 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :preExamination .
 
 :purpose a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         owl:Thing ;
     rdfs:range xsd:string ;
@@ -367,11 +369,10 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :required .
 
 :result a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         owl:Thing ;
     rdfs:range xsd:string ;
@@ -380,11 +381,10 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :result .
 
 :scientificField a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         schema1:Programme,
         owl:Thing ;
@@ -394,11 +394,10 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :scientificField .
 
 :semester a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         owl:Thing ;
     rdfs:range xsd:string ;
@@ -415,9 +414,9 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :semesters .
 
 :startTime a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
         uni:Take,
         owl:Thing ;
     rdfs:range xsd:dateTimeStamp ;
@@ -426,11 +425,7 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :startTime .
 
 :text a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
-        :Question,
-        :Test,
+    rdfs:domain :Question,
         owl:Thing ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf :text ;
@@ -446,18 +441,17 @@ foaf: owl:sameAs foaf: .
     owl:sameAs :title .
 
 :typeOfTeaching a owl:DatatypeProperty ;
-    rdfs:domain <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+    rdfs:domain foaf:Person ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf :typeOfTeaching ;
     owl:equivalentProperty :typeOfTeaching ;
     owl:sameAs :typeOfTeaching .
 
 :year a owl:DatatypeProperty ;
-    rdfs:domain _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:domain _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         owl:Thing ;
     rdfs:range xsd:integer ;
@@ -469,21 +463,19 @@ xsd:dateTimeStamp a rdfs:Datatype ;
     owl:sameAs xsd:dateTimeStamp .
 
 owl:Nothing a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
-        _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        _:n369d40913c71476db11798b1e778b000b9,
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb10,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb8,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb9,
         schema1:Course,
         schema1:Programme,
         :Book,
-        :DomainProblem,
         :Evaluation,
         :MyAnswer,
         :Question,
@@ -500,6 +492,7 @@ owl:Nothing a owl:Class ;
     owl:sameAs :createdBy .
 
 uni:doneBy a owl:ObjectProperty ;
+    rdfs:range foaf:Person ;
     rdfs:subPropertyOf uni:doneBy ;
     owl:equivalentProperty uni:doneBy ;
     owl:sameAs uni:doneBy .
@@ -508,11 +501,6 @@ uni:doneBy a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasAnswers ;
     owl:equivalentProperty :hasAnswers ;
     owl:sameAs :hasAnswers .
-
-:hasDomainProblems a owl:ObjectProperty ;
-    rdfs:subPropertyOf :hasDomainProblems ;
-    owl:equivalentProperty :hasDomainProblems ;
-    owl:sameAs :hasDomainProblems .
 
 :hasEvaluation a owl:ObjectProperty ;
     rdfs:subPropertyOf :hasEvaluation ;
@@ -540,20 +528,6 @@ uni:doneBy a owl:ObjectProperty ;
     owl:equivalentClass :Book ;
     owl:sameAs :Book .
 
-:DomainProblem a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
-        schema1:Course,
-        :DomainProblem,
-        owl:Thing ;
-    owl:equivalentClass :DomainProblem ;
-    owl:sameAs :DomainProblem .
-
-<http://www.w3.org/2000/10/swap/pim/contact#Person> owl:sameAs <http://www.w3.org/2000/10/swap/pim/contact#Person> .
-
 xsd:boolean a rdfs:Datatype ;
     owl:sameAs xsd:boolean .
 
@@ -565,20 +539,27 @@ xsd:integer a rdfs:Datatype ;
     owl:equivalentProperty :partOf ;
     owl:sameAs :partOf .
 
+foaf:Person owl:sameAs foaf:Person .
+
 "1"^^xsd:nonNegativeInteger a xsd:decimal,
         xsd:integer,
         xsd:nonNegativeInteger ;
     owl:sameAs "1"^^xsd:nonNegativeInteger .
 
 :MyAnswer a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        :MyAnswer,
-        uni:Take,
+    rdfs:subClassOf :MyAnswer,
         owl:Thing ;
     owl:equivalentClass :MyAnswer ;
     owl:sameAs :MyAnswer .
+
+:Test a owl:Class ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb10,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb8,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb9,
+        :Test,
+        owl:Thing ;
+    owl:equivalentClass :Test ;
+    owl:sameAs :Test .
 
 :Evaluation a owl:Class ;
     rdfs:subClassOf :Evaluation,
@@ -586,52 +567,38 @@ xsd:integer a rdfs:Datatype ;
     owl:equivalentClass :Evaluation ;
     owl:sameAs :Evaluation .
 
+uni:Take a owl:Class ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb5,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb6,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb7,
+        uni:Take,
+        owl:Thing ;
+    owl:equivalentClass uni:Take ;
+    owl:sameAs uni:Take .
+
 :Question a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
-        :Question,
-        :Test,
+    rdfs:subClassOf :Question,
         owl:Thing ;
     owl:equivalentClass :Question ;
     owl:sameAs :Question .
 
 owl:ObjectProperty owl:sameAs owl:ObjectProperty .
 
-uni:Take a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        uni:Take,
-        owl:Thing ;
-    owl:equivalentClass uni:Take ;
-    owl:sameAs uni:Take .
-
-:Test a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b10,
-        _:n369d40913c71476db11798b1e778b000b11,
-        _:n369d40913c71476db11798b1e778b000b9,
-        :Test,
-        owl:Thing ;
-    owl:equivalentClass :Test ;
-    owl:sameAs :Test .
-
-owl:AnnotationProperty owl:sameAs owl:AnnotationProperty .
-
 owl:Class owl:sameAs owl:Class .
 
 owl:Restriction owl:sameAs owl:Restriction .
 
 schema1:Course a owl:Class ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b1,
-        _:n369d40913c71476db11798b1e778b000b2,
-        _:n369d40913c71476db11798b1e778b000b3,
-        _:n369d40913c71476db11798b1e778b000b4,
-        _:n369d40913c71476db11798b1e778b000b5,
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb1,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb2,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb3,
+        _:n5d74445b9d7848a89f2fa9a3ff5f923cb4,
         schema1:Course,
         owl:Thing ;
     owl:equivalentClass schema1:Course ;
     owl:sameAs schema1:Course .
+
+owl:AnnotationProperty owl:sameAs owl:AnnotationProperty .
 
 schema1:Programme a owl:Class ;
     rdfs:subClassOf schema1:Programme,
@@ -651,86 +618,71 @@ owl:Thing a owl:Class ;
     owl:equivalentClass owl:Thing ;
     owl:sameAs owl:Thing .
 
-_:Na652c7c0538247709e086493051c4358 a _:n369d40913c71476db11798b1e778b000b6,
-        _:n369d40913c71476db11798b1e778b000b7,
-        _:n369d40913c71476db11798b1e778b000b8,
-        uni:Take,
-        owl:Thing ;
-    uni:doneBy <http://www.example.com/person/pera> ;
-    owl:sameAs _:Na652c7c0538247709e086493051c4358 .
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb11 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb11 .
 
-_:n369d40913c71476db11798b1e778b000b12 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b12 .
-
-_:n369d40913c71476db11798b1e778b000b10 a owl:Restriction ;
-    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:onClass schema1:Course ;
-    owl:onProperty :partOf ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b10 .
-
-_:n369d40913c71476db11798b1e778b000b11 a owl:Restriction ;
-    owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb10 a owl:Restriction ;
+    owl:onClass foaf:Person ;
     owl:onProperty :createdBy ;
     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b11 .
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb10 .
 
-_:n369d40913c71476db11798b1e778b000b9 a owl:Restriction ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb8 a owl:Restriction ;
     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     owl:onClass :Question ;
     owl:onProperty :hasQuestions ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b9 .
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb8 .
 
-_:n369d40913c71476db11798b1e778b000b7 a owl:Restriction ;
-    owl:onClass <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb9 a owl:Restriction ;
+    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    owl:onClass schema1:Course ;
+    owl:onProperty :partOf ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb9 .
+
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb6 a owl:Restriction ;
+    owl:onClass foaf:Person ;
     owl:onProperty uni:doneBy ;
     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b7 .
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb6 .
 
-_:n369d40913c71476db11798b1e778b000b8 a owl:Restriction ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb7 a owl:Restriction ;
     owl:onClass :Test ;
     owl:onProperty :partOf ;
     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b8 .
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb7 .
 
-_:n369d40913c71476db11798b1e778b000b1 a owl:Restriction ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b1 ;
-    owl:equivalentClass _:n369d40913c71476db11798b1e778b000b1 ;
-    owl:onProperty :hasDomainProblems ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b1 ;
-    owl:someValuesFrom :DomainProblem .
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb5 a owl:Restriction ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb5 ;
+    owl:equivalentClass _:n5d74445b9d7848a89f2fa9a3ff5f923cb5 ;
+    owl:onProperty :hasAnswers ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb5 ;
+    owl:someValuesFrom :MyAnswer .
 
-_:n369d40913c71476db11798b1e778b000b2 a owl:Restriction ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b2 ;
-    owl:equivalentClass _:n369d40913c71476db11798b1e778b000b2 ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb1 a owl:Restriction ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb1 ;
+    owl:equivalentClass _:n5d74445b9d7848a89f2fa9a3ff5f923cb1 ;
     owl:onProperty :hasEvaluation ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b2 ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb1 ;
     owl:someValuesFrom :Evaluation .
 
-_:n369d40913c71476db11798b1e778b000b3 a owl:Restriction ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b3 ;
-    owl:equivalentClass _:n369d40913c71476db11798b1e778b000b3 ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb2 a owl:Restriction ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb2 ;
+    owl:equivalentClass _:n5d74445b9d7848a89f2fa9a3ff5f923cb2 ;
     owl:onProperty :hasLiterature ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b3 ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb2 ;
     owl:someValuesFrom :Book .
 
-_:n369d40913c71476db11798b1e778b000b4 a owl:Restriction ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b4 ;
-    owl:equivalentClass _:n369d40913c71476db11798b1e778b000b4 ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb3 a owl:Restriction ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb3 ;
+    owl:equivalentClass _:n5d74445b9d7848a89f2fa9a3ff5f923cb3 ;
     owl:onProperty :hasTeachers ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b4 ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb3 ;
     owl:someValuesFrom <http://www.w3.org/2000/10/swap/pim/contact#Person> .
 
-_:n369d40913c71476db11798b1e778b000b5 a owl:Restriction ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b5 ;
-    owl:equivalentClass _:n369d40913c71476db11798b1e778b000b5 ;
+_:n5d74445b9d7848a89f2fa9a3ff5f923cb4 a owl:Restriction ;
+    rdfs:subClassOf _:n5d74445b9d7848a89f2fa9a3ff5f923cb4 ;
+    owl:equivalentClass _:n5d74445b9d7848a89f2fa9a3ff5f923cb4 ;
     owl:onProperty :partOf ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b5 ;
+    owl:sameAs _:n5d74445b9d7848a89f2fa9a3ff5f923cb4 ;
     owl:someValuesFrom schema1:Programme .
-
-_:n369d40913c71476db11798b1e778b000b6 a owl:Restriction ;
-    rdfs:subClassOf _:n369d40913c71476db11798b1e778b000b6 ;
-    owl:equivalentClass _:n369d40913c71476db11798b1e778b000b6 ;
-    owl:onProperty :hasAnswers ;
-    owl:sameAs _:n369d40913c71476db11798b1e778b000b6 ;
-    owl:someValuesFrom :MyAnswer .
 
