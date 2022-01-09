@@ -1,0 +1,36 @@
+#courses-table {
+  width: 70%;
+  margin: auto;
+}
+
+#filter-div {
+  margin: 15px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+form {
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+#select {
+  width: 400px;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.mat-form-field {
+  margin: 10px;
+}
