@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Test } from 'src/app/model/test.model';
+import { TestsService } from 'src/app/service/tests.service';
 
 @Component({
   selector: 'app-tests',
@@ -8,24 +9,22 @@ import { Test } from 'src/app/model/test.model';
   styleUrls: ['./tests.component.css']
 })
 export class TestsComponent implements OnInit {
-  tests = []
+  tests: Test[] = []
   option: string | undefined
   displayedColumns: string[] = ['name', 'minDuration', 'maxDuration']
-  dataSource!: MatTableDataSource<Test>
+  dataSource = new MatTableDataSource<Test>(this.tests)
 
-  constructor() { }
+  constructor(private testsService: TestsService) { }
 
   ngOnInit(): void {
   }
 
-  radioChange(event: any) {
-    this.tests = [];
-
-    if (this.option == '1') {
-      // this.dataSource = new MatTableDataSource<Test>();
-    }
-    else {
-
-    }
+  async radioChange(event: any) {
+    let sort: 'minDuration' | 'maxDuration' = 'minDuration'
+    if (this.option == '1') sort = 'minDuration'
+    else sort = 'maxDuration'
+    
+    this.tests = await this.testsService.getSortedTestsByDuration(sort).toPromise()
+    this.dataSource = new MatTableDataSource<Test>(this.tests);
   }
 }

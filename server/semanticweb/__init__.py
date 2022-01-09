@@ -23,8 +23,5 @@ g.parse('../ontologije/university_ontology.ttl')
 # turn on reasoner
 DeductiveClosure(OWLRL_Semantics).expand(g)
 
-# import ssl
-# ssl._create_default_https_context = ssl._create_unverified_context
-
 # avoid circular imports in python
 from semanticweb import routes

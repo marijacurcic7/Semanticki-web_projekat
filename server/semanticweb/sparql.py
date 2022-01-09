@@ -1,6 +1,4 @@
-from datetime import timedelta
 from semanticweb import g
-from json import dumps
 
 
 def get_all_courses():
