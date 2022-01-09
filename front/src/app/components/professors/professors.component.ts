@@ -13,7 +13,6 @@ import { ProfessorsService } from 'src/app/service/professors.service';
 export class ProfessorsComponent implements OnInit {
 
   displayedColumns: string[] = ['name'];
-  // professors: Professor[] = [];
   professors: string[] = [];
   courses: string[] = [];
   course: string = "";
@@ -57,10 +56,6 @@ export class ProfessorsComponent implements OnInit {
 
   onProgramChange(event: any): void {
     this.program = event.value;
-
-    // this.professorsService.getStudentsCourse(this.course).subscribe(result => {
-    //   console.log(result);
-    // });
 
     this.professorsService.getProfessorsProgram(this.program).subscribe(result => {
       this.professors = result;
