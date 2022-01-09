@@ -16,10 +16,12 @@ export class CoursesComponent implements OnInit {
   dataSource!: MatTableDataSource<Course>;
   option: string | undefined;
   option3Form!: FormGroup;
-
+  sortType: string = "ASC";
+  semester: string | undefined;
 
   professors: string[] = [];
   courses: Course[] = [];
+  fields: string[] = [];
   // prof: string = "";
 
 
@@ -37,7 +39,6 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
     this.professorsService.getAllProfessors().subscribe(result => {
-      console.log(result);
       this.professors = result;
     });
   }
@@ -64,7 +65,6 @@ export class CoursesComponent implements OnInit {
 
   courses3Books() {
     this.coursesService.getCourses3Books().subscribe(result => {
-      this.displayedColumns = ['name', 'count'];
       for (let r of result) {
         let course: Course = {
           naziv: r.courseTitle,
@@ -78,26 +78,30 @@ export class CoursesComponent implements OnInit {
 
   radioChange(event: any) {
     this.courses = [];
+    this.dataSource = new MatTableDataSource<Course>();
 
     if (this.option == '1') {
       this.displayedColumns = ['name'];
-
-      this.dataSource = new MatTableDataSource<Course>();
     }
     else if (this.option == '2') {
-      
+      this.displayedColumns = ['name', 'count'];
       this.courses3Books();
+    }
+    else if (this.option == '4') {
+      this.displayedColumns = ['name'];
+    }
+    else if (this.option == '5') {
+      this.displayedColumns = ['name', 'points'];
+      this.coursesByTestResults();
     }
   }
 
   onSubmit(): void {
     this.courses = [];
-
     let espb = this.option3Form.controls['espb'].value;
     let year = this.option3Form.controls['year'].value;
 
     this.coursesService.getCoursesESPBYear(espb, year).subscribe(result => {
-      console.log(result);
       this.displayedColumns = ['name', 'espb', 'year'];
       for (let r of result) {
         let course: Course = {
@@ -108,10 +112,51 @@ export class CoursesComponent implements OnInit {
         this.courses.push(course);
       }
       this.dataSource = new MatTableDataSource<Course>(this.courses);
-
     });
-    
   }
 
+  onSortChange(event: any): void {
+    this.courses = [];
+    this.sortType = event.value;
+    this.coursesByTestResults();
+  }
+
+  coursesByTestResults() {
+    this.coursesService.getCoursesByTestResults(this.sortType).subscribe(result => {
+      for (let r of result) {
+        let course: Course = {
+          naziv: r[1],
+          avgPoints: r[0],
+        }
+        this.courses.push(course);
+      }
+      this.dataSource = new MatTableDataSource<Course>(this.courses);
+    });
+  }
+
+  onSemesterChange(event: any) {
+    this.courses = [];
+    this.fields = [];
+    this.semester = event.value;
+    if(!this.semester) return;
+    this.coursesService.getScientificFields(this.semester).subscribe(result => {
+      this.fields = result;
+    })
+
+  }
+
+  onScientificFieldChange(event: any) {
+    let scientificField = event.value;
+    if(!this.semester) return;
+    this.coursesService.getCoursesWithSemesterAndScientificField(this.semester, scientificField).subscribe(result => {
+      for (let r of result) {
+        let course: Course = {
+          naziv: r,
+        }
+        this.courses.push(course);
+      }
+      this.dataSource = new MatTableDataSource<Course>(this.courses);
+    })
+  }
 
 }

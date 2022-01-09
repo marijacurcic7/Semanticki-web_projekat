@@ -38,6 +38,41 @@
                 <button mat-raised-button type="submit" color="primary">Submit</button>
             </form>
 
+            <mat-radio-button class="example-radio-button" value="4">
+                Courses with semester and scientific field
+            </mat-radio-button>
+
+            <form *ngIf="(option == '4')" >
+                <mat-form-field id="select" appearance="fill">
+                    <mat-label>Semester:</mat-label>
+                    <mat-select (selectionChange)="onSemesterChange($event)">
+                        <mat-option value="zimski">zimski</mat-option>
+                        <mat-option value="letnji">letnji</mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+                <mat-form-field id="select" appearance="fill">
+                    <mat-label>Select scientific fields</mat-label>
+                    <mat-select aria-disabled="true" (selectionChange)="onScientificFieldChange($event)">
+                        <mat-option *ngFor="let field of fields" [value]="field">
+                            {{field}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </form>
+
+            <mat-radio-button class="example-radio-button" value="5">
+                Sorted courses by test results
+            </mat-radio-button>
+
+            <mat-form-field *ngIf="(option == '5')" id="select" appearance="fill">
+                <mat-label>Sort type:</mat-label>
+                <mat-select [(value)]="sortType" (selectionChange)="onSortChange($event)">
+                    <mat-option value="ASC">asc</mat-option>
+                    <mat-option value="DESC">desc</mat-option>
+                </mat-select>
+            </mat-form-field>
+
         </mat-radio-group>
         <div>Courses: </div>
 
@@ -66,6 +101,11 @@
       <ng-container matColumnDef="year">
         <th mat-header-cell *matHeaderCellDef> Year </th>
         <td mat-cell *matCellDef="let element"> {{element.godina}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef> Average points </th>
+        <td mat-cell *matCellDef="let element"> {{element.avgPoints}} </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

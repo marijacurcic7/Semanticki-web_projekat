@@ -4,6 +4,7 @@ export interface Course {
     brojKnjiga?: number,
     godina?: number,
     espb?: number,
+    avgPoints?: number,
     // semestar: string,
     
 }

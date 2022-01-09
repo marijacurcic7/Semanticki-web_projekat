@@ -48,6 +48,40 @@ export class CoursesService {
     }
 
     return this.http.get<any[]>("http://localhost:8090/query_courses_with_espb_and_year", queryParams);
-    
   }
+
+  getCoursesByTestResults(sort: string) {
+    let queryParams = {};
+
+    queryParams = {
+			params: new HttpParams()
+				.set('sort', String(sort)),
+    }
+    
+    return this.http.get<any[]>("http://localhost:8090/query_sorted_courses_by_test_results", queryParams);
+  }
+
+  getScientificFields(semester: string) {
+    let queryParams = {};
+
+    queryParams = {
+			params: new HttpParams()
+				.set('semester', String(semester)),
+    }
+    
+    return this.http.get<any[]>("http://localhost:8090/scientific_fields_in_semester", queryParams);
+  }
+
+  getCoursesWithSemesterAndScientificField(semester: string, scientificField: string) {
+    let queryParams = {};
+
+    queryParams = {
+			params: new HttpParams()
+				.set('semester', String(semester))
+        .append('scientificField', String(scientificField)),
+    }
+    
+    return this.http.get<any[]>("http://localhost:8090/query_courses_with_semester_and_scientific_field", queryParams);
+  }
+
 }

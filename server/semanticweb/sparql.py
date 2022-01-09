@@ -116,7 +116,7 @@ def get_courses_with_espb_and_year(espb_limit, current_year):
 
 def get_scientific_fields(semester):
     query = """
-    SELECT ?scientificField
+    SELECT DISTINCT ?scientificField
     WHERE {
     ?course a aiiso:Course .
     ?course uni:semester '%s' .
