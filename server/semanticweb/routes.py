@@ -2,6 +2,7 @@ from flask import jsonify, request
 from semanticweb import app, db, sparql, Graph
 from firebase_admin import auth
 
+
 # allow all origin
 @app.after_request
 def after_request(response):
@@ -33,7 +34,6 @@ def test_firestore():
 def test_rdflib():
     g = Graph()
     g.parse('http://dbpedia.org/resource/WebAssembly')
-    # return 'true'
     return jsonify([(s, p, o) for s, p, o in g])
 
 
@@ -54,34 +54,9 @@ def get_programs():
     return jsonify(sparql.get_all_programs())
 
 
-@app.get('/query_teachers_on_course')
-def query_teachers_on_course():
-    course_name = request.args.get('courseName')
-    return jsonify(sparql.get_teachers(course_name))
-
-
 @app.get('/teachers')
 def get_teachers():
-    # return "hello"
     return jsonify(sparql.get_all_teachers())
-
-
-@app.get('/query_courses_for_a_given_teacher')
-def query_courses_for_a_given_teacher():
-    teacher_name = request.args.get('teacherName')
-    return jsonify(sparql.get_courses(teacher_name))
-
-
-@app.get('/query_courses_with_more_than_3_books')
-def query_courses_with_more_than_3_books():
-    return jsonify(sparql.get_courses_with_more_than_3_books())
-
-
-@app.get('/query_courses_with_espb_and_year')
-def query_courses_with_espb_and_year():
-    espb_limit = int(request.args.get('espbLimit'))
-    year = int(request.args.get('year'))
-    return jsonify(sparql.get_courses_with_espb_and_year(espb_limit, year))
 
 
 @app.get('/scientific_fields_in_semester')
@@ -90,6 +65,35 @@ def get_scientific_fields():
     return jsonify(sparql.get_scientific_fields(semester))
 
 
+# Q1
+@app.get('/query_teachers_on_course')
+def query_teachers_on_course():
+    course_name = request.args.get('courseName')
+    return jsonify(sparql.get_teachers(course_name))
+
+
+# Q2
+@app.get('/query_courses_for_a_given_teacher')
+def query_courses_for_a_given_teacher():
+    teacher_name = request.args.get('teacherName')
+    return jsonify(sparql.get_courses(teacher_name))
+
+
+# Q3
+@app.get('/query_courses_with_more_than_3_books')
+def query_courses_with_more_than_3_books():
+    return jsonify(sparql.get_courses_with_more_than_3_books())
+
+
+# Q4
+@app.get('/query_courses_with_espb_and_year')
+def query_courses_with_espb_and_year():
+    espb_limit = int(request.args.get('espbLimit'))
+    year = int(request.args.get('year'))
+    return jsonify(sparql.get_courses_with_espb_and_year(espb_limit, year))
+
+
+# Q5
 @app.get('/query_courses_with_semester_and_scientific_field')
 def query_courses_with_semester_and_scientific_field():
     semester = request.args.get('semester')
@@ -97,18 +101,7 @@ def query_courses_with_semester_and_scientific_field():
     return jsonify(sparql.get_courses_with_semester_and_scientific_field(semester, scientific_field))
 
 
-@app.get('/query_teachers_on_programme')
-def query_teachers_on_programme():
-    program_name = request.args.get('programName')
-    return jsonify(sparql.get_teachers_on_programme(program_name))
-    
-
-@app.get('/query_students_on_course')
-def query_students_on_course():
-    cousre_name = request.args.get('courseName')
-    return jsonify(sparql.get_students_on_course(cousre_name))
-
-
+# Q6
 @app.get('/query_sorted_students_by_test_results')
 def query_sorted_students_by_test_results():
     sort_type = request.args.get('sort', None)  # expecting asc or desc
@@ -117,6 +110,7 @@ def query_sorted_students_by_test_results():
     return jsonify(sparql.get_sorted_students_by_test_results(sort_type))
 
 
+# Q7
 @app.get('/query_sorted_courses_by_test_results')
 def query_sorted_courses_by_test_results():
     sort_type = request.args.get('sort', None)  # expecting asc or desc
@@ -125,6 +119,7 @@ def query_sorted_courses_by_test_results():
     return jsonify(sparql.get_sorted_courses_by_test_results(sort_type))
 
 
+# Q8
 @app.get('/query_sorted_tests_by_duration')
 def query_sorted_tests_by_duration():
     # expecting minDuration or maxDuration
@@ -132,3 +127,15 @@ def query_sorted_tests_by_duration():
     if sort_by != 'minDuration':
         sort_by = 'maxDuration'
     return jsonify(sparql.get_sorted_tests_by_duration(sort_by))
+
+# Q9
+@app.get('/query_students_on_course')
+def query_students_on_course():
+    cousre_name = request.args.get('courseName')
+    return jsonify(sparql.get_students_on_course(cousre_name))
+
+# Q10
+@app.get('/query_teachers_on_programme')
+def query_teachers_on_programme():
+    program_name = request.args.get('programName')
+    return jsonify(sparql.get_teachers_on_programme(program_name))

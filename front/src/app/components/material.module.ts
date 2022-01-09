@@ -25,6 +25,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ProfessorsComponent } from './professors/professors.component';
 import { CoursesComponent } from './courses/courses.component';
 import { StudentsComponent } from './students/students.component';
+import { TestsComponent } from './tests/tests.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { StudentsComponent } from './students/students.component';
     ProfessorsComponent,
     CoursesComponent,
     StudentsComponent,
+    TestsComponent,
   ],
   imports: [
     CommonModule,
