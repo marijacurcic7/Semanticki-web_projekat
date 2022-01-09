@@ -128,6 +128,11 @@ def query_sorted_tests_by_duration():
         sort_by = 'maxDuration'
     return jsonify(sparql.get_sorted_tests_by_duration(sort_by))
 
+# Q9
+@app.get('/query_students_on_course')
+def query_students_on_course():
+    cousre_name = request.args.get('courseName')
+    return jsonify(sparql.get_students_on_course(cousre_name))
 
 # Q10
 @app.get('/query_teachers_on_programme')
