@@ -4,6 +4,7 @@
 @prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uni: <http://www.semanticweb.org/marija/ontologies/2021/university#> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -25,8 +26,8 @@
 ###  http://purl.org/vocab/aiiso/schema#name
 schema:name rdf:type owl:AnnotationProperty ;
             rdfs:domain schema:Programme ,
-                        :Domain ,
-                        :Test .
+                        uni:Domain ,
+                        uni:Test .
 
 
 ###  http://www.w3.org/2002/07/owl#qualifiedCardinality
@@ -38,40 +39,42 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#createdBy
-:createdBy rdf:type owl:ObjectProperty .
+uni:createdBy rdf:type owl:ObjectProperty ;
+              rdfs:range foaf:Person .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#doneBy
-:doneBy rdf:type owl:ObjectProperty;
-  rdfs:range foaf:Person .
+uni:doneBy rdf:type owl:ObjectProperty ;
+           rdfs:range foaf:Person .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#hasAnswers
-:hasAnswers rdf:type owl:ObjectProperty .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#hasDomainProblems
-:hasDomainProblems rdf:type owl:ObjectProperty .
+uni:hasAnswers rdf:type owl:ObjectProperty ;
+               rdfs:range uni:MyAnswer .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#hasEvaluation
-:hasEvaluation rdf:type owl:ObjectProperty .
+uni:hasEvaluation rdf:type owl:ObjectProperty ;
+                  rdfs:range uni:Evaluation .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#hasLiterature
-:hasLiterature rdf:type owl:ObjectProperty .
+uni:hasLiterature rdf:type owl:ObjectProperty ;
+                  rdfs:range uni:Book .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#hasQuestions
-:hasQuestions rdf:type owl:ObjectProperty .
+uni:hasQuestions rdf:type owl:ObjectProperty ;
+                 rdfs:range uni:Question .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#hasTeachers
-:hasTeachers rdf:type owl:ObjectProperty .
+uni:hasTeachers rdf:type owl:ObjectProperty ;
+                rdfs:range foaf:Person .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#partOf
-:partOf rdf:type owl:ObjectProperty .
+uni:partOf rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -79,163 +82,163 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#activity
-:activity rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Evaluation ;
-          rdfs:range xsd:string .
+uni:activity rdf:type owl:DatatypeProperty ;
+             rdfs:domain uni:Evaluation ;
+             rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#answersList
-:answersList rdf:type owl:DatatypeProperty ;
-             rdfs:domain :MyAnswer .
+uni:answersList rdf:type owl:DatatypeProperty ;
+                rdfs:domain uni:MyAnswer .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#correct
-:correct rdf:type owl:DatatypeProperty ;
-         rdfs:domain :MyAnswer ;
-         rdfs:range xsd:boolean .
+uni:correct rdf:type owl:DatatypeProperty ;
+            rdfs:domain uni:MyAnswer ;
+            rdfs:range xsd:boolean .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#correctAnswers
-:correctAnswers rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Question .
+uni:correctAnswers rdf:type owl:DatatypeProperty ;
+                   rdfs:domain uni:Question .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#domainProblem
-:domainProblem rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Question ;
-               rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#educationalField
-:educationalField rdf:type owl:DatatypeProperty ;
-                  rdfs:domain schema:Programme ;
+uni:domainProblem rdf:type owl:DatatypeProperty ;
+                  rdfs:domain uni:Question ;
                   rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/marija/ontologies/2021/university#educationalField
+uni:educationalField rdf:type owl:DatatypeProperty ;
+                     rdfs:domain schema:Programme ;
+                     rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#endTime
-:endTime rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Take ;
-         rdfs:range xsd:dateTimeStamp .
+uni:endTime rdf:type owl:DatatypeProperty ;
+            rdfs:domain uni:Take ;
+            rdfs:range xsd:dateTimeStamp .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#espb
-:espb rdf:type owl:DatatypeProperty ;
-      rdfs:domain schema:Course ,
-                  schema:Programme ;
-      rdfs:range xsd:integer .
+uni:espb rdf:type owl:DatatypeProperty ;
+         rdfs:domain schema:Course ,
+                     schema:Programme ;
+         rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#levelOfStudy
-:levelOfStudy rdf:type owl:DatatypeProperty ;
-              rdfs:domain schema:Programme ;
-              rdfs:range xsd:string .
+uni:levelOfStudy rdf:type owl:DatatypeProperty ;
+                 rdfs:domain schema:Programme ;
+                 rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#methodology
-:methodology rdf:type owl:DatatypeProperty ;
+uni:methodology rdf:type owl:DatatypeProperty ;
+                rdfs:domain schema:Course ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#name
+uni:name rdf:type owl:DatatypeProperty ;
+         rdfs:domain schema:Programme ,
+                     uni:Test ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#passed
+uni:passed rdf:type owl:DatatypeProperty ;
+           rdfs:domain uni:Take ;
+           rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#points
+uni:points rdf:type owl:DatatypeProperty ;
+           rdfs:domain uni:Evaluation ,
+                       uni:MyAnswer ,
+                       uni:Question ,
+                       uni:Take ,
+                       uni:Test ;
+           rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#possibleAnswers
+uni:possibleAnswers rdf:type owl:DatatypeProperty ;
+                    rdfs:domain uni:Question .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#preExamination
+uni:preExamination rdf:type owl:DatatypeProperty ;
+                   rdfs:domain uni:Evaluation ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#purpose
+uni:purpose rdf:type owl:DatatypeProperty ;
+            rdfs:domain schema:Course ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#required
+uni:required rdf:type owl:DatatypeProperty ;
+             rdfs:domain uni:Evaluation ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#result
+uni:result rdf:type owl:DatatypeProperty ;
+           rdfs:domain schema:Course ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#scientificField
+uni:scientificField rdf:type owl:DatatypeProperty ;
+                    rdfs:domain schema:Course ,
+                                schema:Programme ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/marija/ontologies/2021/university#semester
+uni:semester rdf:type owl:DatatypeProperty ;
              rdfs:domain schema:Course ;
              rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/marija/ontologies/2021/university#name
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:domain schema:Programme ,
-                  :Test ;
-      rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#passed
-:passed rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Take ;
-        rdfs:range xsd:boolean .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#points
-:points rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Evaluation ,
-                    :MyAnswer ,
-                    :Question ,
-                    :Take ,
-                    :Test ;
-        rdfs:range xsd:float .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#possibleAnswers
-:possibleAnswers rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Question .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#preExamination
-:preExamination rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Evaluation ;
-                rdfs:range xsd:boolean .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#purpose
-:purpose rdf:type owl:DatatypeProperty ;
-         rdfs:domain schema:Course ;
-         rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#required
-:required rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Evaluation ;
-          rdfs:range xsd:boolean .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#result
-:result rdf:type owl:DatatypeProperty ;
-        rdfs:domain schema:Course ;
-        rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#scientificField
-:scientificField rdf:type owl:DatatypeProperty ;
-                 rdfs:domain schema:Course ,
-                             schema:Programme ;
-                 rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/marija/ontologies/2021/university#semester
-:semester rdf:type owl:DatatypeProperty ;
-          rdfs:domain schema:Course ;
-          rdfs:range xsd:string .
-
-
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#semesters
-:semesters rdf:type owl:DatatypeProperty ;
-           rdfs:domain schema:Programme ;
-           rdfs:range xsd:integer .
+uni:semesters rdf:type owl:DatatypeProperty ;
+              rdfs:domain schema:Programme ;
+              rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#startTime
-:startTime rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Take ;
-           rdfs:range xsd:dateTimeStamp .
+uni:startTime rdf:type owl:DatatypeProperty ;
+              rdfs:domain uni:Take ;
+              rdfs:range xsd:dateTimeStamp .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#text
-:text rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Question ;
-      rdfs:range xsd:string .
+uni:text rdf:type owl:DatatypeProperty ;
+         rdfs:domain uni:Question ;
+         rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#title
-:title rdf:type owl:DatatypeProperty ;
-       rdfs:domain schema:Programme ;
-       rdfs:range xsd:string .
+uni:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain schema:Programme ;
+          rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#typeOfTeaching
-:typeOfTeaching rdf:type owl:DatatypeProperty ;
-                rdfs:domain foaf:Person ;
-                rdfs:range xsd:string .
+uni:typeOfTeaching rdf:type owl:DatatypeProperty ;
+                   rdfs:domain foaf:Person ;
+                   rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#year
-:year rdf:type owl:DatatypeProperty ;
-      rdfs:domain schema:Course ;
-      rdfs:range xsd:integer .
+uni:year rdf:type owl:DatatypeProperty ;
+         rdfs:domain schema:Course ;
+         rdfs:range xsd:integer .
 
 
 #################################################################
@@ -245,19 +248,19 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  http://purl.org/vocab/aiiso/schema#Course
 schema:Course rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasEvaluation ;
-                                owl:someValuesFrom :Evaluation
+                                owl:onProperty uni:hasEvaluation ;
+                                owl:someValuesFrom uni:Evaluation
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasLiterature ;
-                                owl:someValuesFrom :Book
+                                owl:onProperty uni:hasLiterature ;
+                                owl:someValuesFrom uni:Book
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasTeachers ;
+                                owl:onProperty uni:hasTeachers ;
                                 owl:someValuesFrom <http://www.w3.org/2000/10/swap/pim/contact#Person>
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :partOf ;
+                                owl:onProperty uni:partOf ;
                                 owl:someValuesFrom schema:Programme
                               ] .
 
@@ -267,56 +270,56 @@ schema:Programme rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Book
-:Book rdf:type owl:Class .
+uni:Book rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Evaluation
-:Evaluation rdf:type owl:Class .
+uni:Evaluation rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#MyAnswer
-:MyAnswer rdf:type owl:Class .
+uni:MyAnswer rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Question
-:Question rdf:type owl:Class .
+uni:Question rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Take
-:Take rdf:type owl:Class ;
-      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasAnswers ;
-                        owl:someValuesFrom :MyAnswer
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :doneBy ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass foaf:Person
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :partOf ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass :Test
-                      ] .
+uni:Take rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty uni:hasAnswers ;
+                           owl:someValuesFrom uni:MyAnswer
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty uni:doneBy ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass foaf:Person
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty uni:partOf ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass uni:Test
+                         ] .
 
 
 ###  http://www.semanticweb.org/marija/ontologies/2021/university#Test
-:Test rdf:type owl:Class ;
-      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasQuestions ;
-                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass :Question
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :partOf ;
-                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass schema:Course
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :createdBy ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass foaf:Person
-                      ] .
+uni:Test rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty uni:hasQuestions ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass uni:Question
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty uni:partOf ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass schema:Course
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty uni:createdBy ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass foaf:Person
+                         ] .
 
 
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger

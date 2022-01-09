@@ -22,6 +22,7 @@ def get_all_programs():
     WHERE {
     ?program a aiiso:Programme .
     ?program uni:name ?name .
+    ?program uni:semesters ?semesters .
     }
     """
     result = g.query(query)

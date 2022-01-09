@@ -62,6 +62,7 @@ def query_teachers_on_course():
 
 @app.get('/teachers')
 def get_teachers():
+    # return "hello"
     return jsonify(sparql.get_all_teachers())
 
 
