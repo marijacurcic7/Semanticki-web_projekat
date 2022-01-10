@@ -44,11 +44,14 @@ export class ProfessorsService {
 
   async getAllProfessors() {
     await this.setHeaders()
-    return this.http.get<any[]>("http://localhost:8090/teachers").toPromise()
+    return this.http.get<any[]>("http://localhost:8090/teachers",
+    { headers: this.headers }).toPromise()
+
   }
 
   async getAllPrograms() {
     await this.setHeaders()
-    return this.http.get<any[]>("http://localhost:8090/programs").toPromise()
+    return this.http.get<any[]>("http://localhost:8090/programs",
+    { headers: this.headers }).toPromise()
   }
 }
