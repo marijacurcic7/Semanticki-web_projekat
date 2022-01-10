@@ -23,7 +23,7 @@ export class StudentsComponent implements OnInit {
   constructor(
     private coursesService: CoursesService,
     private studentsService: StudentsService
-  ) { 
+  ) {
     this.dataSource = new MatTableDataSource<Student>();
   }
 
@@ -31,26 +31,23 @@ export class StudentsComponent implements OnInit {
     this.courses = await this.coursesService.getAllCourses()
   }
 
-  onCourseChange(event: any): void {
+  async onCourseChange(event: any) {
     this.course = event.value;
 
-    this.studentsService.getStudentsCourse(this.course).subscribe(result => {
-      console.log(result);
-      for (let r of result) {
-        let student: Student = {
-          name: r,
-        }
-        this.students.push(student);
+    const result = await this.studentsService.getStudentsCourse(this.course)
+    for (let r of result) {
+      let student: Student = {
+        name: r,
       }
-      console.log(this.students);
-      this.dataSource = new MatTableDataSource<Student>(this.students);
-    });
-
+      this.students.push(student);
+    }
+    console.log(this.students);
+    this.dataSource = new MatTableDataSource<Student>(this.students);
   }
 
   radioChange(event: any) {
     this.students = [];
-    if (this.option == '1'){
+    if (this.option == '1') {
       this.displayedColumns = ['name'];
     }
     else if (this.option == '2') {
@@ -65,21 +62,18 @@ export class StudentsComponent implements OnInit {
     this.studentsByTestResults();
   }
 
-  studentsByTestResults() {
-
-    this.studentsService.getStudentsByTestResults(this.sortType).subscribe(result => {
-      console.log(result);
-      for (let r of result) {
-        let student: Student = {
-          name: r[0],
-          points: r[1],
-          testName: r[2]
-        }
-        this.students.push(student);
+  async studentsByTestResults() {
+    const result = await this.studentsService.getStudentsByTestResults(this.sortType)
+    for (let r of result) {
+      let student: Student = {
+        name: r[0],
+        points: r[1],
+        testName: r[2]
       }
+      this.students.push(student);
+    }
 
-      this.dataSource = new MatTableDataSource<Student>(this.students);
-    })
+    this.dataSource = new MatTableDataSource<Student>(this.students);
 
   }
 
