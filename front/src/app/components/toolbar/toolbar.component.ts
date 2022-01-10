@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,7 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public auth: AuthService
+    ) { }
 
   ngOnInit(): void {
   }

@@ -14,6 +14,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import {LoginComponent} from './login/login.component'
 
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
@@ -36,6 +37,7 @@ import { TestsComponent } from './tests/tests.component';
     CoursesComponent,
     StudentsComponent,
     TestsComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
