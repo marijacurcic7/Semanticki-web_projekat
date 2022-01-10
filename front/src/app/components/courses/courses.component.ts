@@ -37,10 +37,8 @@ export class CoursesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.professorsService.getAllProfessors().subscribe(result => {
-      this.professors = result;
-    });
+  async ngOnInit() {
+    this.professors = await this.professorsService.getAllProfessors()      
   }
 
   onTeacherChange(event: any): void {

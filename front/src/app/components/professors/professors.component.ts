@@ -24,41 +24,23 @@ export class ProfessorsComponent implements OnInit {
   constructor(
     private coursesService: CoursesService,
     private professorsService: ProfessorsService
-  ) { 
+  ) {
     this.dataSource = new MatTableDataSource<Professor>();
   }
 
   async ngOnInit() {
     this.courses = await this.coursesService.getAllCourses()
-
-    this.professorsService.getAllPrograms().subscribe(result => {
-      this.programs = result;
-    });
+    this.programs = await this.professorsService.getAllPrograms()
   }
 
 
-  onCourseChange(event: any): void {
+  async onCourseChange(event: any) {
     this.course = event.value;
-
-    this.professorsService.getProfessors(this.course).subscribe(result => {
-      this.professors = result;
-    });
-
-    // this.professorsService.getStudentsCourse(this.course).subscribe(result => {
-    //   console.log(result);
-    // });
-
+    this.professors = await this.professorsService.getProfessors(this.course)
   }
 
-
-  onProgramChange(event: any): void {
+  async onProgramChange(event: any) {
     this.program = event.value;
-
-    this.professorsService.getProfessorsProgram(this.program).subscribe(result => {
-      this.professors = result;
-    });
-
-
+    this.professors = await this.professorsService.getProfessorsProgram(this.program)
   }
-
 }

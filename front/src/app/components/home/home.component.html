@@ -1,8 +1,8 @@
 <app-toolbar></app-toolbar>
 <router-outlet></router-outlet>
-<button mat-button color="primary" (click)="auth.testFirebaseToken()">
+<!-- <button mat-button color="primary" (click)="auth.testFirebaseToken()">
   test firebase token
-</button>
+</button> -->
 <div *ngIf="route.children.length === 0 && (auth.user$ | async)">
 
   <h1 style="padding: 2rem;">
