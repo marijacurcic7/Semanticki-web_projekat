@@ -29,7 +29,7 @@ export class CoursesComponent implements OnInit {
     private coursesService: CoursesService,
     private professorsService: ProfessorsService,
     private formBuilder: FormBuilder,
-  ) { 
+  ) {
     this.dataSource = new MatTableDataSource<Course>();
     this.option3Form = this.formBuilder.group({
       'espb': [''],
@@ -49,31 +49,29 @@ export class CoursesComponent implements OnInit {
 
   }
 
-  coursesForTeacher(teacher: string) {
-    this.coursesService.getCourses(teacher).subscribe(result => {
-      for (let r of result) {
-        r = r + '';
-        let courseName = r.split(',')[0];
-        let course: Course = {
-          naziv: courseName
-        }
-        this.courses.push(course);
+  async coursesForTeacher(teacher: string) {
+    const result = await this.coursesService.getCourses(teacher)
+    for (let r of result) {
+      r = r + '';
+      let courseName = r.split(',')[0];
+      let course: Course = {
+        naziv: courseName
       }
-      this.dataSource = new MatTableDataSource<Course>(this.courses);
-    });
+      this.courses.push(course);
+    }
+    this.dataSource = new MatTableDataSource<Course>(this.courses);
   }
 
-  courses3Books() {
-    this.coursesService.getCourses3Books().subscribe(result => {
-      for (let r of result) {
-        let course: Course = {
-          naziv: r.courseTitle,
-          brojKnjiga: r.bookCount
-        }
-        this.courses.push(course);
+  async courses3Books() {
+    const result = await this.coursesService.getCourses3Books()
+    for (let r of result) {
+      let course: Course = {
+        naziv: r.courseTitle,
+        brojKnjiga: r.bookCount
       }
-      this.dataSource = new MatTableDataSource<Course>(this.courses);
-    });
+      this.courses.push(course);
+    }
+    this.dataSource = new MatTableDataSource<Course>(this.courses);
   }
 
   radioChange(event: any) {
@@ -96,23 +94,22 @@ export class CoursesComponent implements OnInit {
     }
   }
 
-  onSubmit(): void {
+  async onSubmit() {
     this.courses = [];
     let espb = this.option3Form.controls['espb'].value;
     let year = this.option3Form.controls['year'].value;
 
-    this.coursesService.getCoursesESPBYear(espb, year).subscribe(result => {
-      this.displayedColumns = ['name', 'espb', 'year'];
-      for (let r of result) {
-        let course: Course = {
-          naziv: r.courseTitle,
-          espb: r.espb,
-          godina: r.year
-        }
-        this.courses.push(course);
+    const result = await this.coursesService.getCoursesESPBYear(espb, year)
+    this.displayedColumns = ['name', 'espb', 'year'];
+    for (let r of result) {
+      let course: Course = {
+        naziv: r.courseTitle,
+        espb: r.espb,
+        godina: r.year
       }
-      this.dataSource = new MatTableDataSource<Course>(this.courses);
-    });
+      this.courses.push(course);
+    }
+    this.dataSource = new MatTableDataSource<Course>(this.courses);
   }
 
   onSortChange(event: any): void {
@@ -121,42 +118,36 @@ export class CoursesComponent implements OnInit {
     this.coursesByTestResults();
   }
 
-  coursesByTestResults() {
-    this.coursesService.getCoursesByTestResults(this.sortType).subscribe(result => {
-      for (let r of result) {
-        let course: Course = {
-          naziv: r[1],
-          avgPoints: r[0],
-        }
-        this.courses.push(course);
+  async coursesByTestResults() {
+    const result = await this.coursesService.getCoursesByTestResults(this.sortType)
+    for (let r of result) {
+      let course: Course = {
+        naziv: r[1],
+        avgPoints: r[0],
       }
-      this.dataSource = new MatTableDataSource<Course>(this.courses);
-    });
+      this.courses.push(course);
+    }
+    this.dataSource = new MatTableDataSource<Course>(this.courses);
   }
 
-  onSemesterChange(event: any) {
+  async onSemesterChange(event: any) {
     this.courses = [];
     this.fields = [];
     this.semester = event.value;
-    if(!this.semester) return;
-    this.coursesService.getScientificFields(this.semester).subscribe(result => {
-      this.fields = result;
-    })
-
+    if (!this.semester) return;
+    this.fields = await this.coursesService.getScientificFields(this.semester)
   }
 
-  onScientificFieldChange(event: any) {
+  async onScientificFieldChange(event: any) {
     let scientificField = event.value;
-    if(!this.semester) return;
-    this.coursesService.getCoursesWithSemesterAndScientificField(this.semester, scientificField).subscribe(result => {
-      for (let r of result) {
-        let course: Course = {
-          naziv: r,
-        }
-        this.courses.push(course);
+    if (!this.semester) return;
+    const result = await this.coursesService.getCoursesWithSemesterAndScientificField(this.semester, scientificField)
+    for (let r of result) {
+      let course: Course = {
+        naziv: r,
       }
-      this.dataSource = new MatTableDataSource<Course>(this.courses);
-    })
+      this.courses.push(course);
+    }
+    this.dataSource = new MatTableDataSource<Course>(this.courses);
   }
-
 }
