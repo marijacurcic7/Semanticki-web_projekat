@@ -27,10 +27,8 @@ export class StudentsComponent implements OnInit {
     this.dataSource = new MatTableDataSource<Student>();
   }
 
-  ngOnInit(): void {
-    this.coursesService.getAllCourses().subscribe(result => {
-      this.courses = result;
-    });
+  async ngOnInit() {
+    this.courses = await this.coursesService.getAllCourses()
   }
 
   onCourseChange(event: any): void {

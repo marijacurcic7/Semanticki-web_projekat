@@ -1,6 +1,7 @@
 from flask import jsonify, request
 from semanticweb import app, db, sparql, Graph
 from firebase_admin import auth
+from functools import wraps
 
 
 # allow all origin
@@ -8,7 +9,29 @@ from firebase_admin import auth
 def after_request(response):
     header = response.headers
     header['Access-Control-Allow-Origin'] = '*'
+    header['Access-Control-Allow-Headers'] = '*'
     return response
+
+
+def check_token(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if not request.headers.get('authorization'):
+            return {'message': 'No token provided'}, 400
+        try:
+            user = auth.verify_id_token(request.headers['authorization'])
+            print(user)
+            request.user = user
+        except:
+            return {'message': 'Invalid token provided.'}, 400
+        return f(*args, **kwargs)
+    return wrap
+
+
+@app.route('/test-firebase-token')
+@check_token
+def test_firebase_token():
+    return jsonify('token works')
 
 
 @app.route('/')
@@ -39,12 +62,14 @@ def test_rdflib():
 
 @app.route('/test-auth')
 def test_auth():
+    user: auth.UserRecord
     user = auth.get_user_by_email('jovan@teacher.com')
-    print(user)
+    print(user.idToken)
     return 'done'
 
 
 @app.get('/courses')
+@check_token
 def get_courses():
     return jsonify(sparql.get_all_courses())
 

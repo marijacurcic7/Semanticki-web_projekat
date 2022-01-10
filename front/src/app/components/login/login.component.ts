@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     try {
       await this.auth.loginWithEmailAndPassword(email, password)
       this.formState = 'sucess'
-      this.router.navigate(['/tests'])
+      this.router.navigate(['/'])
     } catch (error) { this.formState = 'fail' }
   }
 }

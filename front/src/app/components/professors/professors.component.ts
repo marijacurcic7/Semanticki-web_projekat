@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Course } from 'src/app/model/course.model';
 import { Professor } from 'src/app/model/professor.model';
 import { CoursesService } from 'src/app/service/courses.service';
 import { ProfessorsService } from 'src/app/service/professors.service';
@@ -29,10 +28,8 @@ export class ProfessorsComponent implements OnInit {
     this.dataSource = new MatTableDataSource<Professor>();
   }
 
-  ngOnInit(): void {
-    this.coursesService.getAllCourses().subscribe(result => {
-      this.courses = result;
-    });
+  async ngOnInit() {
+    this.courses = await this.coursesService.getAllCourses()
 
     this.professorsService.getAllPrograms().subscribe(result => {
       this.programs = result;

@@ -1,6 +1,10 @@
 <app-toolbar></app-toolbar>
 <router-outlet></router-outlet>
+<button mat-button color="primary" (click)="auth.testFirebaseToken()">
+  test firebase token
+</button>
 <div *ngIf="route.children.length === 0 && (auth.user$ | async)">
+
   <h1 style="padding: 2rem;">
     <mat-icon class="material-icons-filled" style="vertical-align: middle;">person</mat-icon>
     {{(auth.user$ |async)?.displayName }}
@@ -24,4 +28,6 @@
       <span>Tests</span>
     </button>
   </div>
+
+
 </div>

@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FirebaseError } from '@firebase/util';
 import { Observable, of } from 'rxjs';
-import { GoogleAuthProvider } from 'firebase/auth'
-import { switchMap } from 'rxjs/operators';
+import { switchMap, take } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +15,7 @@ export class AuthService {
   constructor(
     private auth: AngularFireAuth,
     private snackBar: MatSnackBar,
-    private firestore: AngularFirestore,
+    private http: HttpClient,
   ) {
 
     this.user$ = this.auth.authState.pipe(
@@ -25,24 +24,6 @@ export class AuthService {
         return of(user)
       })
     )
-  }
-
-  async signUp(email: string, password: string, name: string) {
-    try {
-      // check domain
-      const domain = email.split('@')[1]
-      if (domain !== 'teacher.com' && domain !== 'student.com') throw new Error('bad domain.')
-
-      // sign up
-      const credential = await this.auth.createUserWithEmailAndPassword(email, password)
-      if (credential.user === null) throw new Error()
-      this.setUserData(credential.user.uid, email, name)
-      this.openSuccessSnackBar('Successfully created new account.')
-    } catch (error) {
-      if (error instanceof FirebaseError) this.openFailSnackBar(error.code)
-      else this.openFailSnackBar(error as string)
-      throw error
-    }
   }
 
   async loginWithEmailAndPassword(email: string, password: string) {
@@ -57,41 +38,25 @@ export class AuthService {
     }
   }
 
-  async googleLogin() {
-    try {
-      const credential = await this.auth.signInWithPopup(new GoogleAuthProvider())
-      if (credential.user === null) throw new Error()
-      const { uid, email, displayName } = credential.user
-      if (uid === null || email === null || displayName === null) throw new Error()
-      this.setUserData(uid, email, displayName)
-      this.openSuccessSnackBar('Successfully logged in.')
-    } catch (error) {
-      if (error instanceof FirebaseError) this.openFailSnackBar(error.code)
-      else this.openFailSnackBar()
-      throw error
-    }
-  }
-
   logout() {
     this.auth.signOut()
   }
 
-  setUserData(uid: string, email: string, displayName: string) {
-    let role: 'teacher' | 'student' | 'admin' | undefined;
+  async testFirebaseToken() {
+    const user = await this.user$.pipe(take(1)).toPromise()
+    const authToken = await user?.getIdToken()
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${authToken}`,
+    })
 
-    const domain = email.split('@')[1]
-    if (domain === 'teacher.com') role = 'teacher'
-    else if (domain === 'student.com') role = 'student'
-    else role = undefined
-
-    return this.firestore.doc(`users/${uid}`).set({
-      uid,
-      email,
-      displayName,
-      role,
-    },
-      { merge: true })
+    const response = await this.http.get<string>(
+      "http://localhost:8090/test-firebase-token",
+       { headers: headers }
+    ).toPromise()
+    console.log(response)
   }
+
   openSuccessSnackBar(message: string): void {
     this.snackBar.open(message, 'Dismiss', {
       verticalPosition: 'top',
