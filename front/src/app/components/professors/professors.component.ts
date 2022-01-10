@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Course } from 'src/app/model/course.model';
 import { Professor } from 'src/app/model/professor.model';
 import { CoursesService } from 'src/app/service/courses.service';
 import { ProfessorsService } from 'src/app/service/professors.service';
@@ -25,43 +24,23 @@ export class ProfessorsComponent implements OnInit {
   constructor(
     private coursesService: CoursesService,
     private professorsService: ProfessorsService
-  ) { 
+  ) {
     this.dataSource = new MatTableDataSource<Professor>();
   }
 
-  ngOnInit(): void {
-    this.coursesService.getAllCourses().subscribe(result => {
-      this.courses = result;
-    });
-
-    this.professorsService.getAllPrograms().subscribe(result => {
-      this.programs = result;
-    });
+  async ngOnInit() {
+    this.courses = await this.coursesService.getAllCourses()
+    this.programs = await this.professorsService.getAllPrograms()
   }
 
 
-  onCourseChange(event: any): void {
+  async onCourseChange(event: any) {
     this.course = event.value;
-
-    this.professorsService.getProfessors(this.course).subscribe(result => {
-      this.professors = result;
-    });
-
-    // this.professorsService.getStudentsCourse(this.course).subscribe(result => {
-    //   console.log(result);
-    // });
-
+    this.professors = await this.professorsService.getProfessors(this.course)
   }
 
-
-  onProgramChange(event: any): void {
+  async onProgramChange(event: any) {
     this.program = event.value;
-
-    this.professorsService.getProfessorsProgram(this.program).subscribe(result => {
-      this.professors = result;
-    });
-
-
+    this.professors = await this.professorsService.getProfessorsProgram(this.program)
   }
-
 }

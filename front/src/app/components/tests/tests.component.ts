@@ -24,7 +24,7 @@ export class TestsComponent implements OnInit {
     if (this.option == '1') sort = 'minDuration'
     else sort = 'maxDuration'
     
-    this.tests = await this.testsService.getSortedTestsByDuration(sort).toPromise()
+    this.tests = await this.testsService.getSortedTestsByDuration(sort)
     this.dataSource = new MatTableDataSource<Test>(this.tests);
   }
 }

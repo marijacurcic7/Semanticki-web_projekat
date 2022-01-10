@@ -1,2 +1,39 @@
 <app-toolbar></app-toolbar>
 <router-outlet></router-outlet>
+<!-- <button mat-button color="primary" (click)="auth.testFirebaseToken()">
+  test firebase token
+</button> -->
+<div *ngIf="route.children.length === 0 && (auth.user$ | async);">
+
+  <h1 style="padding: 2rem;">
+    <mat-icon class="material-icons-filled" style="vertical-align: middle;">person</mat-icon>
+    {{(auth.user$ |async)?.displayName }}
+  </h1>
+
+  <div style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 3rem;">
+    <button mat-flat-button color="primary" [routerLink]="['/professors']">
+      <mat-icon>people_outline</mat-icon>
+      <span>Professors</span>
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/students']">
+      <mat-icon>people_outline</mat-icon>
+      <span>Students</span>
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/courses']">
+      <mat-icon>subject</mat-icon>
+      <span>Courses</span>
+    </button>
+    <button mat-flat-button color="primary" [routerLink]="['/tests']">
+      <mat-icon>feed</mat-icon>
+      <span>Tests</span>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="route.children.length === 0  && !(auth.user$ | async);">
+  <div style="display: flex; flex-direction: column;">
+    <h1 style="text-align: center; padding: 2rem;">SPARQL</h1>
+    <h3 style="text-align: center;">login to continue</h3>
+    <img src="../../../assets/image.svg" alt="Online learning">
+  </div>
+</div>

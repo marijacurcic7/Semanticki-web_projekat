@@ -21,7 +21,7 @@ g.parse('../python-rdf/uni.ttl')
 # load ontology
 g.parse('../ontologije/university_ontology.ttl')
 # turn on reasoner
-DeductiveClosure(OWLRL_Semantics).expand(g)
+# DeductiveClosure(OWLRL_Semantics).expand(g)
 
 # avoid circular imports in python
 from semanticweb import routes
